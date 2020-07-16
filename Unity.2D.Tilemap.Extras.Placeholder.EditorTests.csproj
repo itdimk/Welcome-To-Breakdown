@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FAFDB965-0899-067B-71C7-93724D6D9835}</ProjectGuid>
+    <ProjectGuid>{36009161-2CCE-713D-194E-045CE15AD5E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras.Placeholder.EditorTests</AssemblyName>
@@ -58,19 +58,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Tests\Editor\PlaceholderTests.cs" />
-     <None Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Tests\Editor\Unity.2D.Tilemap.Extras.EditorTests.asmdef" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Tests\Editor\PlaceholderTests.cs" />
+     <None Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Tests\Editor\Unity.2D.Tilemap.Extras.EditorTests.asmdef" />
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -262,7 +262,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/Unity/2dgame4/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

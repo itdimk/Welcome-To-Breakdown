@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2F4433B7-25C9-7D11-33C0-CC33CC28CF4C}</ProjectGuid>
+    <ProjectGuid>{C8EAEADD-CB0A-1F7B-CECE-012516E66AAF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras.Editor</AssemblyName>
@@ -58,39 +58,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\CoordinateBrush\CoordinateBrush.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\GameObjectBrush\GameObjectBrush.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\GroupBrush\GroupBrush.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\LineBrush\LineBrush.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\BasePrefabBrush.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabBrush\PrefabBrush.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabRandomBrush\PrefabRandomBrush.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\RandomBrush\RandomBrush.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrush\TintBrush.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrushSmooth\TintBrushSmooth.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\HexagonalRuleTile\HexagonalRuleTileEditor.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\IsometricRuleTile\IsometricRuleTileEditor.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\AdvancedRuleOverrideTileEditor.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\PopulateRuleOverrideTileWizard.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\RuleOverrideTileEditor.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\CustomRuleTileMenu.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\RuleTileEditor.cs" />
-     <None Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
-     <None Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Editor\Unity.2D.Tilemap.Extras.Editor.asmdef" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\CoordinateBrush\CoordinateBrush.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\GameObjectBrush\GameObjectBrush.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\GroupBrush\GroupBrush.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\LineBrush\LineBrush.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\BasePrefabBrush.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabBrush\PrefabBrush.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabRandomBrush\PrefabRandomBrush.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\RandomBrush\RandomBrush.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrush\TintBrush.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrushSmooth\TintBrushSmooth.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\HexagonalRuleTile\HexagonalRuleTileEditor.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\IsometricRuleTile\IsometricRuleTileEditor.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\AdvancedRuleOverrideTileEditor.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\PopulateRuleOverrideTileWizard.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\RuleOverrideTileEditor.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\CustomRuleTileMenu.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\RuleTileEditor.cs" />
+     <None Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
+     <None Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Editor\Unity.2D.Tilemap.Extras.Editor.asmdef" />
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -282,10 +282,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
- <HintPath>D:/Unity/2dgame4/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/Unity/2dgame4/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -644,7 +644,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{1A486EED-5172-C334-283C-750E9AE99EE6}</Project>
+      <Project>{D05ECACA-4619-CCF4-CD0D-992A52C332EF}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
   </ItemGroup>

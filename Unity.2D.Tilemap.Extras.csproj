@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1A486EED-5172-C334-283C-750E9AE99EE6}</ProjectGuid>
+    <ProjectGuid>{D05ECACA-4619-CCF4-CD0D-992A52C332EF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras</AssemblyName>
@@ -58,25 +58,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Brushes\TintTextureGenerator.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\GridInformation\GridInformation.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\AnimatedTile\AnimatedTile.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\HexagonalRuleTile\HexagonalRuleTile.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\IsometricRuleTile\IsometricRuleTile.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\PipelineTile\PipelineTile.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\RandomTile\RandomTile.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\RuleOverrideTile\AdvancedRuleOverrideTile.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\RuleOverrideTile\RuleOverrideTile.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\RuleTile\RuleTile.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\TerrainTile\TerrainTile.cs" />
-     <Compile Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\WeightedRandomTile\WeightedRandomTile.cs" />
-     <None Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Unity.2D.Tilemap.Extras.asmdef" />
-     <None Include="D:\Unity\2dgame4\Packages\com.unity.2d.tilemap.extras\Runtime\Brushes\TintedTilemap.shader" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Brushes\TintTextureGenerator.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\GridInformation\GridInformation.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\AnimatedTile\AnimatedTile.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\HexagonalRuleTile\HexagonalRuleTile.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\IsometricRuleTile\IsometricRuleTile.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\PipelineTile\PipelineTile.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\RandomTile\RandomTile.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\RuleOverrideTile\AdvancedRuleOverrideTile.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\RuleOverrideTile\RuleOverrideTile.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\RuleTile\RuleTile.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\TerrainTile\TerrainTile.cs" />
+     <Compile Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Tiles\WeightedRandomTile\WeightedRandomTile.cs" />
+     <None Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Unity.2D.Tilemap.Extras.asmdef" />
+     <None Include="D:\Unity\Github\dumb-game\Packages\com.unity.2d.tilemap.extras\Runtime\Brushes\TintedTilemap.shader" />
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity/2dgame4/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -268,7 +268,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
- <HintPath>D:/Unity/2dgame4/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ <HintPath>D:/Unity/Github/dumb-game/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
