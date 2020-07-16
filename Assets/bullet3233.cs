@@ -16,10 +16,6 @@ public class bullet3233 : MonoBehaviour
     {
         rb.velocity = transform.right * speed;
 
-        /*var collider = GameObject.Find("PlaYeR").GetComponent<CapsuleCollider2D>();
-        Debug.Log(GetComponent<Collider2D>());
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collider, true);*/
-
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)

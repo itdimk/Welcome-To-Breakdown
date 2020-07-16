@@ -25,6 +25,10 @@
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+<<<<<<< HEAD
+=======
+      <Path>Temp</Path>
+>>>>>>> 76b263272912c7f44aad7b6814a817ee35b6b8aa
       <Path>obj</Path>
     </explicitExcludes>
   </component>
