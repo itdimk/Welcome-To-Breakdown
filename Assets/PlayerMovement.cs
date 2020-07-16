@@ -87,10 +87,30 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("EnemyBox"))
         {
-            Health -= 10;
-            GetComponent<SpriteRenderer>().sprite = HitSprite;
-            Debug.Log("aaaa");
+            GetDamage(10f, other);
         }
+        
+        if(Health <= 0)
+            Die();
+    }
+    
+
+    private void GetDamage(float damageAmount, Collider2D source)
+    {
+        Health -= 10;
+       
+        var physics = GetComponent<Rigidbody2D>();
+        var forceVector = new Vector2((source.transform.position.x - transform.position.x) * -3000, 
+            (source.transform.position.y - transform.position.y) * -3000);
+        
+        physics.AddForce(forceVector);
+        Debug.Log(forceVector);
+        
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -101,6 +121,11 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Space))
                 GetComponent<Rigidbody2D>()?.AddForce(new Vector2(0, 600));
+        }
+        
+        if (other.gameObject.CompareTag("EnemyBox"))
+        {
+            GetDamage(10f, other);
         }
     }
 
