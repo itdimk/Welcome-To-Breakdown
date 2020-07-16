@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool jump = false;
     private bool Crouch = false;
     public Sprite HitSprite;
+    
 
     // Update is called once per frame
     void Update()
