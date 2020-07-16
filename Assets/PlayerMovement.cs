@@ -88,6 +88,17 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyBox"))
         {
             GetDamage(10f, other);
+            Health -= 10;
+            GetComponent<SpriteRenderer>().sprite = HitSprite;
+        }
+        if (other.gameObject.CompareTag("Spikes"))
+        {
+            Health -= 10;
+            GetComponent<SpriteRenderer>().sprite = HitSprite;
+        }
+        if (other.gameObject.CompareTag("Chest"))
+        {
+            
         }
         
         if(Health <= 0)
