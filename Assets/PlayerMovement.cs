@@ -88,7 +88,15 @@ public class PlayerMovement : MonoBehaviour
         {
             Health -= 10;
             GetComponent<SpriteRenderer>().sprite = HitSprite;
-            Debug.Log("aaaa");
+        }
+        if (other.gameObject.CompareTag("Spikes"))
+        {
+            Health -= 10;
+            GetComponent<SpriteRenderer>().sprite = HitSprite;
+        }
+        if (other.gameObject.CompareTag("Chest"))
+        {
+            
         }
     }
 

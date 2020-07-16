@@ -13,6 +13,8 @@ TagManager:
   - EnemyBox
   - Bullet
   - Ladder
+  - Spikes
+  - Chest
   layers:
   - Default
   - TransparentFX
