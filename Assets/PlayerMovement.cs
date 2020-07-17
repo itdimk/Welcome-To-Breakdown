@@ -153,11 +153,18 @@ public class PlayerMovement : MonoBehaviour
         
         physics.AddForce(forceVector);
         HelthText.text = Health.ToString();
+        FindObjectOfType<AudioManager>().Play("PlayerHit");
+
+        if (Health <= 20)
+        {
+            FindObjectOfType<AudioManager>().Play("PlayerPizda");
+        }
     }
 
     private void Die()
     {
         Destroy(gameObject);
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
     }
 
     private void OnTriggerStay2D(Collider2D other)
