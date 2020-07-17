@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
@@ -15,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isOnLadder = false;
 
     public float runSpeed = 40f;
-    public int Health = 100;
+    public float Health = 100f;
     private float horizontalMove = 0f;
 
     private bool jump = false;
@@ -23,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public Sprite HitSprite;
     public GameObject EndLevelScreen;
     public int EndLevelScreenTime = 3000;
+
+    public TextMeshProUGUI HelthText;
     
     private Stopwatch delayedSceneLoadTimer = new Stopwatch();
 
@@ -95,13 +99,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("EnemyBox"))
         {
+            Debug.Log(other);
             GetDamage(10f, other);
-            Health -= 10;
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
         if (other.gameObject.CompareTag("Spikes"))
         {
-            Health -= 10;
+            GetDamage(10f, other);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
         if (other.gameObject.CompareTag("Chest"))
@@ -119,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.gameObject.CompareTag("EnemyEye"))
         {
-            GetDamage(-5, other);
+            GetDamage(4, other);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
 
@@ -140,15 +144,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetDamage(float damageAmount, Collider2D source)
     {
-        Health -= 10;
+        Health -= damageAmount;
        
         var physics = GetComponent<Rigidbody2D>();
         var forceVector = new Vector2((source.transform.position.x - transform.position.x) * -3000, 
             (source.transform.position.y - transform.position.y) * -3000);
         
         physics.AddForce(forceVector);
-        Debug.Log(forceVector);
-        
+        HelthText.text = Health.ToString();
     }
 
     private void Die()
