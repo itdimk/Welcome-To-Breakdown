@@ -121,6 +121,11 @@ public class PlayerMovement : MonoBehaviour
         {
             EndLevelScreen.SetActive(true);
         }
+        if (other.gameObject.CompareTag("EnemyEye"))
+        {
+            GetDamage(-5, other);
+            GetComponent<SpriteRenderer>().sprite = HitSprite;
+        }
 
         if(Health <= 0)
             Die();
