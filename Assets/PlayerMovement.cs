@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
@@ -23,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public Sprite HitSprite;
     public GameObject EndLevelScreen;
     public int EndLevelScreenTime = 3000;
+
+    public TextMeshProUGUI HelthText;
     
     private Stopwatch delayedSceneLoadTimer = new Stopwatch();
 
@@ -142,8 +146,7 @@ public class PlayerMovement : MonoBehaviour
             (source.transform.position.y - transform.position.y) * -3000);
         
         physics.AddForce(forceVector);
-        Debug.Log(forceVector);
-        
+        HelthText.text = Health.ToString();
     }
 
     private void Die()
