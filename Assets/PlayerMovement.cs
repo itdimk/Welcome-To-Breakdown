@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isOnLadder = false;
 
     public float runSpeed = 40f;
-    public int Health = 100;
+    public float Health = 100f;
     private float horizontalMove = 0f;
 
     private bool jump = false;
@@ -99,13 +99,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("EnemyBox"))
         {
+            Debug.Log(other);
             GetDamage(10f, other);
-            Health -= 10;
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
         if (other.gameObject.CompareTag("Spikes"))
         {
-            Health -= 10;
+            GetDamage(10f, other);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
         if (other.gameObject.CompareTag("Chest"))
@@ -123,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.gameObject.CompareTag("EnemyEye"))
         {
-            GetDamage(-5, other);
+            GetDamage(4, other);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
 
@@ -144,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetDamage(float damageAmount, Collider2D source)
     {
-        Health -= 10;
+        Health -= damageAmount;
        
         var physics = GetComponent<Rigidbody2D>();
         var forceVector = new Vector2((source.transform.position.x - transform.position.x) * -3000, 
