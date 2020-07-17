@@ -16,6 +16,7 @@ TagManager:
   - Spikes
   - Chest
   - EndLevel
+  - EndScreen
   layers:
   - Default
   - TransparentFX
