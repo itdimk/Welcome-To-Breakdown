@@ -61,6 +61,9 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(Health <= 0)
+            Die();
+        
         if (!jump)
             FixClimb();
 
@@ -126,9 +129,7 @@ public class PlayerMovement : MonoBehaviour
             GetDamage(4, other);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
-
-        if(Health <= 0)
-            Die();
+        
     }
 
     private void LoadNextSceneIfRequired()
