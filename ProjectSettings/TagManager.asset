@@ -17,6 +17,7 @@ TagManager:
   - Chest
   - EndLevel
   - EndScreen
+  - EnemyEye
   layers:
   - Default
   - TransparentFX
