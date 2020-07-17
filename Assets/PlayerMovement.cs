@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,7 +21,10 @@ public class PlayerMovement : MonoBehaviour
     private bool jump = false;
     private bool Crouch = false;
     public Sprite HitSprite;
+    public GameObject EndLevelScreen;
+    public int EndLevelScreenTime = 3000;
     
+    private Stopwatch delayedSceneLoadTimer = new Stopwatch();
 
     // Update is called once per frame
     void Update()
@@ -56,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(horizontalMove * Time.fixedDeltaTime, Crouch, jump);
         jump = false;
+        LoadNextSceneIfRequired();
     }
 
     void FixClimb()
@@ -73,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("Scary"))
         {
-            GameObject.FindWithTag("Scary2").gameObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
+           // GameObject.FindWithTag("Scary2").gameObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
         }
 
         if (other.gameObject.CompareTag("Secrets1"))
@@ -103,12 +110,26 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.gameObject.CompareTag("EndLevel"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            delayedSceneLoadTimer.Restart();
         }
-        
-        
+
+        if (other.CompareTag("EndLevel"))
+        {
+            EndLevelScreen.SetActive(true);
+        }
+
         if(Health <= 0)
             Die();
+    }
+
+    private void LoadNextSceneIfRequired()
+    {
+        if (delayedSceneLoadTimer.IsRunning && delayedSceneLoadTimer.ElapsedMilliseconds >= EndLevelScreenTime)
+        {
+            delayedSceneLoadTimer.Stop();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            EndLevelScreen.SetActive(false);
+        }
     }
     
 
