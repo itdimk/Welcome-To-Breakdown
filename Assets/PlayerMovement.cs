@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -100,6 +101,11 @@ public class PlayerMovement : MonoBehaviour
         {
             
         }
+        if (other.gameObject.CompareTag("EndLevel"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
         
         if(Health <= 0)
             Die();

@@ -15,6 +15,7 @@ TagManager:
   - Ladder
   - Spikes
   - Chest
+  - EndLevel
   layers:
   - Default
   - TransparentFX
