@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     
     private Stopwatch delayedSceneLoadTimer = new Stopwatch();
 
+    public float LadderMaxSpeed = 12;
+    
     // Update is called once per frame
     void Update()
     {
@@ -160,7 +162,18 @@ public class PlayerMovement : MonoBehaviour
             isOnLadder = true;
 
             if (Input.GetKey(KeyCode.Space))
-                GetComponent<Rigidbody2D>()?.AddForce(new Vector2(0, 600));
+            {
+                if(GetComponent<Rigidbody2D>().velocity.y < LadderMaxSpeed)
+                    GetComponent<Rigidbody2D>()?.AddForce(new Vector2(0, 650));
+                
+                if(GetComponent<Rigidbody2D>().velocity.y < 0)
+                    GetComponent<Rigidbody2D>()?.AddForce(new Vector2(0, 650));
+            }
+            else
+            {
+                if(GetComponent<Rigidbody2D>().velocity.y <= -LadderMaxSpeed)
+                    GetComponent<Rigidbody2D>()?.AddForce(new Vector2(0, 580));
+            }
         }
         
         if (other.gameObject.CompareTag("EnemyBox"))
