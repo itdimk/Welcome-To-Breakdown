@@ -155,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
         HelthText.text = Health.ToString();
         FindObjectOfType<AudioManager>().Play("PlayerHit");
 
-        if (Health <= 20)
+        if (Health <= 20 && Health > 10)
         {
             FindObjectOfType<AudioManager>().Play("PlayerPizda");
         }

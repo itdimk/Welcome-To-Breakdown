@@ -28,13 +28,14 @@ public class Weapon : MonoBehaviour
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
+                FindObjectOfType<AudioManager>().Play("Shooting");
             }
         }
         else
         {
             timeBtwShots -= Time.deltaTime;
         }
-
+        
         Crutch();
     }
     
