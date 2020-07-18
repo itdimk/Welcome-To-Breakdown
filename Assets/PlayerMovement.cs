@@ -100,17 +100,7 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.CompareTag("EnemyBox"))
-        {
-            Debug.Log(other);
-            GetDamage(10f, other);
-            GetComponent<SpriteRenderer>().sprite = HitSprite;
-        }
-        if (other.gameObject.CompareTag("Spikes"))
-        {
-            GetDamage(10f, other);
-            GetComponent<SpriteRenderer>().sprite = HitSprite;
-        }
+       
         if (other.gameObject.CompareTag("Chest"))
         {
             
@@ -124,11 +114,7 @@ public class PlayerMovement : MonoBehaviour
         {
             EndLevelScreen.SetActive(true);
         }
-        if (other.gameObject.CompareTag("EnemyEye"))
-        {
-            GetDamage(4, other);
-            GetComponent<SpriteRenderer>().sprite = HitSprite;
-        }
+      
         
     }
 
@@ -179,7 +165,19 @@ public class PlayerMovement : MonoBehaviour
         
         if (other.gameObject.CompareTag("EnemyBox"))
         {
+            Debug.Log(other);
+            GetDamage(8f, other);
+            GetComponent<SpriteRenderer>().sprite = HitSprite;
+        }
+        if (other.gameObject.CompareTag("Spikes"))
+        {
             GetDamage(10f, other);
+            GetComponent<SpriteRenderer>().sprite = HitSprite;
+        }
+        if (other.gameObject.CompareTag("EnemyEye"))
+        {
+            GetDamage(4, other);
+            GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
     }
 
