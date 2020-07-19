@@ -129,7 +129,12 @@ public class PlayerMovement : MonoBehaviour
             EndLevelScreen.SetActive(false);
         }
     }
-    
+
+    public void Cure(float cureAmount)
+    {
+        Health += cureAmount;
+        HelthText.text = Health.ToString();
+    }
 
     private void GetDamage(float damageAmount, Collider2D source)
     {

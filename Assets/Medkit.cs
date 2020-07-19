@@ -24,7 +24,7 @@ public class Medkit : MonoBehaviour
     {
         if (other.gameObject.CompareTag(PlayerTag))
         {
-            other.gameObject.GetComponent<PlayerMovement>().Health += Amount;
+            other.gameObject.GetComponent<PlayerMovement>().Cure(Amount);
             Destroy(gameObject);
         }
     }
