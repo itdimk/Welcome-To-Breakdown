@@ -141,8 +141,8 @@ public class PlayerMovement : MonoBehaviour
         Health -= damageAmount;
        
         var physics = GetComponent<Rigidbody2D>();
-        var forceVector = new Vector2((source.transform.position.x - transform.position.x) * -3000, 
-            (source.transform.position.y - transform.position.y) * -3000);
+        var forceVector = new Vector2((source.transform.position.x - transform.position.x) * -100, 
+            (source.transform.position.y - transform.position.y) * -100);
         
         physics.AddForce(forceVector);
         HelthText.text = Health.ToString();
