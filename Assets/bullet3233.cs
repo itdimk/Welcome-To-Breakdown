@@ -21,10 +21,11 @@ public class bullet3233 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
         
-        Enemy2 enemy2 = hitInfo.GetComponent<Enemy2>();
+        Enemy2 enemy2 = hitInfo.gameObject.GetComponent<Enemy2>();
         if (enemy2 != null)
         {
             enemy2.TakeDamage(damage);
+            Debug.Log(enemy2);
         }
         
         Destroy(gameObject);

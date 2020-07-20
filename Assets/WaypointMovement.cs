@@ -27,11 +27,7 @@ public class WaypointMovement : MonoBehaviour
     {
         MoveToCurrentWp();
         NextWpIfRequired();
-<<<<<<< HEAD
-=======
-        
-        Debug.Log($"Moving pos:{transform.position} wp:{waypoints[_currWaypointIndex].position}");
->>>>>>> 94ac9efec86d93cfb8b0f0c7b7e6e92ff5f98b71
+
     }
 
     private void MoveToCurrentWp()

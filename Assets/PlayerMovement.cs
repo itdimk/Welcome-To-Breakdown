@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public int EndLevelScreenTime = 3000;
 
     public TextMeshProUGUI HelthText;
+    public float HitPushPower = 3000;
     
     private Stopwatch delayedSceneLoadTimer = new Stopwatch();
 
@@ -135,16 +136,29 @@ public class PlayerMovement : MonoBehaviour
         Health += cureAmount;
         HelthText.text = Health.ToString();
     }
+    
+    private void Push(GameObject other)
+    {
+        Vector3 myPos = other.transform.position;
+        Vector3 target = transform.position;
+
+        Vector3 forceVector = new Vector3(target.x - myPos.x, target.y - myPos.y);
+        
+        float multiplier = HitPushPower / forceVector.magnitude;
+        forceVector.Scale(new Vector3(multiplier, multiplier));
+
+        var physics = GetComponent<Rigidbody2D>();
+
+        if (physics != null)
+            physics.AddForce(forceVector);
+    }
 
     private void GetDamage(float damageAmount, Collider2D source)
     {
         Health -= damageAmount;
-       
-        var physics = GetComponent<Rigidbody2D>();
-        var forceVector = new Vector2((source.transform.position.x - transform.position.x) * -100, 
-            (source.transform.position.y - transform.position.y) * -100);
+
+        Push(source.gameObject);
         
-        physics.AddForce(forceVector);
         HelthText.text = Health.ToString();
         FindObjectOfType<AudioManager>().Play("PlayerHit");
 
