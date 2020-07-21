@@ -86,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Coins"))
         {
             Destroy(other.gameObject);
+            FindObjectOfType<AudioManager>().Play("Coin");
         }
 
         if (other.gameObject.CompareTag("Scary"))

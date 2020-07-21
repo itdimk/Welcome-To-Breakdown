@@ -23,6 +23,7 @@ public class Enemy2 : MonoBehaviour
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy( gameObject);
+        FindObjectOfType<AudioManager>().Play("EyeDeath");
         
         if(destroyParent)
             Destroy(transform.parent.gameObject);
