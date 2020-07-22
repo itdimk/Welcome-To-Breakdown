@@ -10,8 +10,9 @@ public class Weapon : MonoBehaviour
 
     public GameObject projectile;
     public Transform shotPoint;
-    
 
+    public AudioManager AudioManager;
+    
     private float timeBtwShots;
     public float startTimeBtwShots;
     private void FixedUpdate()
@@ -22,7 +23,7 @@ public class Weapon : MonoBehaviour
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
-                FindObjectOfType<AudioManager>().Play("Shooting");
+                AudioManager.Play("Shooting");
             }
         }
         else
