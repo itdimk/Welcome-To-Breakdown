@@ -25,9 +25,9 @@ public class bullet3233 : MonoBehaviour
         if (enemy2 != null)
         {
             enemy2.TakeDamage(damage);
-            Debug.Log(enemy2);
+            Destroy(gameObject);
         }
         
-        Destroy(gameObject);
+        
     }
 }

@@ -127,7 +127,12 @@ public class PlayerMovement : MonoBehaviour
         if (delayedSceneLoadTimer.IsRunning && delayedSceneLoadTimer.ElapsedMilliseconds >= EndLevelScreenTime)
         {
             delayedSceneLoadTimer.Stop();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+            int activeIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.UnloadSceneAsync(activeIndex);
+            SceneManager.LoadScene( activeIndex+ 1);
+         
+                
             EndLevelScreen.SetActive(false);
         }
     }
@@ -154,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
             physics.AddForce(forceVector);
     }
 
-    private void GetDamage(float damageAmount, Collider2D source)
+    private void GetDamage(float damageAmount, GameObject source)
     {
         Health -= damageAmount;
 
@@ -199,17 +204,26 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyBox"))
         {
             Debug.Log(other);
-            GetDamage(8f, other);
+            GetDamage(8f, other.gameObject);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
         if (other.gameObject.CompareTag("Spikes"))
         {
-            GetDamage(10f, other);
+            GetDamage(10f, other.gameObject);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
         if (other.gameObject.CompareTag("EnemyEye"))
         {
-            GetDamage(4, other);
+            GetDamage(4, other.gameObject);
+            GetComponent<SpriteRenderer>().sprite = HitSprite;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Spikes"))
+        {
+            GetDamage(10f, other.gameObject);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
     }

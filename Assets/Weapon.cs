@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     public GameObject projectile;
     public Transform shotPoint;
 
-    public AudioManager AudioManager;
+    public AudioManager Audio;
     
     private float timeBtwShots;
     public float startTimeBtwShots;
@@ -23,7 +23,8 @@ public class Weapon : MonoBehaviour
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
-                AudioManager.Play("Shooting");
+                Audio.Play("Shooting");
+                Debug.Log(Audio);
             }
         }
         else
