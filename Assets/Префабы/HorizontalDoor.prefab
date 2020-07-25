@@ -334,10 +334,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3153937620970041152}
   - component: {fileID: 7680470786679677927}
-  - component: {fileID: 5819857334897508062}
   - component: {fileID: 2042268636829237623}
   m_Layer: 0
-  m_Name: DoorBlocks (2)
+  m_Name: HorizontalDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,27 +387,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8687413, y: 9.024488}
   m_EdgeRadius: 0
---- !u!50 &5819857334897508062
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5746056488607147013}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &2042268636829237623
 MonoBehaviour:
   m_ObjectHideFlags: 0
