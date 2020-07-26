@@ -24,7 +24,6 @@ public class Weapon : MonoBehaviour
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
                 Audio.Play("Shooting");
-                Debug.Log(Audio);
             }
         }
         else
