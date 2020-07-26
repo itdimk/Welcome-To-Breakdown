@@ -18,6 +18,8 @@ TagManager:
   - EndLevel
   - EndScreen
   - EnemyEye
+  - Helth
+  - Box
   layers:
   - Default
   - TransparentFX
