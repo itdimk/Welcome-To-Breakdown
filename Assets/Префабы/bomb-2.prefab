@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d735b6a2620ab469b2eaf314ce30e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayToBoom: 2
-  DelayToDestroy: 2.5
+  DelayToBoom: 2.4
+  DelayToDestroy: 2.46
   BoomWave: {fileID: -1902660214820746368}
 --- !u!58 &-1902660214820746368
 CircleCollider2D:
@@ -170,6 +170,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010621667, y: -0.24429601}
+  m_Offset: {x: -0.027446508, y: -0.24429607}
   serializedVersion: 2
-  m_Radius: 2.075793
+  m_Radius: 2.5199206
