@@ -12,11 +12,16 @@ public class Boom : MonoBehaviour
     private float startTick = 0;
 
     private bool isBooming = false;
+
+
+    private AudioManager _audio;
     
     // Start is called before the first frame update
     void Start()
     {
         startTick = Time.time;
+        _audio = FindObjectOfType<AudioManager>();
+        
     }
 
     // Update is called once per frame
@@ -36,6 +41,7 @@ public class Boom : MonoBehaviour
 
     void BoomAction()
     {
+        _audio.Play("BoomBomb");
         BoomWave.enabled = true;
     }
 }
