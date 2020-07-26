@@ -11,8 +11,6 @@ using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController2D controller;
-    public Animator animator;
 
     public bool isOnLadder = false;
 
@@ -38,12 +36,10 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (!isOnLadder && Input.GetButtonDown("Jump"))
         {
             jump = true;
-            animator.SetBool("IsJumping", true);
         }
 
 
@@ -57,10 +53,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void OnLanding()
-    {
-        animator.SetBool("IsJumping", false);
-    }
 
     void FixedUpdate()
     {
@@ -70,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
         if (!jump)
             FixClimb();
 
-        controller.Move(horizontalMove * Time.fixedDeltaTime, Crouch, jump);
         jump = false;
         LoadNextSceneIfRequired();
     }

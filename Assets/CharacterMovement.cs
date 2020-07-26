@@ -25,9 +25,14 @@ public class CharacterMovement : MonoBehaviour
     private bool _isFacingRight = true;
 
     private bool _jumpHasBeenPressed = false;
+
+    private float _inputX;
+    private Animator _animator;
     
     void Start()
     {
+        _animator = GetComponent<Animator>();
+        
         _physics = GetComponent<Rigidbody2D>()
                    ?? throw new NullReferenceException($"Can't get {nameof(Rigidbody2D)}");
     }
@@ -44,18 +49,20 @@ public class CharacterMovement : MonoBehaviour
             .Where(c => !c.isTrigger && c.gameObject != gameObject).ToArray();
 
         _isGrounded = _ground.Length > 0;
-
+        _inputX = Input.GetAxisRaw("Horizontal");
+        
         Move();
+        SetAnimatorValues();
     }
 
     private void Move()
     {
         if (_isGrounded || AirControl)
         {
-            float inputX = Input.GetAxisRaw("Horizontal");
+          
 
             Vector2 groundMovement = GetGroundMovement();
-            Vector2 targetVelocity = new Vector2(inputX * Speed, _physics.velocity.y);
+            Vector2 targetVelocity = new Vector2(_inputX * Speed, _physics.velocity.y);
             
             if(_isGrounded)
                 targetVelocity += groundMovement;
@@ -63,7 +70,7 @@ public class CharacterMovement : MonoBehaviour
             _physics.velocity = Vector2.SmoothDamp(_physics.velocity,
                 targetVelocity, ref _currVelocity, Smoothness);
 
-            if ((inputX > 0 && !_isFacingRight) || (inputX < 0 && _isFacingRight))
+            if ((_inputX > 0 && !_isFacingRight) || (_inputX < 0 && _isFacingRight))
                 Flip();
         }
 
@@ -94,5 +101,16 @@ public class CharacterMovement : MonoBehaviour
       //  theScale.x *= -1;
       //  transform.localScale = theScale;
       transform.Rotate(0, 180f, 0);
+    }
+
+
+    private void SetAnimatorValues()
+    {
+       
+        _animator.SetFloat("SpeedX", Math.Abs(_inputX));
+        
+        _animator.SetBool("IsFalling", !_isGrounded && _physics.velocity.y < 0);
+        
+        _animator.SetBool("IsGrounded", _isGrounded);
     }
 }
