@@ -40,7 +40,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1741601316668715792}
   m_Layer: 0
+<<<<<<< HEAD
   m_Name: Door 1
+=======
+  m_Name: Door
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,8 +110,13 @@ GameObject:
   - component: {fileID: 1741601317212569445}
   - component: {fileID: 1741601317212569444}
   - component: {fileID: 1741601317212569451}
+<<<<<<< HEAD
   - component: {fileID: 1741601317212569454}
   - component: {fileID: 1741601317212569449}
+=======
+  - component: {fileID: 1741601317212569449}
+  - component: {fileID: 1741601317212569454}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_Layer: 0
   m_Name: DoorGFX
   m_TagString: Untagged
@@ -146,7 +155,11 @@ Tilemap:
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
+<<<<<<< HEAD
       m_AllTileFlags: 1073741825
+=======
+      m_AllTileFlags: 1073741827
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   - first: {x: 11, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -155,7 +168,11 @@ Tilemap:
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
+<<<<<<< HEAD
       m_AllTileFlags: 1073741825
+=======
+      m_AllTileFlags: 1073741827
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   - first: {x: 11, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -164,6 +181,7 @@ Tilemap:
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
+<<<<<<< HEAD
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
@@ -172,6 +190,18 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: 7fbfdf6678cede441ac7dbb624cd6d63, type: 3}
+=======
+      m_AllTileFlags: 1073741827
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 3
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 3
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_TileMatrixArray:
   - m_RefCount: 3
     m_Data:
@@ -193,7 +223,13 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - m_RefCount: 3
+<<<<<<< HEAD
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+=======
+    m_Data: {r: 0.94277847, g: 0.5273466, b: 0.64865583, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 3.4295e-41, g: 3.4295e-41, b: 3.4295e-41, a: 3.4295e-41}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -281,7 +317,11 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+<<<<<<< HEAD
 --- !u!114 &1741601317212569454
+=======
+--- !u!114 &1741601317212569449
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,18 +330,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1741601317212569452}
   m_Enabled: 0
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 3b95cd67f78edf44ab7c76df4589a323, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 878fcaee0a6795742bc63d1b71e9221b, type: 3}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
   - {fileID: 1741601316921694324}
   Cycled: 0
+<<<<<<< HEAD
   Speed: 6
+=======
+  Speed: 3
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   IsReachedDistance: 0.1
   FreezeX: 1
   FreezeY: 0
   Smoothness: 0.1
+<<<<<<< HEAD
 --- !u!114 &1741601317212569449
+=======
+--- !u!114 &1741601317212569454
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -310,7 +362,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1741601317212569452}
   m_Enabled: 0
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 3b95cd67f78edf44ab7c76df4589a323, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 878fcaee0a6795742bc63d1b71e9221b, type: 3}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
@@ -391,19 +447,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1741601317220876512}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: c7b186042a59e364f9a30820785817b9, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 3ad39023d28adbf43a79ac74ca50ff2d, type: 3}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_Name: 
   m_EditorClassIdentifier: 
   TargetObjects:
   - {fileID: 1741601318409645015}
   TargetScripts:
+<<<<<<< HEAD
   - {fileID: 1741601317212569449}
+=======
+  - {fileID: 1741601317212569454}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 3
   WhoIsTriggered:
   - Player
+<<<<<<< HEAD
   - Box
+=======
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   TargetTime: 0
   TargetButton: 
 --- !u!114 &5686659692811805911
@@ -415,19 +482,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1741601317220876512}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: c7b186042a59e364f9a30820785817b9, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 3ad39023d28adbf43a79ac74ca50ff2d, type: 3}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_Name: 
   m_EditorClassIdentifier: 
   TargetObjects:
   - {fileID: 1741601317770380050}
   TargetScripts:
+<<<<<<< HEAD
   - {fileID: 1741601317212569454}
+=======
+  - {fileID: 1741601317212569449}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   TargetComponents: []
   ActivateBy: 3
   DeactivateBy: 1
   WhoIsTriggered:
   - Player
+<<<<<<< HEAD
   - Box
+=======
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   TargetTime: 0
   TargetButton: 
 --- !u!1 &1741601317770380050
@@ -500,7 +578,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: 29bc2ab0e2261e04284392ded549f615, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 72beb6449f6385347ae8426c60a99b70, type: 3}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -581,7 +663,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: cae51a6cde2746e468303340d5112944, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 65f9edb8a307ee443b93aac50f5983f9, type: 3}
+>>>>>>> 3945c350e5c2be7b2a691b7df6253f69ea6512a5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
