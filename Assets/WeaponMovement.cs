@@ -1,9 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Scripts
-{
-    public class WeaponMovement : MonoBehaviour
+public class WeaponMovement : MonoBehaviour
 {
     private Camera _mainCamera;
 
@@ -82,5 +80,4 @@ namespace Scripts
 
         return rotation;
     }
-}
 }
