@@ -945,7 +945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200102049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 171.3, y: -53, z: -10}
+  m_LocalPosition: {x: 183.53, y: -51.600002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 783673239}
@@ -1793,7 +1793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 171.3, y: -53, z: -10}
+  m_LocalPosition: {x: 183.53, y: -51.600002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2014483060}
@@ -1812,7 +1812,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Door
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 863614181}
     - target: {fileID: 2197639042258711421, guid: 0a3d39ef501f2794b8a605d14bb46082,
         type: 3}
       propertyPath: MoveDoorDistanceY
@@ -7119,7 +7119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243316492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 171.3, y: -53.8, z: 0}
+  m_LocalPosition: {x: 183.53, y: -52.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 543906894}

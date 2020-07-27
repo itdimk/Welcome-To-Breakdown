@@ -223,16 +223,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("EnemyBox"))
         {
-            Debug.Log(other);
-            GetDamage(8f, other.gameObject);
+            GetDamage(6f, other.gameObject);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
 
-        if (other.gameObject.CompareTag("Spikes"))
-        {
-            GetDamage(10f, other.gameObject);
-            GetComponent<SpriteRenderer>().sprite = HitSprite;
-        }
+      
 
         if (other.gameObject.CompareTag("EnemyEye"))
         {
@@ -245,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Spikes"))
         {
-            GetDamage(10f, other.gameObject);
+            GetDamage(5f, other.gameObject);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
     }
