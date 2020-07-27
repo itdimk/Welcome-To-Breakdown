@@ -1521,7 +1521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200102049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 244.5, y: 127.4, z: -10}
+  m_LocalPosition: {x: 6.81, y: 0.5700004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 783673239}
@@ -8753,7 +8753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 244.5, y: 127.4, z: -10}
+  m_LocalPosition: {x: 6.81, y: 0.5700004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2014483060}
@@ -12011,10 +12011,13 @@ MonoBehaviour:
   isOnLadder: 0
   runSpeed: 40
   Health: 100
+  Armor: 0
+  ArmorAbsorption: 0.9
   HitSprite: {fileID: 0}
   EndLevelScreen: {fileID: 1413089615}
   EndLevelScreenTime: 3000
   HelthText: {fileID: 257916120}
+  ArmorText: {fileID: 0}
   HitPushPower: 3000
   LadderMaxSpeed: 12
 --- !u!70 &903250602
@@ -12263,7 +12266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903250600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 244.5, y: 126.6, z: 0}
+  m_LocalPosition: {x: 6.81, y: -0.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1851509494}

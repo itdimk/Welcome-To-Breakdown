@@ -11,11 +11,12 @@ using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public bool isOnLadder = false;
 
     public float runSpeed = 40f;
     public float Health = 100f;
+    public float Armor = 0f;
+    public float ArmorAbsorption = 0.9f;
     private float horizontalMove = 0f;
 
     private bool jump = false;
@@ -25,12 +26,23 @@ public class PlayerMovement : MonoBehaviour
     public int EndLevelScreenTime = 3000;
 
     public TextMeshProUGUI HelthText;
+    public TextMeshProUGUI ArmorText;
     public float HitPushPower = 3000;
-    
+
     private Stopwatch delayedSceneLoadTimer = new Stopwatch();
 
     public float LadderMaxSpeed = 12;
-    
+
+
+    private void Start()
+    {
+        if(HelthText != null)
+            HelthText.text = Mathf.Round(Health).ToString();
+        
+        if(ArmorText != null)
+            ArmorText.text = Mathf.Round(Armor).ToString();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -56,9 +68,9 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(Health <= 0)
+        if (Health <= 0)
             Die();
-        
+
         if (!jump)
             FixClimb();
 
@@ -82,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("Scary"))
         {
-           // GameObject.FindWithTag("Scary2").gameObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
+            // GameObject.FindWithTag("Scary2").gameObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
         }
 
         if (other.gameObject.CompareTag("Secrets1"))
@@ -95,11 +107,11 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-       
+
         if (other.gameObject.CompareTag("Chest"))
         {
-            
         }
+
         if (other.gameObject.CompareTag("EndLevel"))
         {
             delayedSceneLoadTimer.Restart();
@@ -109,8 +121,6 @@ public class PlayerMovement : MonoBehaviour
         {
             EndLevelScreen.SetActive(true);
         }
-      
-        
     }
 
     private void LoadNextSceneIfRequired()
@@ -121,9 +131,9 @@ public class PlayerMovement : MonoBehaviour
 
             int activeIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.UnloadSceneAsync(activeIndex);
-            SceneManager.LoadScene( activeIndex+ 1);
-         
-                
+            SceneManager.LoadScene(activeIndex + 1);
+
+
             EndLevelScreen.SetActive(false);
         }
     }
@@ -131,16 +141,26 @@ public class PlayerMovement : MonoBehaviour
     public void Cure(float cureAmount)
     {
         Health += cureAmount;
-        HelthText.text = Health.ToString();
+
+        if (HelthText != null)
+            HelthText.text = Mathf.Round(Health).ToString();
     }
-    
+
+    public void ToArmor(float amount)
+    {
+        this.Armor += amount;
+
+        if (ArmorText != null)
+            ArmorText.text = Mathf.Round(amount).ToString();
+    }
+
     private void Push(GameObject other)
     {
         Vector3 myPos = other.transform.position;
         Vector3 target = transform.position;
 
         Vector3 forceVector = new Vector3(target.x - myPos.x, target.y - myPos.y);
-        
+
         float multiplier = HitPushPower / forceVector.magnitude;
         forceVector.Scale(new Vector3(multiplier, multiplier));
 
@@ -152,11 +172,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetDamage(float damageAmount, GameObject source)
     {
-        Health -= damageAmount;
+        float absorbed = Math.Min(damageAmount * ArmorAbsorption, Armor * ArmorAbsorption);
+
+      
+        Health = Math.Max(0, Health - (damageAmount - absorbed));
+        Armor = Math.Max(0, Armor - absorbed);
 
         Push(source.gameObject);
+
+        if(HelthText != null)
+            HelthText.text = Mathf.Round(Health).ToString();
         
-        HelthText.text = Health.ToString();
+        if(ArmorText != null)
+            ArmorText.text = Mathf.Round(Armor).ToString();
+        
         FindObjectOfType<AudioManager>().Play("PlayerHit");
 
         if (Health <= 20 && Health > 10)
@@ -179,30 +208,32 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Space))
             {
-                if(GetComponent<Rigidbody2D>().velocity.y < LadderMaxSpeed)
+                if (GetComponent<Rigidbody2D>().velocity.y < LadderMaxSpeed)
                     GetComponent<Rigidbody2D>()?.AddForce(new Vector2(0, 650));
-                
-                if(GetComponent<Rigidbody2D>().velocity.y < 0)
+
+                if (GetComponent<Rigidbody2D>().velocity.y < 0)
                     GetComponent<Rigidbody2D>()?.AddForce(new Vector2(0, 650));
             }
             else
             {
-                if(GetComponent<Rigidbody2D>().velocity.y <= -LadderMaxSpeed)
+                if (GetComponent<Rigidbody2D>().velocity.y <= -LadderMaxSpeed)
                     GetComponent<Rigidbody2D>()?.AddForce(new Vector2(0, 580));
             }
         }
-        
+
         if (other.gameObject.CompareTag("EnemyBox"))
         {
             Debug.Log(other);
             GetDamage(8f, other.gameObject);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
+
         if (other.gameObject.CompareTag("Spikes"))
         {
             GetDamage(10f, other.gameObject);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
+
         if (other.gameObject.CompareTag("EnemyEye"))
         {
             GetDamage(4, other.gameObject);
