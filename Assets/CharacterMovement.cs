@@ -53,6 +53,8 @@ public class CharacterMovement : MonoBehaviour
         
         Move();
         SetAnimatorValues();
+        
+        _jumpHasBeenPressed = false;
     }
 
     private void Move()
@@ -78,7 +80,6 @@ public class CharacterMovement : MonoBehaviour
         {
             var force = new Vector2(0, JumpForce);
             _physics.AddForce(force);
-            _jumpHasBeenPressed = false;
         }
     }
 

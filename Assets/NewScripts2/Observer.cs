@@ -34,13 +34,16 @@ public class Observer : MonoBehaviour
     void Start()
     {
         _mainCamera = Camera.main;
+        
+        if(Origin.parent != transform || Tip.parent != transform)
+            Debug.LogWarning($"{nameof(Tip)} and {nameof(Origin)} should be children of this object");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         if (FlipSupport)
-            _mirror = transform.parent.rotation.y < 0;
+            _mirror = transform.rotation.y < 0;
 
         float currAngle = GetCurrentAngle();
         float targetAngle = GetTargetAngle();

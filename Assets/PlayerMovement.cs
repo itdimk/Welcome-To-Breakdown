@@ -86,6 +86,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            GetDamage(4f, other.gameObject);
+            GetComponent<SpriteRenderer>().sprite = HitSprite;
+        }
+        
         if (other.gameObject.CompareTag("Coins"))
         {
             Destroy(other.gameObject);
@@ -202,6 +208,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+     
+        
         if (other.gameObject.CompareTag("Ladder"))
         {
             isOnLadder = true;
@@ -223,7 +231,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("EnemyBox"))
         {
-            GetDamage(6f, other.gameObject);
+            GetDamage(8f, other.gameObject);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
 
@@ -240,9 +248,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Spikes"))
         {
-            GetDamage(5f, other.gameObject);
+            GetDamage(6f, other.gameObject);
             GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
+        
+      
     }
 
     public void OnTriggerExit2D(Collider2D other)
