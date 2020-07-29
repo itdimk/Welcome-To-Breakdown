@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Mode
+public enum Mode23
 {
     LookAtMouse,
     LookAtTarget,
@@ -15,7 +15,7 @@ public class Observer : MonoBehaviour
     public Transform Origin;
     public Transform Tip;
 
-    public Mode Mode;
+    public Mode23 Mode;
 
     public float RotationSpeed = 1.0F;
 
@@ -64,10 +64,10 @@ public class Observer : MonoBehaviour
 
         switch (Mode)
         {
-            case Mode.LookAtMouse:
+            case Mode23.LookAtMouse:
                 targetDirection = _mainCamera.ScreenToWorldPoint(Input.mousePosition) - Origin.position;
                 break;
-            case global::Mode.LookAtTarget:
+            case Mode23.LookAtTarget:
                 targetDirection = Target.position - Origin.position;
                 break;
         }
