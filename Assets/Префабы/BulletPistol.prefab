@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6312900162094917242}
   - component: {fileID: 8714556952565975162}
   - component: {fileID: 1741373958086659232}
+  - component: {fileID: 2468925888089267456}
   m_Layer: 0
   m_Name: BulletPistol
   m_TagString: Bullet
@@ -136,3 +137,20 @@ MonoBehaviour:
   speed: 80
   damage: 40
   rb: {fileID: 6312900162094917242}
+--- !u!114 &2468925888089267456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2269188884099551936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e21e03993ac464c818046433a4e2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Who:
+  - Player
+  DestroyOnDelay: 2
+  DestroyOnCollision: 1
+  DestroyOnTrigger: 0
