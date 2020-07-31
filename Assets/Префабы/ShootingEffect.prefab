@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4301580460390795081}
   - component: {fileID: 4301580460390795086}
   - component: {fileID: 4301580460390795087}
+  - component: {fileID: -7649712542009412459}
   m_Layer: 0
   m_Name: ShootingEffect
   m_TagString: Untagged
@@ -4812,3 +4813,20 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-7649712542009412459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4301580460390795084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e21e03993ac464c818046433a4e2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Who:
+  - Player
+  DestroyOnDelay: 1
+  DestroyOnCollision: 0
+  DestroyOnTrigger: 0
