@@ -20,6 +20,7 @@ public class ObserverNew : MonoBehaviour
 
     public float RotationSpeed = 1.0F;
 
+    public bool LimitAngle = true;
     public float MaxAngle = 90F;
     public float MinAngle = 90F;
 
@@ -71,7 +72,10 @@ public class ObserverNew : MonoBehaviour
                 break;
         }
 
-        return LimitRotation(Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg);
+        if(LimitAngle)
+            return LimitRotation(Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg);
+        else
+            return  Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
     }
 
     private void Rotate(float currAngle, float targetAngle, float rotationZ)
