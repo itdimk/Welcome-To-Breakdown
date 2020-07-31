@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6525716715395624039}
   - component: {fileID: 8501598622436770407}
   - component: {fileID: 1522629973201864381}
+  - component: {fileID: 3002012398851070066}
   m_Layer: 0
-  m_Name: bullet3233 2
+  m_Name: bulletUzi
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,6 +134,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71638e0fbbb7f8c45a6006e95e1c2435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 80
   damage: 40
   rb: {fileID: 6525716715395624039}
+--- !u!114 &3002012398851070066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330297758029224157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e21e03993ac464c818046433a4e2d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Who:
+  - Player
+  DestroyOnDelay: 2
+  DestroyOnCollision: 1
+  DestroyOnTrigger: 0

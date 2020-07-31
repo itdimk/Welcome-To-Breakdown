@@ -22,12 +22,19 @@ public class bullet3233 : MonoBehaviour
     {
         
         Enemy2 enemy2 = hitInfo.gameObject.GetComponent<Enemy2>();
+        BomberDeath bomber = hitInfo.gameObject.GetComponent<BomberDeath>();
         if (enemy2 != null)
         {
             enemy2.TakeDamage(damage);
             Destroy(gameObject);
         }
         
+        if (bomber != null)
+        {
+            bomber.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+
         
     }
 }
