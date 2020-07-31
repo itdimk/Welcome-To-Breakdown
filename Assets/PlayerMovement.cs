@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool jump = false;
     private bool Crouch = false;
-    public Sprite HitSprite;
+    public string HitAnimationName = "hit";
     public GameObject EndLevelScreen;
     public int EndLevelScreenTime = 3000;
 
@@ -89,7 +89,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             GetDamage(4f, other.gameObject);
-            GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
         
         if (other.gameObject.CompareTag("Coins"))
@@ -178,6 +177,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetDamage(float damageAmount, GameObject source)
     {
+       GetComponent<Animator>().Play(HitAnimationName);
+        
         float absorbed = Math.Min(damageAmount * ArmorAbsorption, Armor * ArmorAbsorption);
 
       
@@ -232,7 +233,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyBox"))
         {
             GetDamage(8f, other.gameObject);
-            GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
 
       
@@ -240,7 +240,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("EnemyEye"))
         {
             GetDamage(4, other.gameObject);
-            GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
     }
 
@@ -249,7 +248,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Spikes"))
         {
             GetDamage(6f, other.gameObject);
-            GetComponent<SpriteRenderer>().sprite = HitSprite;
         }
         
       
