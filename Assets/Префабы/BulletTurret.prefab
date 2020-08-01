@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1741373958086659232}
   - component: {fileID: 2468925888089267456}
   m_Layer: 0
-  m_Name: BulletPistol
+  m_Name: BulletTurret
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,5 +153,5 @@ MonoBehaviour:
   - Obstacle
   - Player
   DestroyOnDelay: 2
-  DestroyOnCollision: 0
+  DestroyOnCollision: 1
   DestroyOnTrigger: 1
