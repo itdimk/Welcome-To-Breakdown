@@ -6,6 +6,8 @@ public class PreemptionMarker : MonoBehaviour
 {
     public Rigidbody2D Target;
     public float Scale = 0.5f;
+    public float OffsetY = 0;
+    public bool FreezeY = false;
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,9 @@ public class PreemptionMarker : MonoBehaviour
 
         Vector2 newPos =  targetPos + (Target.velocity * Scale);
 
+        if(FreezeY)
+            newPos.Set(newPos.x, targetPos.y + OffsetY);
+        
         transform.position = newPos;
     }
 }
