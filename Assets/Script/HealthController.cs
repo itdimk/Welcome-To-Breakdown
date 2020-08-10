@@ -18,6 +18,12 @@ namespace Itdimk
         public Text WriteHpTo;
         public Text WriteArmorTo;
 
+        public event Action Dead;
+        public event Action Hitted;
+        public event Action Cured;
+        public event Action Armored;
+        
+
         private void Start()
         {
             SetHp(hp);
@@ -31,6 +37,8 @@ namespace Itdimk
             SetArmor(Math.Max(0, armor - absorbed));
             SetHp(Math.Max(0, hp - (amount - absorbed)));
 
+            Hitted?.Invoke();
+
             if (hp <= 0)
                 Die();
         }
@@ -38,11 +46,15 @@ namespace Itdimk
         public void Cure(float amount)
         {
             SetHp(Math.Min(maxHp, hp + amount));
+
+            Cured?.Invoke();
         }
 
         public void Armor(float amount)
         {
             SetArmor(Math.Min(maxArmor, armor + amount));
+
+            Armored?.Invoke();
         }
 
         public void SetArmor(float value)
@@ -63,7 +75,9 @@ namespace Itdimk
 
         public void Die()
         {
-            Destroy(gameObject);
+            Dead?.Invoke();
+
+            gameObject.SetActive(false);
         }
     }
 }

@@ -10,8 +10,12 @@ namespace Itdimk
         private Camera _mainCamera;
         private Vector3 _mousePosition;
         public bool HideCursor;
-
-        // Start is called before the first frame update
+        
+        public float Smoothness = 0.05f;
+        
+        private Vector3 _velocity;
+    
+        
         void Start()
         {
             _mainCamera = Camera.main;
@@ -27,7 +31,8 @@ namespace Itdimk
         void FixedUpdate()
         {
             Vector2 position = _mainCamera.ScreenToWorldPoint(_mousePosition);
-            transform.position = position;
+            transform.position = Vector3.SmoothDamp(transform.position, position, ref _velocity, 
+                Smoothness) ;
         }
     }
 }
