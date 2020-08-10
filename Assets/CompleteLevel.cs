@@ -15,6 +15,6 @@ public class CompleteLevel : MonoBehaviour
         
         if(currLevel > levels)
             PlayerPrefs.SetInt("levels-completed", currLevel);
-
+       
     }
 }

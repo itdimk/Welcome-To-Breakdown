@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 80
-  damage: 40
+  damage: 50
   rb: {fileID: 6525716715395624039}
 --- !u!114 &3002012398851070066
 MonoBehaviour:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Who:
-  - Player
+  - Enemy
   DestroyOnDelay: 2
   DestroyOnCollision: 1
   DestroyOnTrigger: 0

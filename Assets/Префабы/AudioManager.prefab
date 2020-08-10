@@ -63,26 +63,32 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: 31dbe080806d84148ab80fc93dbef53c, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 7d5795817b81f9a48b79443837ba7101, type: 3}
+    volume: 0.241
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Shooting
     clip: {fileID: 8300000, guid: 0d4c588eb76cfd64497d38017ea72dd0, type: 3}
-    volume: 1
+    volume: 0.254
     pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: EyeDeath
-    clip: {fileID: 8300000, guid: 6eac6ef1ee9f89b4981f80af69d83d0f, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Coin
     clip: {fileID: 8300000, guid: 16f6ba62752f6f340a663ecd14475490, type: 3}
-    volume: 1
+    volume: 0.587
     pitch: 1
-    loop: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EyeDeath
+    clip: {fileID: 8300000, guid: 6eac6ef1ee9f89b4981f80af69d83d0f, type: 3}
+    volume: 0.343
+    pitch: 1.809
+    loop: 0
+    source: {fileID: 0}
+  - name: LevelComplete
+    clip: {fileID: 8300000, guid: 454b45e8595266342865e4b21b817716, type: 3}
+    volume: 0.343
+    pitch: 1
+    loop: 0
     source: {fileID: 0}

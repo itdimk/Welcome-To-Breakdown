@@ -150,7 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Who:
-  - Player
+  - Enemy
+  - Obstacle
   DestroyOnDelay: 2
   DestroyOnCollision: 1
   DestroyOnTrigger: 0
