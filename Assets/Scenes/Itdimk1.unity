@@ -430,10 +430,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 5
   DeactivateBy: 6
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: Fire1
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &33706834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,10 +1130,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 3
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &163957353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1172,6 +1184,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 5326419930252445462, guid: 8efd2cd5db2a5194597c13d4a9761bd8, type: 3}
   Radius: 0.2
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &181257132
 GameObject:
   m_ObjectHideFlags: 0
@@ -16550,6 +16565,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 603038485}
   Radius: 1
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &259002975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16568,10 +16586,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
   TargetTime: 1
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &259002976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16786,10 +16810,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 3
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &283960158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16808,6 +16838,9 @@ MonoBehaviour:
   ActivateOnSpawn: 0
   Target: {fileID: 4985064224791371562, guid: 56682cf2424b2d042b5418aee0a02d03, type: 3}
   Radius: 0.2
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &306201235
 GameObject:
   m_ObjectHideFlags: 0
@@ -17124,6 +17157,18 @@ MonoBehaviour:
   armorAbsorption: 0.9
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCure:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &340486963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17316,11 +17361,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 0
   DeactivateBy: 1
-  WhoIsTriggered:
-  - Player
-  - Box
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &349316121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17340,11 +17390,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
-  - Box
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &349316122
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17527,12 +17582,6 @@ MonoBehaviour:
   oneUse: 1
   users:
   - Player
---- !u!4 &353018868 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1741601317212569453, guid: 9e31429e18f4ab54bbc5e32d62362be4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1741601318424714780}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &385394122
 GameObject:
   m_ObjectHideFlags: 0
@@ -18102,7 +18151,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 484529782}
-  - component: {fileID: 484529783}
   - component: {fileID: 484529784}
   m_Layer: 0
   m_Name: Sound
@@ -18125,20 +18173,6 @@ Transform:
   m_Father: {fileID: 924059145}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &484529783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484529781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3121acc86c404e4daec57df0de28f39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SoundName: Shooting
-  Manager: {fileID: 1356450422}
 --- !u!114 &484529784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18197,13 +18231,12 @@ GameObject:
   - component: {fileID: 497170165}
   - component: {fileID: 497170164}
   - component: {fileID: 497170169}
-  - component: {fileID: 497170170}
   - component: {fileID: 497170171}
   - component: {fileID: 497170173}
   - component: {fileID: 497170167}
   - component: {fileID: 497170168}
   - component: {fileID: 497170166}
-  - component: {fileID: 497170172}
+  - component: {fileID: 497170170}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -18270,7 +18303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497170163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.8, y: -27.7, z: 0}
+  m_LocalPosition: {x: 1.51, y: -0.77, z: 0}
   m_LocalScale: {x: 0.6650989, y: 0.7908896, z: 0.7989988}
   m_Children:
   - {fileID: 1315877399}
@@ -18372,11 +18405,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   maxHp: 100
-  armor: 1000
-  maxArmor: 1000
+  armor: 0
+  maxArmor: 100
   armorAbsorption: 0.9
   WriteHpTo: {fileID: 1819360770}
   WriteArmorTo: {fileID: 1341181723}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1356450422}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 497170166}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: hit-anim
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1356450422}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Hit
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCure:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &497170171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18393,24 +18471,6 @@ MonoBehaviour:
   MaxLadderUpSpeed: 5
   MaxLadderDownSpeed: 5
   HorizontalMovementThreshold: 0.01
---- !u!114 &497170172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497170163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b9f360477ffa84e938294a9f2c94ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HitAnimationName: hit-anim
-  DeathAnimationName: 
-  HitSoundName: Hit
-  DeathSoundName: Death
-  Animator: {fileID: 497170166}
-  Audio: {fileID: 1356450422}
 --- !u!114 &497170173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18639,7 +18699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.8, y: -27.7, z: -10}
+  m_LocalPosition: {x: 1.51, y: -0.77, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18696,6 +18756,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 603038485}
   Radius: 1
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &523483669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18714,10 +18777,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
   TargetTime: 1
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &523483670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19680,7 +19749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &677134151
 Transform:
   m_ObjectHideFlags: 0
@@ -19947,10 +20016,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &706473013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19969,10 +20044,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 0
   DeactivateBy: 1
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &706779319
 GameObject:
   m_ObjectHideFlags: 0
@@ -20813,6 +20894,18 @@ MonoBehaviour:
   armorAbsorption: 0.9
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCure:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &799544752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21246,10 +21339,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 3
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &905209087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21294,6 +21393,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 5326419930252445462, guid: 8efd2cd5db2a5194597c13d4a9761bd8, type: 3}
   Radius: 0.1
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &909853922
 GameObject:
   m_ObjectHideFlags: 0
@@ -21997,7 +22099,7 @@ Transform:
   m_LocalPosition: {x: 11.745464, y: 0.9698, z: -341.2478}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 353018868}
+  m_Father: {fileID: 1505763697}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1010004100
@@ -22593,7 +22695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106127753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.8, y: -27.7, z: -10}
+  m_LocalPosition: {x: 1.51, y: -0.77, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 258472968}
@@ -22655,6 +22757,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 1714466992}
   Radius: 1
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1117919061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22673,10 +22778,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
   TargetTime: 1
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1117919062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23140,6 +23251,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 603038485}
   Radius: 1
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1226201977
 GameObject:
   m_ObjectHideFlags: 0
@@ -23272,10 +23386,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 3
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1231046818
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23320,6 +23440,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 5326419930252445462, guid: 8efd2cd5db2a5194597c13d4a9761bd8, type: 3}
   Radius: 0.2
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1237658061
 GameObject:
   m_ObjectHideFlags: 0
@@ -30173,6 +30296,18 @@ MonoBehaviour:
   armorAbsorption: 0.9
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCure:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1283682197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32511,6 +32646,18 @@ MonoBehaviour:
   armorAbsorption: 0.9
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCure:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1330089017
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33034,10 +33181,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 3
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1355755095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33082,6 +33235,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 5326419930252445462, guid: 8efd2cd5db2a5194597c13d4a9761bd8, type: 3}
   Radius: 0.2
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1356450421
 GameObject:
   m_ObjectHideFlags: 0
@@ -33269,10 +33425,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1362338045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34384,6 +34546,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 603038485}
   Radius: 1
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1395987622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34402,10 +34567,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
   TargetTime: 1
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1395987623
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34705,6 +34876,12 @@ Transform:
   m_Father: {fileID: 1683884322}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1505763697 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1741601317212569453, guid: 9e31429e18f4ab54bbc5e32d62362be4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1741601318424714780}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1513825592
 GameObject:
   m_ObjectHideFlags: 0
@@ -36886,6 +37063,18 @@ MonoBehaviour:
   armorAbsorption: 0.9
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCure:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1714466996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37084,10 +37273,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 3
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1724594008
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37132,6 +37327,9 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 5326419930252445462, guid: 8efd2cd5db2a5194597c13d4a9761bd8, type: 3}
   Radius: 0.1
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1728055273
 GameObject:
   m_ObjectHideFlags: 0
@@ -37968,11 +38166,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 0
   DeactivateBy: 1
-  WhoIsTriggered:
-  - Player
-  - Box
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1894763258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38361,10 +38564,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1969314742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38670,6 +38879,18 @@ MonoBehaviour:
   armorAbsorption: 0.9
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCure:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1990878388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39004,6 +39225,20 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 924059144}
   Radius: 0.08
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1356450422}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shooting
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2070410694
 GameObject:
   m_ObjectHideFlags: 0
@@ -40773,6 +41008,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 5.8
       objectReference: {fileID: 0}
+    - target: {fileID: 5686659692811805910, guid: 9e31429e18f4ab54bbc5e32d62362be4,
+        type: 3}
+      propertyPath: TargetTriggerTags.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686659692811805910, guid: 9e31429e18f4ab54bbc5e32d62362be4,
+        type: 3}
+      propertyPath: TargetTriggerTags.Array.data[1]
+      value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686659692811805911, guid: 9e31429e18f4ab54bbc5e32d62362be4,
+        type: 3}
+      propertyPath: TargetTriggerTags.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686659692811805911, guid: 9e31429e18f4ab54bbc5e32d62362be4,
+        type: 3}
+      propertyPath: TargetTriggerTags.Array.data[1]
+      value: Box
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e31429e18f4ab54bbc5e32d62362be4, type: 3}
 --- !u!114 &5686659693382587154
@@ -40795,11 +41050,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
-  - Box
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5686659693382587155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40818,11 +41078,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 0
   DeactivateBy: 1
-  WhoIsTriggered:
-  - Player
-  - Box
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &5722176331375369525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40946,11 +41211,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 1
   DeactivateBy: 0
-  WhoIsTriggered:
-  - Player
-  - Box
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6017523348498119613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40969,11 +41239,16 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 0
   DeactivateBy: 1
-  WhoIsTriggered:
-  - Player
-  - Box
   TargetTime: 0
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &6957066490244339100
 BoxCollider2D:
   m_ObjectHideFlags: 0

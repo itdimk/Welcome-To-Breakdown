@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -13,17 +14,16 @@ namespace Itdimk
         public float maxArmor = 100.0f;
 
         public float armorAbsorption = 0.9f;
-
-
+        
         public Text WriteHpTo;
         public Text WriteArmorTo;
 
-        public event Action Dead;
-        public event Action Hitted;
-        public event Action Cured;
-        public event Action Armored;
+        public UnityEvent OnDeath;
+        public UnityEvent OnHit;
+        public UnityEvent OnCure;
+        public UnityEvent OnArmor;
         
-
+        
         private void Start()
         {
             SetHp(hp);
@@ -37,7 +37,7 @@ namespace Itdimk
             SetArmor(Math.Max(0, armor - absorbed));
             SetHp(Math.Max(0, hp - (amount - absorbed)));
 
-            Hitted?.Invoke();
+            OnHit?.Invoke();
 
             if (hp <= 0)
                 Die();
@@ -47,14 +47,14 @@ namespace Itdimk
         {
             SetHp(Math.Min(maxHp, hp + amount));
 
-            Cured?.Invoke();
+            OnCure?.Invoke();
         }
 
         public void Armor(float amount)
         {
             SetArmor(Math.Min(maxArmor, armor + amount));
 
-            Armored?.Invoke();
+            OnArmor?.Invoke();
         }
 
         public void SetArmor(float value)
@@ -75,7 +75,7 @@ namespace Itdimk
 
         public void Die()
         {
-            Dead?.Invoke();
+            OnDeath?.Invoke();
 
             gameObject.SetActive(false);
         }
