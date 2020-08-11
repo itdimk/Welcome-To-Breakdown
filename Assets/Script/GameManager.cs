@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public UnityEvent OnPause;
     public UnityEvent OnResume;
+    public UnityEvent OnQuit;
     public string PauseButton = "Cancel";
 
 
@@ -41,7 +42,7 @@ public class GameManager : MonoBehaviour
     public void Pause()
     {
         IsPaused = true;
-        Time.timeScale = 0.01f;
+        Time.timeScale = 0f;
         OnPause.Invoke();
     }
 
@@ -52,6 +53,11 @@ public class GameManager : MonoBehaviour
         OnResume.Invoke();
     }
 
+    public void Quit()
+    {
+        OnQuit.Invoke();
+    }
+    
     public void Exit()
     {
         Application.Quit();

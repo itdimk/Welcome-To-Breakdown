@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace Itdimk
@@ -14,9 +15,12 @@ namespace Itdimk
         public GameObject Target;
         public float Radius = 1.0f;
 
+        public UnityEvent OnSpawn;
+        
         private int _currentIndex;
         private float _startTick;
 
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -59,6 +63,8 @@ namespace Itdimk
 
             if (ActivateOnSpawn)
                 obj.SetActive(true);
+            
+            OnSpawn?.Invoke();
         }
 
         Vector3 GetSpawnPoint()
