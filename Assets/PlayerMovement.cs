@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI HelthText;
     public TextMeshProUGUI ArmorText;
     public float HitPushPower = 3000;
-
+    public UnityEvent OnDeath;
     private Stopwatch delayedSceneLoadTimer = new Stopwatch();
 
     public float LadderMaxSpeed = 12;
@@ -205,6 +206,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Destroy(gameObject);
         FindObjectOfType<AudioManager>().Play("PlayerDeath");
+        OnDeath.Invoke();
     }
 
     private void OnTriggerStay2D(Collider2D other)
