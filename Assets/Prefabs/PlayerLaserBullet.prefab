@@ -15,8 +15,10 @@ GameObject:
   - component: {fileID: 8600174889227288171}
   - component: {fileID: 1843204760447889952}
   - component: {fileID: 7944174690488680355}
+  - component: {fileID: 5958359322114388004}
+  - component: {fileID: 3448989081011793022}
   m_Layer: 0
-  m_Name: LaserBullet
+  m_Name: PlayerLaserBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +86,7 @@ MonoBehaviour:
   DamageOnEnter: 1
   DamageOnExit: 0
   who:
-  - Player
+  - Enemy
 --- !u!114 &2496480697508513133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,9 +193,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Who:
   - Wall
+  - Enemy
   DestroyOnDelay: 2
   DestroyOnCollision: 0
   DestroyOnTrigger: 1
+--- !u!114 &5958359322114388004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326419930252445462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d3aa3f35cc67f4abfddd390d5a4ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tip: {fileID: 37486348026463222}
+  Origin: {fileID: 3577229301894480537}
+  Target: {fileID: 3448989081011793022}
+  RotationSpeed: 1
+  MaxAngle: 90
+  MinAngle: 0
+  Accuracy: 0.01
+  LimitAngle: 0
+  FlipSupport: 0
+  FlipSupportProvider: {fileID: 0}
+--- !u!114 &3448989081011793022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326419930252445462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f01f9adc5443148b2073c6b49aed34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: Enemy
+  ScanInterval: 4
+  Priority: 0
+  MaxDistance: 10
 --- !u!1 &9084947075596699363
 GameObject:
   m_ObjectHideFlags: 0

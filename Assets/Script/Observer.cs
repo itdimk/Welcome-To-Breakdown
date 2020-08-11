@@ -1,43 +1,32 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.U2D;
 
 namespace Itdimk
 {
-    public enum Mode
-    {
-        LookAtMouse,
-        LookAtTarget,
-    }
-
     public class Observer : MonoBehaviour
     {
-        public Transform Target;
-        public Transform Tip;
+        public Transform Direction;
         public Transform Origin;
 
-        public Mode Mode;
+        public TargetSetterBase Target;
 
         public float RotationSpeed = 1.0F;
 
         public float MaxAngle = 90F;
-        public float MinAngle = 90F;
+        public float MinAngle = 0F;
 
-        public float Accuracy = 1.0f;
+        public float Error = 0.01f;
 
-        private Camera _mainCamera;
         private float _thresholdAngle;
         private bool _mirror;
 
+        public bool LimitAngle = true;
         public bool FlipSupport = false;
         public Transform FlipSupportProvider;
 
         // Start is called before the first frame update
         void Start()
         {
-            _mainCamera = Camera.main;
         }
 
         // Update is called once per frame
@@ -55,43 +44,32 @@ namespace Itdimk
 
         private float GetCurrentAngle()
         {
-            Vector2 currDirection = Tip.position - Origin.position;
+            Vector2 currDirection = Direction.position - Origin.position;
             return Mathf.Atan2(currDirection.y, currDirection.x) * Mathf.Rad2Deg;
         }
 
         private float GetTargetAngle()
         {
-            Vector2 targetDirection = Vector2.zero;
-
-            switch (Mode)
-            {
-                case Mode.LookAtMouse:
-                    targetDirection = _mainCamera.ScreenToWorldPoint(Input.mousePosition) - Origin.position;
-                    break;
-                case Mode.LookAtTarget:
-                    targetDirection = Target.position - Origin.position;
-                    break;
-            }
-
-            return LimitRotation(Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg);
+            Vector2 targetDirection = Target.GetTargetPos() - Origin.position;
+            return LimitRotationIfRequired(Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg);
         }
 
         private void Rotate(float currAngle, float targetAngle, float rotationZ)
         {
             var axis = new Vector3(0, 0, 1);
 
-            if (GetAngleDelta(_thresholdAngle, targetAngle) > Accuracy)
+            if (GetAngleDelta(_thresholdAngle, targetAngle) > Error)
             {
                 transform.RotateAround(Origin.position, axis, rotationZ);
 
-                if (Mathf.Abs(targetAngle - currAngle) <= Accuracy)
+                if (Mathf.Abs(targetAngle - currAngle) <= Error)
                     _thresholdAngle = targetAngle;
             }
         }
 
         private float GetRotationZ(float currAngle, float targetAngle)
         {
-            float rotationSpeed = Mathf.Min(Math.Abs(currAngle - targetAngle), RotationSpeed);
+            float rotationSpeed = Mathf.Min(GetAngleDelta(currAngle, targetAngle), RotationSpeed);
 
             if (currAngle - targetAngle > 180 || targetAngle - currAngle > 180)
                 return Math.Sign(currAngle) * rotationSpeed;
@@ -100,8 +78,11 @@ namespace Itdimk
         }
 
 
-        private float LimitRotation(float rotation)
+        private float LimitRotationIfRequired(float rotation)
         {
+            if (!LimitAngle)
+                return rotation;
+
             float maxAngle = _mirror ? (MaxAngle + 180) % 360 : MaxAngle;
             float minAngle = _mirror ? (MinAngle + 180) % 360 : MinAngle;
 
@@ -143,15 +124,21 @@ namespace Itdimk
 
         private float GetAngleDelta(float angle1, float angle2)
         {
-            angle1 %= 360;
-            angle2 %= 360;
+            if (angle1 < 0 || angle2 < 0)
+            {
+                angle1 = To360(angle1);
+                angle2 = To360(angle2);
+            }
+            else
+            {
+                angle1 %= 360;
+                angle2 %= 360;
+            }
 
             float delta1 = Mathf.Abs(angle1 - angle2);
             float delta2 = 360 - delta1;
 
             return Mathf.Min(delta1, delta2);
         }
-
     }
-
 }
