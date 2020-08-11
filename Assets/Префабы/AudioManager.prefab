@@ -70,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Shooting
     clip: {fileID: 8300000, guid: 0d4c588eb76cfd64497d38017ea72dd0, type: 3}
-    volume: 0.254
+    volume: 0.734
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -86,9 +86,15 @@ MonoBehaviour:
     pitch: 1.809
     loop: 0
     source: {fileID: 0}
-  - name: LevelComplete
-    clip: {fileID: 8300000, guid: 454b45e8595266342865e4b21b817716, type: 3}
-    volume: 0.343
+  - name: BoomBomb
+    clip: {fileID: 8300000, guid: 8ec84d7404a66874f9d7ae6ca5d630f4, type: 3}
+    volume: 0.575
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BomberDeath
+    clip: {fileID: 8300000, guid: c19e6468dbc3bfd4e8e165c690161bfb, type: 3}
+    volume: 0.575
     pitch: 1
     loop: 0
     source: {fileID: 0}

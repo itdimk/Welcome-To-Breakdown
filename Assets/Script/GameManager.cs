@@ -55,11 +55,15 @@ public class GameManager : MonoBehaviour
 
     public void Quit()
     {
+      
+        Resume();
         OnQuit.Invoke();
+        Cursor.visible = true;
     }
     
     public void Exit()
     {
+        Resume();
         Application.Quit();
         Debug.Log("Application quit is called");
     }
