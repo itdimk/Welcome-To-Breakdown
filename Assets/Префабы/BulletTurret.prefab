@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2269188884099551936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 194.23065, y: -52.329628, z: -1.638521}
-  m_LocalScale: {x: 2.042333, y: 1.0542717, z: 1}
+  m_LocalPosition: {x: 190.62, y: -52.329628, z: -1.638521}
+  m_LocalScale: {x: 0.87394804, y: 1.0542717, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 22
-  m_Sprite: {fileID: 21300000, guid: 8bf4a7ee4fd4eb248ab598524c2764ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1fe05747ba952f640af34d713d38097b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 80
-  damage: 40
+  damage: 10
   rb: {fileID: 6312900162094917242}
 --- !u!114 &2468925888089267456
 MonoBehaviour:
