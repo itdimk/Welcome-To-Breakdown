@@ -10,7 +10,7 @@ public class FollowMouse : MonoBehaviour
     public bool HideCursor;
     
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         _mainCamera = Camera.main;
         Cursor.visible = !HideCursor;

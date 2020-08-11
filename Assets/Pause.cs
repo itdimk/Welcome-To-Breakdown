@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-    private bool isPaused = false;
+    public GameManager Manager;
     public GameObject PauseCanvas;
 
     private void OnEnable()
@@ -24,17 +24,15 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isPaused && Input.GetButtonDown("Cancel"))
+        if (!Manager.IsPaused && Input.GetButtonDown("Cancel"))
         {
             PauseCanvas?.SetActive(true);
-            Time.timeScale = 0;
-            isPaused = true;
+            Manager.Pause();
         }
-        else if (isPaused && Input.GetButtonDown("Cancel"))
+        else if (Manager.IsPaused && Input.GetButtonDown("Cancel"))
         {
-            Time.timeScale = 1f;
             PauseCanvas?.SetActive(false);
-            isPaused = false;
+            Manager.Resume();
         }
     }
 }
