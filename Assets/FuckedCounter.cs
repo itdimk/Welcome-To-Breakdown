@@ -19,7 +19,9 @@ public class FuckedCounter : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        number *= (decimal)(Random.Range(1f, 2f));
+        if(number < decimal.MaxValue / 2)
+            number *= (decimal)(Random.Range(1f, 2f));
+        
         Text.text = $"Score: {number}E+{Random.Range(1f, 10f)}";
 
     }
