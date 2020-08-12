@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &274244560823266389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068054916323164687}
+  m_Layer: 0
+  m_Name: wp1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2068054916323164687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274244560823266389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 713135133732900871}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6562412547871416533
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,9 +42,9 @@ GameObject:
   - component: {fileID: 8289518224318132880}
   - component: {fileID: 1437903326751069295}
   - component: {fileID: 4368433731265821295}
-  - component: {fileID: 6648722995498647221}
   - component: {fileID: 8582709412248408367}
   - component: {fileID: 3021476642451263947}
+  - component: {fileID: 4968576763733750533}
   m_Layer: 0
   m_Name: BulletM4Normal
   m_TagString: Bullet
@@ -32,7 +62,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 193.76216, y: -53.84666, z: -1.638521}
   m_LocalScale: {x: 0.1, y: 1.0542717, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2068054916323164687}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -123,21 +154,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.08
---- !u!114 &6648722995498647221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6562412547871416533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71638e0fbbb7f8c45a6006e95e1c2435, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 80
-  damage: 4
-  rb: {fileID: 1437903326751069295}
 --- !u!114 &8582709412248408367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushPower: 0
   onePunch: 0
-  amount: 4
+  amount: 8
   DamageOnTrigger: 1
   DamageOnCollision: 0
   DamageOnStay: 0
@@ -181,3 +197,24 @@ MonoBehaviour:
   DamageOnExit: 0
   who:
   - Enemy
+--- !u!114 &4968576763733750533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6562412547871416533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b95cd67f78edf44ab7c76df4589a323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 2068054916323164687}
+  Cycled: 0
+  Speed: 60
+  IsReachedDistance: 0.1
+  FreezeX: 0
+  FreezeY: 0
+  Smoothness: 0.01
+  UseRigidbody: 0

@@ -21,6 +21,7 @@ TagManager:
   - Helth
   - Box
   - Obstacle
+  - WithoutDamage
   layers:
   - Default
   - TransparentFX

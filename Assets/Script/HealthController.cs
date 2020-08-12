@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -15,14 +16,15 @@ namespace Itdimk
 
         public float armorAbsorption = 0.9f;
         
-        public Text WriteHpTo;
-        public Text WriteArmorTo;
+        public TextMeshProUGUI WriteHpTo;
+        public TextMeshProUGUI WriteArmorTo;
+        public GameObject DeathEffect;
 
         public UnityEvent OnDeath;
         public UnityEvent OnHit;
         public UnityEvent OnCure;
         public UnityEvent OnArmor;
-        
+
         
         private void Start()
         {
@@ -76,8 +78,10 @@ namespace Itdimk
         public void Die()
         {
             OnDeath?.Invoke();
-
-            gameObject.SetActive(false);
+            
+            if(DeathEffect != null)
+                Instantiate(DeathEffect, transform.position, Quaternion.identity).SetActive(true);
+            Destroy(gameObject);
         }
     }
 }

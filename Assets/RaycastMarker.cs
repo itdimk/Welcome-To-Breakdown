@@ -17,8 +17,8 @@ public class RaycastMarker : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        var all = Physics2D.RaycastAll(From.position, To.position, 15);
-        all = all.Where(a => !a.collider.isTrigger).ToArray();
+        var all = Physics2D.RaycastAll(From.position, (To.position - From.position).normalized, 50);
+        all = all.Where(a =>  a.collider.gameObject.tag == "Obstacle").ToArray();
         transform.position = all.First().point;
 
     }

@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 3872930610066446397}
   - component: {fileID: 6343878317590515574}
   - component: {fileID: 4436502111548282367}
+  - component: {fileID: 1388426608223343819}
+  - component: {fileID: 2143146316437688272}
   m_Layer: 0
   m_Name: bomb-2 1
   m_TagString: EnemyBox
@@ -193,6 +195,63 @@ MonoBehaviour:
   ActivateOnSpawn: 1
   Target: {fileID: 5223068862271196225}
   Radius: 0
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1388426608223343819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5463624233101515173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9b97ef71e217c41b282893db5b3112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushPower: 1000
+  onePunch: 0
+  amount: 25
+  DamageOnTrigger: 1
+  DamageOnCollision: 0
+  DamageOnStay: 0
+  DamageOnEnter: 1
+  DamageOnExit: 0
+  who:
+  - Player
+--- !u!114 &2143146316437688272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5463624233101515173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ce0921913a3024bb83087b9b195de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 5
+  maxHp: 5
+  armor: 0
+  maxArmor: 100
+  armorAbsorption: 0.9
+  WriteHpTo: {fileID: 0}
+  WriteArmorTo: {fileID: 0}
+  DeathEffect: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCure:
+    m_PersistentCalls:
+      m_Calls: []
+  OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &8457257339996818600
 PrefabInstance:
   m_ObjectHideFlags: 0

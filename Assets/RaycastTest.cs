@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
 public class RaycastTest : MonoBehaviour
@@ -10,10 +7,10 @@ public class RaycastTest : MonoBehaviour
     public string[] Tags;
     public Transform EndPos;
     
-    private float _scaleMultipiler;
+    private float _scaleMultiplier;
     private float _maxDistance;
-    
-    private RaycastHit2D[] _hitsBuffer = new RaycastHit2D[8];
+    public GameObject Marker;
+    private readonly RaycastHit2D[] _hitsBuffer = new RaycastHit2D[10];
     
     // Start is called before the first frame update
     void Start()
@@ -21,16 +18,14 @@ public class RaycastTest : MonoBehaviour
         float currDistance = Vector3.Distance(StartPos.position, EndPos.position);
         float scaleX = transform.localScale.x;
 
-        _scaleMultipiler = scaleX / currDistance;
+        _scaleMultiplier = scaleX / currDistance;
         _maxDistance = currDistance;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        float currDistance = Vector3.Distance(StartPos.position, EndPos.position);
-
-        var direction = EndPos.position - StartPos.position;
+        var direction = (EndPos.position - StartPos.position).normalized;
         int hitsCount = Physics2D.RaycastNonAlloc(StartPos.position, direction, _hitsBuffer, _maxDistance);
 
         for (int i = 0; i < hitsCount; ++i)
@@ -41,10 +36,10 @@ public class RaycastTest : MonoBehaviour
             {
                 float distance = _hitsBuffer[i].distance;
                 var currScale = transform.localScale;
-                transform.localScale = new Vector3(distance * _scaleMultipiler,currScale.y, currScale.z);
                 
-                if(_hitsBuffer[i].collider.gameObject.name != "Ground")
-                    Debug.Log(_hitsBuffer[i].collider.gameObject.name);
+                transform.localScale = new Vector3(distance * _scaleMultiplier, currScale.y, currScale.z);
+                Marker.transform.position = _hitsBuffer[i].point;
+                    
                 return;
             }
         }

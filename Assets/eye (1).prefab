@@ -666,9 +666,10 @@ GameObject:
   - component: {fileID: 6804998191390451983}
   - component: {fileID: 6804998191390451977}
   - component: {fileID: 6804998191390451982}
+  - component: {fileID: 7838721607778358645}
   m_Layer: 0
   m_Name: laser
-  m_TagString: EnemyEye
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -764,6 +765,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.18, y: 0.45}
   m_EdgeRadius: 0
+--- !u!114 &7838721607778358645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6804998191390451980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9b97ef71e217c41b282893db5b3112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushPower: 0
+  onePunch: 0
+  amount: 1
+  DamageOnTrigger: 1
+  DamageOnCollision: 0
+  DamageOnStay: 1
+  DamageOnEnter: 0
+  DamageOnExit: 0
+  who:
+  - Player
 --- !u!1 &8367134582050377989
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,3 +835,4 @@ MonoBehaviour:
   Tags:
   - Obstacle
   EndPos: {fileID: 6804998190701623629}
+  Marker: {fileID: 0}
