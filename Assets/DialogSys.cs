@@ -65,6 +65,7 @@ public class DialogSys : MonoBehaviour
         }
         else
         {
+            Modals.First().gameObject.SetActive(false);
             ContinueButton.SetActive(true);
         }
 
