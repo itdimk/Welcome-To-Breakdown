@@ -7,14 +7,22 @@ using UnityEngine;
 public class RaycastTest : MonoBehaviour
 {
     public Transform StartPos;
-
+    public string[] Tags;
     public Transform EndPos;
-
-    public GameObject Marker;
+    
+    private float _scaleMultipiler;
+    private float _maxDistance;
+    
+    private RaycastHit2D[] _hitsBuffer = new RaycastHit2D[8];
     
     // Start is called before the first frame update
     void Start()
     {
+        float currDistance = Vector3.Distance(StartPos.position, EndPos.position);
+        float scaleX = transform.localScale.x;
+
+        _scaleMultipiler = scaleX / currDistance;
+        _maxDistance = currDistance;
     }
 
     // Update is called once per frame
@@ -22,19 +30,23 @@ public class RaycastTest : MonoBehaviour
     {
         float currDistance = Vector3.Distance(StartPos.position, EndPos.position);
 
-        var all = Physics2D.RaycastAll(StartPos.position, EndPos.position - StartPos.position, 100);
-        all = all.Where(a => !a.collider.isTrigger && a.collider.gameObject.tag == "Obstacle").ToArray();
+        var direction = EndPos.position - StartPos.position;
+        int hitsCount = Physics2D.RaycastNonAlloc(StartPos.position, direction, _hitsBuffer, _maxDistance);
 
-        if (all.Length > 0)
+        for (int i = 0; i < hitsCount; ++i)
         {
-            float distance = Vector2.Distance(StartPos.position, all.First().point);
+            var hitCollider = _hitsBuffer[i].collider;
 
-            float multipiler = distance / currDistance;
-            
-            Marker.transform.position = all.First().point;
-
-
-            transform.localScale = new Vector3(distance * 0.0299f, 0.5f, 1);
+            if (!hitCollider.isTrigger && Tags.Contains(hitCollider.gameObject.tag))
+            {
+                float distance = _hitsBuffer[i].distance;
+                var currScale = transform.localScale;
+                transform.localScale = new Vector3(distance * _scaleMultipiler,currScale.y, currScale.z);
+                
+                if(_hitsBuffer[i].collider.gameObject.name != "Ground")
+                    Debug.Log(_hitsBuffer[i].collider.gameObject.name);
+                return;
+            }
         }
     }
 }

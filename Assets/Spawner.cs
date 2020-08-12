@@ -12,6 +12,10 @@ public class Spawner : MonoBehaviour
     public GameObject Target;
     public float Radius = 1.0f;
 
+    public int MaxCount = 5;
+
+    private List<GameObject> Spwaned = new List<GameObject>();
+
     private int _currentIndex;
     private float _startTick;
 
@@ -31,7 +35,14 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    bool IsSpawnRequired() => _startTick + Intervals[_currentIndex] <= Time.time;
+    bool IsSpawnRequired()
+    {
+        if (Spwaned.Count >= MaxCount)
+            _startTick = Time.time;
+        
+        Spwaned.RemoveAll(o => o.gameObject == null);
+        return Spwaned.Count < MaxCount && _startTick + Intervals[_currentIndex] <= Time.time;
+    }
 
     void MoveNext()
     {
@@ -54,7 +65,8 @@ public class Spawner : MonoBehaviour
         var obj = Instantiate(Target, transform);
         obj.transform.parent = null;
         obj.transform.position = GetSpawnPoint();
-        
+        Spwaned.Add(obj);
+
         if (ActivateOnSpawn)
             obj.SetActive(true);
     }
