@@ -154,3 +154,6 @@ MonoBehaviour:
   DestroyOnDelay: 2
   DestroyOnCollision: 1
   DestroyOnTrigger: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []

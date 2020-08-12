@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SelfDestroy : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class SelfDestroy : MonoBehaviour
     public bool DestroyOnTrigger;
     private float startTick;
 
+    public UnityEvent OnDestroy;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class SelfDestroy : MonoBehaviour
         if (startTick + DestroyOnDelay < Time.time)
         {
             Destroy(gameObject);
+            OnDestroy?.Invoke();
         }
     }
 
@@ -32,7 +35,10 @@ public class SelfDestroy : MonoBehaviour
         if (Who.Count == 0 || Who.Contains(other.gameObject.tag))
         {
             if (DestroyOnCollision)
+            {
                 Destroy(gameObject);
+                OnDestroy?.Invoke();
+            }
         }
     }
 
@@ -41,7 +47,10 @@ public class SelfDestroy : MonoBehaviour
         if (Who.Count == 0 || Who.Contains(other.gameObject.tag))
         {
             if (DestroyOnTrigger)
+            {
                 Destroy(gameObject);
+                OnDestroy?.Invoke();
+            }
         }
     }
 }

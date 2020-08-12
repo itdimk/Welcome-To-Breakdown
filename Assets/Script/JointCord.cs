@@ -12,9 +12,7 @@ namespace Itdimk
 
         public Material Material;
         public float Width = 1.0F;
-
-        public Joint2D Joint;
-
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -33,13 +31,7 @@ namespace Itdimk
         {
             if (_line != null)
             {
-                _line.SetPositions(new[] {transform.position, ConnectedObject.transform.position});
-
-                if (!TryGetComponent<Joint2D>(out _))
-                {
-                    Destroy(_line);
-                    Destroy(this);
-                }
+                _line.SetPositions(new[] {(Vector3)(Vector2)transform.position, (Vector3)(Vector2)ConnectedObject.transform.position});
             }
         }
     }
