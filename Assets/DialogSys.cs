@@ -4,11 +4,12 @@ using System.Linq;
 using System.Threading;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class DialogSys : MonoBehaviour
 {
-    public TextMeshProUGUI TextMesh;
+    public Text TextMesh;
     public List<string> Sentences;
     public List<ModalWindow> Modals;
     private int currIndex = 0;
