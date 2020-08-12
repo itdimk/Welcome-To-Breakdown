@@ -9,7 +9,7 @@ public class LevelMenu : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        int levelsCompleted = PlayerPrefs.GetInt("levels-completed", 0) - 1;
+        int levelsCompleted = PlayerPrefs.GetInt("levels-completed", 1) - 1;
 
      
         
