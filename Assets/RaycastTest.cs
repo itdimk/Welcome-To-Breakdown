@@ -9,7 +9,6 @@ public class RaycastTest : MonoBehaviour
     
     private float _scaleMultiplier;
     private float _maxDistance;
-    public GameObject Marker;
     private readonly RaycastHit2D[] _hitsBuffer = new RaycastHit2D[10];
     
     // Start is called before the first frame update
@@ -38,8 +37,6 @@ public class RaycastTest : MonoBehaviour
                 var currScale = transform.localScale;
                 
                 transform.localScale = new Vector3(distance * _scaleMultiplier, currScale.y, currScale.z);
-                Marker.transform.position = _hitsBuffer[i].point;
-                    
                 return;
             }
         }
