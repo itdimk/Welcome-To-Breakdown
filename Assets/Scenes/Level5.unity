@@ -950,9 +950,9 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: a6190a77beb28e547842474dc09cc51b, type: 3}
-    volume: 0.241
-    pitch: 0.37
+    clip: {fileID: 8300000, guid: bf7122123c23e3a45b2d8735afa93ff8, type: 3}
+    volume: 0.547
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Shooting
