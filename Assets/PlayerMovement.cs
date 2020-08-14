@@ -249,7 +249,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Spikes"))
         {
-            GetDamage(6f, other.gameObject);
+            GetDamage(2f, gameObject);
         }
         
       
