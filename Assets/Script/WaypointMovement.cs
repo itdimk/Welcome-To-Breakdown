@@ -19,7 +19,8 @@ namespace Itdimk
         private int _currWaypointIndex;
         private bool isReached = false;
         private Vector3 _currVelocity;
-
+        public float MagicNumber = 0.1f;
+        
         public bool UseRigidbody = false;
 
         private Rigidbody2D _physics;
@@ -62,7 +63,7 @@ namespace Itdimk
                 _physics.velocity = direction - pos;
             }
 
-            float multiplier = 0.1f / (nextWpPos - pos).magnitude;
+            float multiplier = MagicNumber / (nextWpPos - pos).magnitude;
             transform.rotation =
                 Quaternion.Slerp(transform.rotation, waypoints[_currWaypointIndex].rotation, multiplier);
 

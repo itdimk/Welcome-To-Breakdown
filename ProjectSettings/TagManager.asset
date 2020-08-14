@@ -22,6 +22,7 @@ TagManager:
   - Box
   - Obstacle
   - WithoutDamage
+  - DeathRocket
   layers:
   - Default
   - TransparentFX

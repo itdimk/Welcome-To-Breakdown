@@ -16,10 +16,10 @@ public class SceneLoader : MonoBehaviour
     {
         int currIndex = SceneManager.GetActiveScene().buildIndex;
 
+        SceneManager.LoadSceneAsync(currIndex + offset);
+        
         if (UnloadCurrentScene)
             SceneManager.UnloadSceneAsync(currIndex);
-
-        SceneManager.LoadSceneAsync(currIndex + offset);
     }
     
 

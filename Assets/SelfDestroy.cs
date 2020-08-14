@@ -32,7 +32,7 @@ public class SelfDestroy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (Who.Count == 0 || Who.Contains(other.gameObject.tag))
+        if (enabled && (Who.Count == 0 || Who.Contains(other.gameObject.tag)))
         {
             if (DestroyOnCollision)
             {
@@ -44,7 +44,7 @@ public class SelfDestroy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (Who.Count == 0 || Who.Contains(other.gameObject.tag))
+        if (enabled && (Who.Count == 0 || Who.Contains(other.gameObject.tag)))
         {
             if (DestroyOnTrigger)
             {
