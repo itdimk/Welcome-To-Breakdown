@@ -77,6 +77,7 @@ namespace Itdimk
 
         public void Die()
         {
+            SetHp(0.0f);
             OnDeath?.Invoke();
             
             if(DeathEffect != null)

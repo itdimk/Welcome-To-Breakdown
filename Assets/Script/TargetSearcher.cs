@@ -29,7 +29,7 @@ namespace Itdimk
         public override Vector3 GetTargetPos()
         {
             if(GameObjects.Count > 0)
-                return GameObjects.First().transform.position;
+                return GameObjects.First(o => o.gameObject != null).transform.position;
             return Vector3.zero;
         }
 

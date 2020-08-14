@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8714556952565975162}
   - component: {fileID: 1741373958086659232}
   - component: {fileID: 2468925888089267456}
+  - component: {fileID: 6941376987136535530}
   m_Layer: 0
   m_Name: BulletTurret
   m_TagString: Bullet
@@ -155,3 +156,28 @@ MonoBehaviour:
   DestroyOnDelay: 2
   DestroyOnCollision: 1
   DestroyOnTrigger: 1
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6941376987136535530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2269188884099551936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9b97ef71e217c41b282893db5b3112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushPower: 1000
+  onePunch: 0
+  amount: 20
+  DamageOnTrigger: 1
+  DamageOnCollision: 0
+  DamageOnStay: 0
+  DamageOnEnter: 1
+  DamageOnExit: 0
+  who:
+  - Player

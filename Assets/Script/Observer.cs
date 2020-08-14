@@ -50,6 +50,9 @@ namespace Itdimk
 
         private float GetTargetAngle()
         {
+            if (Target.GetTargetPos() == Vector3.zero)
+                return GetCurrentAngle();
+            
             Vector2 targetDirection = Target.GetTargetPos() - Origin.position;
             return LimitRotationIfRequired(Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg);
         }

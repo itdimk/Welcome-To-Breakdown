@@ -38,7 +38,7 @@ namespace Itdimk
         private int triggerExitCount;
 
         private float startTick;
-
+        private bool _ignoreTime = false;
         private readonly Dictionary<Type, PropertyInfo> _cachedType
             = new Dictionary<Type, PropertyInfo>();
         
@@ -50,15 +50,8 @@ namespace Itdimk
             startTick = Time.time;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            bool timeIsUp = Time.time >= startTick + TargetTime;
-
-            if (ActivateBy == Hooks.Time && timeIsUp)
-                SetAll(true);
-            else if (DeactivateBy == Hooks.Time && timeIsUp)
-                SetAll(false);
-
             if (!string.IsNullOrWhiteSpace(TargetButton))
             {
                 bool buttonPressed = Input.GetButton(TargetButton);
@@ -78,6 +71,23 @@ namespace Itdimk
                         SetAll(false);
                 }
             }
+        }
+
+        private void FixedUpdate()
+        {
+            bool timeIsUp = Time.time >= startTick + TargetTime;
+
+            if (!_ignoreTime && ActivateBy == Hooks.Time && timeIsUp)
+            {
+                SetAll(true);
+                _ignoreTime = true;
+            }
+            else if (!_ignoreTime && DeactivateBy == Hooks.Time && timeIsUp)
+            {
+                SetAll(false);
+                _ignoreTime = true;
+            }
+
         }
 
 
