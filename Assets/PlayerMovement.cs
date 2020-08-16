@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public UnityEvent OnDeath;
     private Stopwatch delayedSceneLoadTimer = new Stopwatch();
 
+    private bool _pizdaPlayed = false;
     public float LadderMaxSpeed = 12;
 
 
@@ -196,9 +197,10 @@ public class PlayerMovement : MonoBehaviour
         
         FindObjectOfType<AudioManager>().Play("PlayerHit");
 
-        if (Health <= 20 && Health > 10)
+        if (!_pizdaPlayed && Health <= 19)
         {
             FindObjectOfType<AudioManager>().Play("PlayerPizda");
+            _pizdaPlayed = true;
         }
     }
 
