@@ -1,26 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnerD : MonoBehaviour
 {
     public GameObject Target;
-    public float[] Intervals = { 5f };
-    public bool ActivateOnSpawn = true;
-   
+    
     public float SpawnRadius = 1.0f;
-
+    public float[] SpawnIntervals = { 1f };
+   
     [Space]
     public int OnlineCount = 2;
     public int TotalCount = 10;
-    
-    private List<GameObject> Spawned = new List<GameObject>();
+
+    private List<GameObject> _spawned = new List<GameObject>();
 
     private int _currInterval;
     private float _startTick;
 
+    public UnityEvent OnSpawn;
+    
     // Start is called before the first frame update
-    void OnEnable()
+    void Start()
     {
         _startTick = Time.time;
     }
@@ -33,42 +35,45 @@ public class SpawnerD : MonoBehaviour
             Spawn();
             MoveNext();
         }
+        else if(TotalCount == 0)
+            Destruct();
     }
 
     bool IsSpawnRequired()
     {
-        if (Spawned.Count >= MaxCount)
+        if (_spawned.Count >= OnlineCount)
+        {
             _startTick = Time.time;
+            _spawned.RemoveAll(o => o.gameObject == null);
+        }
 
-        Spawned.RemoveAll(o => o.gameObject == null);
-        return Spawned.Count < MaxCount && _startTick + Intervals[_currInterval] <= Time.time;
+        bool condition1 = _spawned.Count < OnlineCount;
+        bool condition2 = _startTick + SpawnIntervals[_currInterval] <= Time.time;
+        bool condition3 = TotalCount > 0;
+        return condition1 && condition2 && condition3;
     }
 
     void MoveNext()
     {
-        if (_currInterval + 1 < Intervals.Count)
+        if (_currInterval + 1 < SpawnIntervals.Length)
             _currInterval++;
         else
-        {
-            if (OneSoawn)
-                Destruct();
-            else
-            {
-                _currInterval = 0;
-                _startTick = Time.time;
-            }
-        }
+            _currInterval = 0;
     }
 
     void Spawn()
     {
+        OnSpawn?.Invoke();
+        
         var obj = Instantiate(Target, transform);
         obj.transform.parent = null;
         obj.transform.position = GetSpawnPoint();
-        Spawned.Add(obj);
+        obj.SetActive(true);
 
-        if (ActivateOnSpawn)
-            obj.SetActive(true);
+        _spawned.Add(obj);
+        
+        _startTick = Time.time;
+        TotalCount--;
     }
 
     Vector3 GetSpawnPoint()
