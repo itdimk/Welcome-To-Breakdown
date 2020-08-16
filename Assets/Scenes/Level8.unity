@@ -1863,7 +1863,18 @@ MonoBehaviour:
   DeathEffect: {fileID: 101255076}
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5242208628865034234}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SoulEaterDeath
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHit:
     m_PersistentCalls:
       m_Calls: []
@@ -35565,7 +35576,18 @@ MonoBehaviour:
   DeathEffect: {fileID: 624237782}
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5242208628865034234}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BomberDeath
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHit:
     m_PersistentCalls:
       m_Calls: []
@@ -35905,6 +35927,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: LevelComplete
     clip: {fileID: 8300000, guid: 454b45e8595266342865e4b21b817716, type: 3}
+    volume: 0.575
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SoulEaterDeath
+    clip: {fileID: 8300000, guid: d243b39971ece474091ab0966bcccf57, type: 3}
+    volume: 0.575
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BomberDeath
+    clip: {fileID: 8300000, guid: c19e6468dbc3bfd4e8e165c690161bfb, type: 3}
     volume: 0.575
     pitch: 1
     loop: 0
