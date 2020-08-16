@@ -1397,7 +1397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200102049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 294.7, y: -33.18, z: -10}
+  m_LocalPosition: {x: 193.7, y: -44.38, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 783673239}
@@ -3385,7 +3385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 294.7, y: -33.18, z: -10}
+  m_LocalPosition: {x: 193.7, y: -44.38, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2014483060}
@@ -23026,7 +23026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
-  ShootingEffect: {fileID: 4301580460390795084, guid: 551b787b9d420cb44884c0b7a148902b,
+  ShootingEffect: {fileID: 4301580460390795084, guid: 271290aadb9726343a885715c8e76321,
     type: 3}
   projectile: {fileID: 6562412547871416533, guid: d3df9a99f1900df4ebc43b17634030a0,
     type: 3}
@@ -23073,8 +23073,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -5948899652625063638, guid: 177053889142ae04a8e04471b33cd1dd,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8422dd090cf3c264aa8598fcc0aebf7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -33455,7 +33454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866578228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 294.7, y: -39.1, z: 0}
+  m_LocalPosition: {x: 193.7, y: -50.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1716267538}
