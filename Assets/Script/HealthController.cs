@@ -15,17 +15,21 @@ namespace Itdimk
         public float maxArmor = 100.0f;
 
         public float armorAbsorption = 0.9f;
-        
+
         public TextMeshProUGUI WriteHpTo;
         public TextMeshProUGUI WriteArmorTo;
         public GameObject DeathEffect;
+        public float DeathDelay = 0f;
 
         public UnityEvent OnDeath;
         public UnityEvent OnHit;
         public UnityEvent OnCure;
         public UnityEvent OnArmor;
+        public UnityEvent BeforeDeath;
 
-        
+
+        private float _deathStartTick;
+
         private void Start()
         {
             SetHp(hp);
@@ -42,7 +46,17 @@ namespace Itdimk
             OnHit?.Invoke();
 
             if (hp <= 0)
-                Die();
+            {
+                SetHp(0.0f);
+
+                if (_deathStartTick == 0)
+                {
+                    BeforeDeath?.Invoke();
+                    _deathStartTick = Time.time;
+                }
+                else if (Time.time >= _deathStartTick + DeathDelay)
+                    Die();
+            }
         }
 
         public void Cure(float amount)
@@ -77,10 +91,9 @@ namespace Itdimk
 
         public void Die()
         {
-            SetHp(0.0f);
             OnDeath?.Invoke();
-            
-            if(DeathEffect != null)
+
+            if (DeathEffect != null)
                 Instantiate(DeathEffect, transform.position, Quaternion.identity).SetActive(true);
             Destroy(gameObject);
         }
