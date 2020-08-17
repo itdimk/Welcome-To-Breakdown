@@ -1671,7 +1671,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3998,12 +3998,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "welcome to breakdown\ncreated by\nitdimk and elnuir\n\nThanks a lot for
-    the help in English translation to abtinmeister\n\nstrange russian phrases -
-    imiles\nwww.youtube.com/c/iMiles\n\ncameo: joe\n\nMusic: \nAikynTaiHa - Cruelty\nJimmy
-    Castle - Fuzeblack\nHacobb - Horsemen at Dawn\nJimmy Castle - Febuary\n\nAlso
-    were used:\n\nhelicopter sprite by Paul Chin\npaulmakegames.blogspot.com\n\nresources
-    from unity asset store\n\nsounds from zvukipro.com\n\nWinter night by jplenio
-    from pixabay.com"
+    the help in English translation to abtinmeister\n\nQuirky russian phrases - imiles\nwww.youtube.com/c/iMiles\n\ncameo:
+    joe\n\nMusic: \nAikynTaiHa - Cruelty\nJimmy Castle - Fuzeblack\nHacobb - Horsemen
+    at Dawn\nJimmy Castle - Febuary\n\nAlso were used:\n\nhelicopter sprite by Paul
+    Chin\npaulmakegames.blogspot.com\n\nresources from unity asset store\n\nsounds
+    from zvukipro.com\n\nWinter night by jplenio from pixabay.com"
 --- !u!222 &2010863234
 CanvasRenderer:
   m_ObjectHideFlags: 0

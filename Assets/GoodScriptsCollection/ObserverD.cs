@@ -7,14 +7,13 @@ public class ObserverD : MonoBehaviour
     public TargetSetterD Target;
     
     [Space]
-    public Transform Direction;
     public Transform Origin;
 
     [Space]
     public bool LimitAngle = true;
     public float MinAngle = 0F;
     public float MaxAngle = 90F;
-    public float Error = 0.01f;
+    public float Tolerance = 0.01f;
     public float RotationSpeed = 1.0F;
     
     [Space]
@@ -44,7 +43,7 @@ public class ObserverD : MonoBehaviour
 
     private float GetCurrentAngle()
     {
-        Vector2 currDirection = Direction.position - Origin.position;
+        Vector2 currDirection = transform.right;
         return Mathf.Atan2(currDirection.y, currDirection.x) * Mathf.Rad2Deg;
     }
 
@@ -61,11 +60,11 @@ public class ObserverD : MonoBehaviour
     {
         var axis = new Vector3(0, 0, 1);
 
-        if (GetAngleDelta(_thresholdAngle, targetAngle) > Error)
+        if (GetAngleDelta(_thresholdAngle, targetAngle) > Tolerance)
         {
             transform.RotateAround(Origin.position, axis, rotationZ);
 
-            if (Mathf.Abs(targetAngle - currAngle) <= Error)
+            if (Mathf.Abs(targetAngle - currAngle) <= Tolerance)
                 _thresholdAngle = targetAngle;
         }
     }
