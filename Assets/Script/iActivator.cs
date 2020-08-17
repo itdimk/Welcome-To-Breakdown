@@ -49,6 +49,12 @@ namespace Itdimk
         {
             startTick = Time.time;
         }
+        
+        private void OnEnable()
+        {
+            startTick = Time.time;
+            _ignoreTime = false;
+        }
 
         private void Update()
         {
