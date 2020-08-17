@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -11,13 +12,16 @@ public class DialogSys : MonoBehaviour
 {
     public Text TextMesh;
     public List<string> Sentences;
-    public List<ModalWindow> Modals;
+    public List<ModalWindow> Modals = new List<ModalWindow>();
     private int currIndex = 0;
     public GameObject ContinueButton;
 
     private string smoothTyping;
     private int smoothTypingIndex;
     public int CrutchedSpeed = 1;
+
+    public UnityEvent NextSentence;
+    public UnityEvent DialogEnd;
     
     // Start is called before the first frame update
     void Start()
@@ -34,6 +38,13 @@ public class DialogSys : MonoBehaviour
 
     public void ShowNext()
     {
+        if (currIndex == Sentences.Count - 1)
+        {
+            DialogEnd?.Invoke();
+            ContinueButton.SetActive(false);
+
+        }
+        
         if (currIndex >= Sentences.Count)
         {
             Destroy(this);
@@ -45,12 +56,12 @@ public class DialogSys : MonoBehaviour
             ShowCurrent();
             MoveNext();
         }
+        
+        NextSentence?.Invoke();
     }
 
     private void MoveNext()
     {
-      
-
         currIndex = Mathf.Clamp(currIndex + 1, 0, Sentences.Count );
     }
 
@@ -61,11 +72,11 @@ public class DialogSys : MonoBehaviour
         if (modalToShow != null)
         {
             modalToShow.gameObject.SetActive(true);
-            ContinueButton.SetActive(false);
+            ContinueButton.SetActive(!modalToShow.HideContinueButton);
         }
         else
         {
-            Modals.First().gameObject.SetActive(false);
+            Modals.Where(o => !o.DontHideAtAll).ToList().ForEach(o => o.gameObject.SetActive(false));
             ContinueButton.SetActive(true);
         }
 
