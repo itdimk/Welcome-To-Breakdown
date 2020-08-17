@@ -22,7 +22,7 @@ public class DialogSys : MonoBehaviour
 
     public UnityEvent NextSentence;
     public UnityEvent DialogEnd;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,21 +32,15 @@ public class DialogSys : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.frameCount % CrutchedSpeed  == 0)
+        if (Time.frameCount % CrutchedSpeed == 0)
             SmoothTyping();
     }
 
     public void ShowNext()
     {
-        if (currIndex == Sentences.Count - 1)
-        {
-            DialogEnd?.Invoke();
-            ContinueButton.SetActive(false);
-
-        }
-        
         if (currIndex >= Sentences.Count)
         {
+            DialogEnd?.Invoke();
             Destroy(this);
             TextMesh.text = "";
             ContinueButton.gameObject.SetActive(false);
@@ -56,13 +50,13 @@ public class DialogSys : MonoBehaviour
             ShowCurrent();
             MoveNext();
         }
-        
+
         NextSentence?.Invoke();
     }
 
     private void MoveNext()
     {
-        currIndex = Mathf.Clamp(currIndex + 1, 0, Sentences.Count );
+        currIndex = Mathf.Clamp(currIndex + 1, 0, Sentences.Count);
     }
 
     private void ShowCurrent()
