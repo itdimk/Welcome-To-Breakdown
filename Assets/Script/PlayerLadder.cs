@@ -6,10 +6,11 @@ namespace Itdimk
     public class PlayerLadder : MonoBehaviour
     {
         public string LadderTag = "Ladder";
-
+        public string ClimbButtonName = "Jump";
+        
         public float MaxLadderUpSpeed = 10.0F;
         public float MaxLadderDownSpeed = 10.0F;
-        public float HorizontalMovementThreshold = 0.1f;
+        public float MaxHorizontalSpeed = 0.9f;
 
         private Rigidbody2D _physics;
 
@@ -31,7 +32,7 @@ namespace Itdimk
             }
         }
 
-        private bool CanMove() => Math.Abs(Input.GetAxisRaw("Horizontal")) <= HorizontalMovementThreshold;
+        private bool CanMove() => Math.Abs(Input.GetAxisRaw("Horizontal")) <= MaxHorizontalSpeed;
 
         private void MoveLadderUp()
             => _physics.velocity = new Vector2(_physics.velocity.x, MaxLadderUpSpeed);

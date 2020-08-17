@@ -21,7 +21,7 @@ public class PreemptionTargetSetterD : TargetSetterD
 
     public override Transform GetTarget()
     {
-        Vector2 targetPos = Target.transform.position;
+        Vector2 targetPos = Target.gameObject.transform.position;
         Vector2 myPos = transform.position;
         
         float distance = Vector2.Distance(targetPos, myPos);

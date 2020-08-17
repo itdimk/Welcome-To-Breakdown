@@ -217,6 +217,13 @@ MonoBehaviour:
   - {fileID: 531963196884037494}
   ActivateBy: 7
   DeactivateBy: 0
-  WhoIsTriggered: []
   TargetTime: 0.8
   TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []

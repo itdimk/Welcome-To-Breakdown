@@ -8,7 +8,8 @@ namespace Itdimk
     {
         public Rigidbody2D Target;
         public float Scale = 0.5f;
-
+        public bool IgnoreY = false;
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -22,6 +23,9 @@ namespace Itdimk
 
             Vector2 newPos = targetPos + (Target.velocity * Scale);
 
+            if (IgnoreY)
+                newPos.y = transform.position.y;
+            
             transform.position = newPos;
         }
     }

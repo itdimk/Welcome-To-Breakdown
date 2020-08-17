@@ -8,9 +8,8 @@ public class RayEmitterD : MonoBehaviour
 {
     public string[] Obstacles;
 
-    public float MaxDistance;
+    public float MaxDistance = 15;
     public int MaxHits = 15;
-    public float ScaleCorrection = 1.0f;
     private float _scaleMultiplier = -1;
     private RaycastHit2D[] _hitsBuffer;
 
@@ -48,11 +47,11 @@ public class RayEmitterD : MonoBehaviour
             => !h.collider.isTrigger && Obstacles.Contains(h.collider.tag));
 
         if (hit != default)
-            return tr.localScale.x / hit.distance * ScaleCorrection;
+            return tr.localScale.x / hit.distance;
         else
         {
             Debug.LogWarning("Ray must touch an obstacle to determine length of it");
-            return ScaleCorrection;
+            return 1f;
         }
     }
 }
