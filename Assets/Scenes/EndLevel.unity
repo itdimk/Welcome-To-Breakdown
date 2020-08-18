@@ -467,7 +467,7 @@ Transform:
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130310714
 GameObject:
@@ -505,7 +505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1631.022, y: 1079.3529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &130310716
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Field: {fileID: 216978099}
-  ValidText: aaa
+  ValidText: honorificabilitudinitatibus
   EnterButtonName: Submit
   TextValid:
     m_PersistentCalls:
@@ -1238,7 +1238,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Suicide
     clip: {fileID: 8300000, guid: 1e683bf01e4b73145b23309fffba61e9, type: 3}
-    volume: 0.481
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -7378,6 +7378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 789811966}
   - component: {fileID: 789811965}
+  - component: {fileID: 789811967}
   m_Layer: 0
   m_Name: BaseDialoguemanager
   m_TagString: Untagged
@@ -7447,6 +7448,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &789811967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789811964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe079e7b97607a4696d4360b2e3e650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &805884175
 GameObject:
   m_ObjectHideFlags: 0
@@ -7526,7 +7539,7 @@ Transform:
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &865585813
 GameObject:
@@ -7607,7 +7620,7 @@ Transform:
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &885500525
 GameObject:
@@ -7621,6 +7634,7 @@ GameObject:
   - component: {fileID: 885500528}
   - component: {fileID: 885500527}
   - component: {fileID: 885500530}
+  - component: {fileID: 885500526}
   m_Layer: 0
   m_Name: END
   m_TagString: EndLevel
@@ -7628,6 +7642,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &885500526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885500525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd1d1c18f35f8b47a78384fc187daad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &885500527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7781,7 +7807,7 @@ Transform:
   - {fileID: 1583762770}
   - {fileID: 1762425426}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1039102210
 GameObject:
@@ -8186,7 +8212,7 @@ Transform:
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1408103129
 GameObject:
@@ -8606,7 +8632,7 @@ Transform:
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1583762768
 GameObject:
@@ -9059,7 +9085,7 @@ Transform:
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1679816064
 GameObject:
@@ -9231,7 +9257,7 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 7
   DeactivateBy: 0
-  TargetTime: 10
+  TargetTime: 42
   TargetButton: 
   TargetTriggerTags:
   - Player
@@ -9264,7 +9290,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753298202
 GameObject:
@@ -15545,6 +15571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2064232328}
   - component: {fileID: 2064232327}
+  - component: {fileID: 2064232329}
   m_Layer: 0
   m_Name: GoodDialoguemanager
   m_TagString: Untagged
@@ -15571,7 +15598,7 @@ MonoBehaviour:
   - Thank you, human. I never doubted human intellect.
   - It was a very long journey. Longer than you could ever imagine.
   - For me, anyways.
-  - You see, I've been locked on those 8 levels for ages.
+  - You see, I've been locked on those levels for ages.
   - I've been going through those places over and over again. I'd been dying, over
     and over again.
   - Just like in some kind of stupid video game.
@@ -15623,7 +15650,18 @@ MonoBehaviour:
       m_Calls: []
   DialogEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2064232329}
+        m_MethodName: LoadSceneByIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2064232328
 Transform:
   m_ObjectHideFlags: 0
@@ -15636,8 +15674,21 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2064232329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064232326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f6646b09da87a458834dac5b3521ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnloadCurrentScene: 1
 --- !u!1 &2097730061
 GameObject:
   m_ObjectHideFlags: 0
@@ -15841,7 +15892,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2097730064
 MonoBehaviour:
@@ -15904,7 +15955,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b186042a59e364f9a30820785817b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetObjects: []
+  TargetObjects:
+  - {fileID: 130310714}
   TargetScripts: []
   TargetComponents: []
   ActivateBy: 7
@@ -15942,6 +15994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119152958}
   - component: {fileID: 2119152957}
+  - component: {fileID: 2119152959}
   m_Layer: 0
   m_Name: Blink11
   m_TagString: Untagged
@@ -16011,8 +16064,27 @@ Transform:
   m_LocalScale: {x: 13.12613, y: 13.12613, z: 13.12613}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2119152959
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119152956}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46fa02da67c9b2440bf2781e6fc4f132, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &646710001003608922
 Transform:
   m_ObjectHideFlags: 0
@@ -16199,75 +16271,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &2951391036152842236
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 945210216811715066, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_Name
-      value: SoulEaterDeath
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 138.89693
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -36.381233
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406228918624268703, guid: aab6350dcd5c6fd45bfd876747daef64,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aab6350dcd5c6fd45bfd876747daef64, type: 3}
 --- !u!1001 &3369474296127124251
 PrefabInstance:
   m_ObjectHideFlags: 0

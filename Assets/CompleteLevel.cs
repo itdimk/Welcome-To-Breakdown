@@ -11,7 +11,7 @@ public class CompleteLevel : MonoBehaviour
     public void Start()
     {
         int levels = PlayerPrefs.GetInt("levels-completed");
-        int currLevel = SceneManager.GetActiveScene().buildIndex;
+        int currLevel = SceneManager.GetActiveScene().buildIndex - 1;
         
         if(currLevel > levels)
             PlayerPrefs.SetInt("levels-completed", currLevel);
