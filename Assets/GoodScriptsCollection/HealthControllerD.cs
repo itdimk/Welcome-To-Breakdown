@@ -12,15 +12,15 @@ public class HealthControllerD : MonoBehaviour
     public float Armor = 0f;
     public float MaxArmor = 100.0f;
     public float ArmorAbsorption = 0.9f;
+    public bool Invincible = false;
     
     [Space]
     public NumberOutputD HpOutput;
     public NumberOutputD ArmorOutput;
-    public GameObject DeathEffect;
 
     public UnityEvent OnDeath;
     public UnityEvent OnHit;
-    public UnityEvent OnCure;
+    public UnityEvent OnHeal;
     public UnityEvent OnArmor;
 
 
@@ -32,6 +32,8 @@ public class HealthControllerD : MonoBehaviour
 
     public void DealDamage(float amount)
     {
+        if(Invincible) return;
+
         float absorbed = Math.Min(amount * ArmorAbsorption, Armor * ArmorAbsorption);
 
         SetArmor(Math.Max(0, Armor - absorbed));
@@ -47,7 +49,7 @@ public class HealthControllerD : MonoBehaviour
     {
         SetHp(Math.Min(MaxHp, Hp + amount));
 
-        OnCure?.Invoke();
+        OnHeal?.Invoke();
     }
 
     public void AddArmor(float amount)
@@ -77,9 +79,5 @@ public class HealthControllerD : MonoBehaviour
     {
         SetHp(0.0f);
         OnDeath?.Invoke();
-
-        if (DeathEffect != null)
-            Instantiate(DeathEffect, transform.position, Quaternion.identity).SetActive(true);
-        Destroy(gameObject);
     }
 }

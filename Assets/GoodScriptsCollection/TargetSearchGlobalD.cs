@@ -25,7 +25,6 @@ public class TargetSearchGlobalD : MonoBehaviour
         {
             _startTick = Time.time;
             RefreshGameObjects();
-            Debug.Log("Targets updated");
         }
     }
 

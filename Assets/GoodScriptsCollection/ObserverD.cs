@@ -5,24 +5,22 @@ using UnityEngine;
 public class ObserverD : MonoBehaviour
 {
     public TargetSetterD Target;
-    
-    [Space]
-    public Transform Origin;
 
-    [Space]
-    public bool LimitAngle = true;
-    public float MinAngle = 0F;
+    [Space] public Transform Origin;
+    public Vector2 DirectionMarker = Vector2.right;
+
+    [Space] public bool LimitAngle = true;
+    public float MinAngle = 270.01f;
     public float MaxAngle = 90F;
     public float Tolerance = 0.01f;
-    public float RotationSpeed = 1.0F;
-    
-    [Space]
-    public bool FlipSupport = false;
+    public float RotationSpeed = 5.0f;
+
+    [Space] public bool FlipSupport = false;
     public Transform FlipSupportProvider;
 
     private float _thresholdAngle;
     private bool _mirror;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,16 +41,18 @@ public class ObserverD : MonoBehaviour
 
     private float GetCurrentAngle()
     {
-        Vector2 currDirection = transform.right;
+        Vector2 currDirection = transform.TransformDirection(DirectionMarker);
         return Mathf.Atan2(currDirection.y, currDirection.x) * Mathf.Rad2Deg;
     }
 
     private float GetTargetAngle()
     {
-        if (Target.GetTarget().position == Vector3.zero)
+        var target = Target.GetTarget();
+
+        if (target == null || target.position == Vector3.zero)
             return GetCurrentAngle();
 
-        Vector2 targetDirection = Target.GetTarget().position - Origin.position;
+        Vector2 targetDirection = target.position - Origin.position;
         return LimitRotationIfRequired(Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg);
     }
 
@@ -98,8 +98,8 @@ public class ObserverD : MonoBehaviour
         return To180(rotation);
     }
 
-    private float To360(float angle) => angle < 0 ? angle + 360 : angle;
-    private float To180(float angle) => angle > 180 ? angle - 360 : angle;
+    public static float To360(float angle) => angle < 0 ? angle + 360 : angle;
+    public static float To180(float angle) => angle > 180 ? angle - 360 : angle;
 
     private bool IsBetween(float targetAngle, float min, float max)
     {
@@ -124,7 +124,7 @@ public class ObserverD : MonoBehaviour
         return delta1 < delta2 ? candidate1 : candidate2;
     }
 
-    private float GetAngleDelta(float angle1, float angle2)
+    public static float GetAngleDelta(float angle1, float angle2)
     {
         if (angle1 < 0 || angle2 < 0)
         {
