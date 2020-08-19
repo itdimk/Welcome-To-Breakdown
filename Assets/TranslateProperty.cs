@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TranslateProperty : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TranslateProperty : MonoBehaviour
     public class Item
     {
         public string Language;
+        [TextArea]
         public string Value;
     }
     
@@ -21,7 +23,6 @@ public class TranslateProperty : MonoBehaviour
     [Space]
     public List<Item> Translations = new List<Item>
     {
-        new Item { Language = "en" },
         new Item { Language = "ru" }
     };
     
@@ -31,11 +32,10 @@ public class TranslateProperty : MonoBehaviour
         var p = Target.GetType().GetProperty(TargetPropertyName);
         string lang = PlayerPrefs.GetString(LanguagePrefsKey);
         string newValue = Translations.FirstOrDefault(t => t.Language == lang)?.Value;
-
-        if (p != null || !string.IsNullOrEmpty(newValue))
+        if (p != null &&  !string.IsNullOrEmpty(newValue))
             p.SetValue(Target, newValue);
         else
-            throw new Exception("Either property is not found or value is not specified");
+            Debug.LogWarning("Either property is not found or value is not specified");
     }
 
     // Update is called once per frame
