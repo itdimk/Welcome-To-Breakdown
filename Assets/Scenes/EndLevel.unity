@@ -1947,6 +1947,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2072,6 +2073,18 @@ MonoBehaviour:
   OnCursorVisibleSet:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe079e7b97607a4696d4360b2e3e650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &525534959
 GameObject:
   m_ObjectHideFlags: 0
@@ -7396,7 +7409,6 @@ GameObject:
   m_Component:
   - component: {fileID: 789811966}
   - component: {fileID: 789811965}
-  - component: {fileID: 789811967}
   m_Layer: 0
   m_Name: BaseDialoguemanager
   m_TagString: Untagged
@@ -7452,6 +7464,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 789811964}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &789811966
 Transform:
   m_ObjectHideFlags: 0
@@ -7466,18 +7489,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &789811967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789811964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fe079e7b97607a4696d4360b2e3e650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &805884175
 GameObject:
   m_ObjectHideFlags: 0
@@ -9275,7 +9286,7 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 7
   DeactivateBy: 0
-  TargetTime: 42
+  TargetTime: 40
   TargetButton: 
   TargetTriggerTags:
   - Player
@@ -15591,6 +15602,7 @@ GameObject:
   - component: {fileID: 2064232328}
   - component: {fileID: 2064232327}
   - component: {fileID: 2064232329}
+  - component: {fileID: 2064232330}
   m_Layer: 0
   m_Name: GoodDialoguemanager
   m_TagString: Untagged
@@ -15708,6 +15720,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnloadCurrentScene: 1
+--- !u!114 &2064232330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064232326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b186042a59e364f9a30820785817b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetObjects:
+  - {fileID: 789811964}
+  TargetScripts: []
+  TargetComponents: []
+  ActivateBy: 0
+  DeactivateBy: 7
+  TargetTime: 0
+  TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2066299860
 GameObject:
   m_ObjectHideFlags: 0
@@ -15812,9 +15852,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2097730063}
   - component: {fileID: 2097730062}
-  - component: {fileID: 2097730064}
   - component: {fileID: 2097730065}
+  - component: {fileID: 2097730064}
   - component: {fileID: 2097730066}
+  - component: {fileID: 2097730067}
   m_Layer: 0
   m_Name: BadDialoguemanager
   m_TagString: Untagged
@@ -16004,17 +16045,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2097730064}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!4 &2097730063
 Transform:
   m_ObjectHideFlags: 0
@@ -16075,6 +16105,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2097730065}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
@@ -16096,7 +16137,7 @@ MonoBehaviour:
   TargetComponents: []
   ActivateBy: 7
   DeactivateBy: 0
-  TargetTime: 1
+  TargetTime: 28
   TargetButton: 
   TargetTriggerTags:
   - Player
@@ -16119,6 +16160,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnloadCurrentScene: 1
+--- !u!114 &2097730067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097730061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b186042a59e364f9a30820785817b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetObjects:
+  - {fileID: 789811964}
+  TargetScripts: []
+  TargetComponents: []
+  ActivateBy: 0
+  DeactivateBy: 7
+  TargetTime: 0
+  TargetButton: 
+  TargetTriggerTags:
+  - Player
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2119152956
 GameObject:
   m_ObjectHideFlags: 0
