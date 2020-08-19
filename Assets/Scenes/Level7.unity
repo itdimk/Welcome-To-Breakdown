@@ -196,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 773532997}
   Scale: 0.15
+  IgnoreY: 0
 --- !u!1 &13716946
 GameObject:
   m_ObjectHideFlags: 0
@@ -135711,6 +135712,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1887952043928757174, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887952044179025332, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887952044244592072, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1887952044686435536, guid: ffc86a4f291bd8040a838dd59f3ec408,
         type: 3}
       propertyPath: m_Name
@@ -135826,6 +135842,46 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1887952044697384887, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887952044817290025, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887952044875784238, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887952045187837916, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887952045284714017, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887952045328928666, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887952045337555094, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887952045502444448, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3183400050387859736, guid: ffc86a4f291bd8040a838dd59f3ec408,
         type: 3}
       propertyPath: m_Enabled
@@ -135834,7 +135890,7 @@ PrefabInstance:
     - target: {fileID: 9034279462297420985, guid: ffc86a4f291bd8040a838dd59f3ec408,
         type: 3}
       propertyPath: m_Text
-      value: 'Level 5
+      value: 'Level 7
 
 '
       objectReference: {fileID: 0}
@@ -135872,7 +135928,7 @@ MonoBehaviour:
   sounds:
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: ca026b67c8b708a4c88405b969bbc9b0, type: 3}
-    volume: 0.13
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -135890,43 +135946,43 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: 3a4a8e16700cfa942a9c4c01bb75086d, type: 3}
-    volume: 0.241
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Shooting
     clip: {fileID: 8300000, guid: 0d4c588eb76cfd64497d38017ea72dd0, type: 3}
-    volume: 0.734
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Coin
     clip: {fileID: 8300000, guid: 16f6ba62752f6f340a663ecd14475490, type: 3}
-    volume: 0.587
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: EyeDeath
     clip: {fileID: 8300000, guid: 6eac6ef1ee9f89b4981f80af69d83d0f, type: 3}
-    volume: 0.343
+    volume: 1
     pitch: 1.809
     loop: 0
     source: {fileID: 0}
   - name: BoomBomb
     clip: {fileID: 8300000, guid: 8ec84d7404a66874f9d7ae6ca5d630f4, type: 3}
-    volume: 0.575
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: BomberDeath
     clip: {fileID: 8300000, guid: c19e6468dbc3bfd4e8e165c690161bfb, type: 3}
-    volume: 0.575
+    volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: LevelComplete
     clip: {fileID: 8300000, guid: 454b45e8595266342865e4b21b817716, type: 3}
-    volume: 0.575
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}

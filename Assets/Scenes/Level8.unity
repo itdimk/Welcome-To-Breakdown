@@ -1861,6 +1861,7 @@ MonoBehaviour:
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
   DeathEffect: {fileID: 101255076}
+  DeathDelay: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -1882,6 +1883,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
+  BeforeDeath:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &263727626
@@ -3023,7 +3027,7 @@ PrefabInstance:
     - target: {fileID: 9034279462297420985, guid: ffc86a4f291bd8040a838dd59f3ec408,
         type: 3}
       propertyPath: m_Text
-      value: 'Level 6
+      value: 'LEVEL 8
 
 '
       objectReference: {fileID: 0}
@@ -33498,6 +33502,7 @@ MonoBehaviour:
   WriteHpTo: {fileID: 695669832}
   WriteArmorTo: {fileID: 1903202844}
   DeathEffect: {fileID: 0}
+  DeathDelay: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -33552,6 +33557,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
+  BeforeDeath:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1885677484
@@ -35574,6 +35582,7 @@ MonoBehaviour:
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
   DeathEffect: {fileID: 624237782}
+  DeathDelay: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -35595,6 +35604,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
+  BeforeDeath:
     m_PersistentCalls:
       m_Calls: []
 --- !u!95 &3479343921458716
@@ -35879,7 +35891,7 @@ MonoBehaviour:
   sounds:
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: ca026b67c8b708a4c88405b969bbc9b0, type: 3}
-    volume: 0.13
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -35897,25 +35909,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: 7d5795817b81f9a48b79443837ba7101, type: 3}
-    volume: 0.241
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Shooting
     clip: {fileID: 8300000, guid: d95bb69014bb7ed499cc53c3d5372c8e, type: 3}
-    volume: 0.734
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Coin
     clip: {fileID: 8300000, guid: 16f6ba62752f6f340a663ecd14475490, type: 3}
-    volume: 0.587
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: EyeDeath
     clip: {fileID: 8300000, guid: 6eac6ef1ee9f89b4981f80af69d83d0f, type: 3}
-    volume: 0.343
+    volume: 1
     pitch: 1.809
     loop: 0
     source: {fileID: 0}
@@ -35927,19 +35939,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: LevelComplete
     clip: {fileID: 8300000, guid: 454b45e8595266342865e4b21b817716, type: 3}
-    volume: 0.575
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: SoulEaterDeath
     clip: {fileID: 8300000, guid: d243b39971ece474091ab0966bcccf57, type: 3}
-    volume: 0.575
+    volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: BomberDeath
     clip: {fileID: 8300000, guid: c19e6468dbc3bfd4e8e165c690161bfb, type: 3}
-    volume: 0.575
+    volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -36154,6 +36166,7 @@ MonoBehaviour:
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
   DeathEffect: {fileID: 0}
+  DeathDelay: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -36186,6 +36199,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnArmor:
+    m_PersistentCalls:
+      m_Calls: []
+  BeforeDeath:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &5430505156761339555

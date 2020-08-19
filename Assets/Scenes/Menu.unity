@@ -841,33 +841,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: PlayerDeath
-    clip: {fileID: 8300000, guid: ca026b67c8b708a4c88405b969bbc9b0, type: 3}
-    volume: 0.13
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: PlayerHit
-    clip: {fileID: 8300000, guid: 0827d5f08fd3e0e44b9e1dfd5db708df, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: PlayerPizda
-    clip: {fileID: 8300000, guid: b91eb419c7a07234eb15d972168040a7, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: Theme
     clip: {fileID: 8300000, guid: 1cd64bbf58b8d2740953bc244f614937, type: 3}
-    volume: 0.761
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Shooting
-    clip: {fileID: 8300000, guid: c11dc5fb0c0296647a2cf57cdb60d2f7, type: 3}
-    volume: 0.113
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
