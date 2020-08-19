@@ -61814,7 +61814,7 @@ MonoBehaviour:
   TargetComponents:
   - {fileID: 1958059781}
   ActivateBy: 1
-  DeactivateBy: 7
+  DeactivateBy: 0
   TargetTime: 2
   TargetButton: 
   TargetTriggerTags:
@@ -61822,17 +61822,6 @@ MonoBehaviour:
   OnActivate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5242208629922806168}
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ManScream
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1958059778}
         m_MethodName: set_enabled
         m_Mode: 6
@@ -61844,11 +61833,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnDeactivate:
-    m_PersistentCalls:
-      m_Calls:
+      - m_Target: {fileID: 1958059781}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 5242208629922806168}
-        m_MethodName: Stop
+        m_MethodName: Play
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -61856,8 +61853,11 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ManScream
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1958059779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61911,12 +61911,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Who: []
-  DestroyOnDelay: 2
+  DestroyOnDelay: 1
   DestroyOnCollision: 0
   DestroyOnTrigger: 0
   OnDestroy:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 834677908}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5242208629922806168}
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ManScream
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1971593154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8598928250772544717, guid: f01a2a1c54976a54da10372d1658c443,
