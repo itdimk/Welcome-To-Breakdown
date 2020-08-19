@@ -21,6 +21,7 @@ public class SpawnerD : MonoBehaviour
 
     public UnityEvent OnSpawn;
     
+    
     // Start is called before the first frame update
     void Start()
     {

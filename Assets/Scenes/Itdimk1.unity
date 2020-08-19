@@ -17845,7 +17845,7 @@ GameObject:
   - component: {fileID: 248227625}
   - component: {fileID: 248227624}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Searcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17863,7 +17863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e70e973d8f31a438ae04e337dfe34c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScanInterval: 4
+  ScanInterval: 2
 --- !u!4 &248227625
 Transform:
   m_ObjectHideFlags: 0
@@ -18652,8 +18652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ce0921913a3024bb83087b9b195de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 500
-  maxHp: 500
+  hp: 205
+  maxHp: 205
   armor: 0
   maxArmor: 100
   armorAbsorption: 0.9
@@ -23408,8 +23408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ce0921913a3024bb83087b9b195de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 200
-  maxHp: 200
+  hp: 205
+  maxHp: 205
   armor: 0
   maxArmor: 100
   armorAbsorption: 0.9
@@ -24956,7 +24956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 972222346}
   m_Layer: 0
-  m_Name: Sholder
+  m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26729,7 +26729,7 @@ MonoBehaviour:
   MinAngle: 270.01
   MaxAngle: 45
   Tolerance: 0.01
-  RotationSpeed: 7
+  RotationSpeed: 6
   FlipSupport: 0
   FlipSupportProvider: {fileID: 0}
 --- !u!1 &1211367775
@@ -34012,8 +34012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ce0921913a3024bb83087b9b195de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 500
-  maxHp: 500
+  hp: 205
+  maxHp: 205
   armor: 0
   maxArmor: 100
   armorAbsorption: 0.9
@@ -36552,8 +36552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ce0921913a3024bb83087b9b195de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 500
-  maxHp: 500
+  hp: 205
+  maxHp: 205
   armor: 0
   maxArmor: 100
   armorAbsorption: 0.9
@@ -42745,7 +42745,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 8.358004, y: 0.34448195}
+  m_Offset: {x: 8.900815, y: -0.022876143}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -42756,7 +42756,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.43845, y: 7.7507286}
+  m_Size: {x: 18.352827, y: 7.016012}
   m_EdgeRadius: 0
 --- !u!114 &1724594009
 MonoBehaviour:
@@ -44877,8 +44877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ce0921913a3024bb83087b9b195de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 200
-  maxHp: 200
+  hp: 205
+  maxHp: 205
   armor: 0
   maxArmor: 100
   armorAbsorption: 0.9
@@ -45050,8 +45050,8 @@ MonoBehaviour:
   Origin: {fileID: 1377254179}
   DirectionMarker: {x: 0, y: 1}
   LimitAngle: 1
-  MinAngle: 180.1
-  MaxAngle: 359.9
+  MinAngle: 220
+  MaxAngle: 320
   Tolerance: 0.01
   RotationSpeed: 6
   FlipSupport: 0
