@@ -20,6 +20,12 @@ public class SelfDestroy : MonoBehaviour
         startTick = Time.time;
     }
 
+    private void OnEnable()
+    {
+        startTick = Time.time;
+        
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
