@@ -158,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
         this.Armor += amount;
 
         if (ArmorText != null)
-            ArmorText.text = Mathf.Round(amount).ToString();
+            ArmorText.text = Mathf.Round(Armor).ToString();
     }
 
     private void Push(GameObject other)
