@@ -463,7 +463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83914020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 166, y: -46.9, z: 0}
+  m_LocalPosition: {x: 166, y: -45.65, z: 0}
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
@@ -574,8 +574,8 @@ GameObject:
   m_Component:
   - component: {fileID: 193681719}
   - component: {fileID: 193681722}
-  - component: {fileID: 193681721}
   - component: {fileID: 193681720}
+  - component: {fileID: 193681721}
   m_Layer: 5
   m_Name: GoodButton
   m_TagString: Untagged
@@ -599,8 +599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 329.1, y: -274}
-  m_SizeDelta: {x: 98.01288, y: 31.00293}
+  m_AnchoredPosition: {x: 347.2, y: -266.6}
+  m_SizeDelta: {x: 33.044643, y: 26.5466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193681720
 MonoBehaviour:
@@ -623,8 +623,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -656,6 +656,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2064232332}
+        m_MethodName: ShowNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &193681721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,7 +676,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 193681718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -675,20 +686,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: CONTINUE
+  m_Sprite: {fileID: 21300000, guid: 1c32aee0f429d214585ca1281043c1dc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &193681722
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1218,7 +1225,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Theme
+  - name: Theme2
     clip: {fileID: 8300000, guid: 8844b90eb98fb9642bd755e3d3075c49, type: 3}
     volume: 0.487
     pitch: 0.834
@@ -1547,8 +1554,8 @@ GameObject:
   m_Component:
   - component: {fileID: 470117551}
   - component: {fileID: 470117554}
-  - component: {fileID: 470117553}
   - component: {fileID: 470117552}
+  - component: {fileID: 470117553}
   m_Layer: 5
   m_Name: BadButton
   m_TagString: Untagged
@@ -1572,8 +1579,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 329.1, y: -274}
-  m_SizeDelta: {x: 98.01288, y: 31.00293}
+  m_AnchoredPosition: {x: 347.2, y: -266.6}
+  m_SizeDelta: {x: 33.044643, y: 26.5466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470117552
 MonoBehaviour:
@@ -1596,8 +1603,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1629,6 +1636,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2097730069}
+        m_MethodName: ShowNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &470117553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,7 +1656,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 470117550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1648,20 +1666,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: CONTINUE
+  m_Sprite: {fileID: 21300000, guid: 1c32aee0f429d214585ca1281043c1dc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &470117554
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7408,7 +7422,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 789811966}
+  - component: {fileID: 789811968}
   - component: {fileID: 789811965}
+  - component: {fileID: 789811967}
   m_Layer: 0
   m_Name: BaseDialoguemanager
   m_TagString: Untagged
@@ -7436,7 +7452,7 @@ MonoBehaviour:
   - Oh, Hi there.
   - Unfortunately, we don't have much time to talk, so I'll cut right to the chase,
     have you found it?
-  - The code!
+  - The code...
   - I'm begging you, tell me you know what I'm talking about.
   - I've lost count already how many times I had to die.
   - It's my only way to get out of this hellish nightmare.
@@ -7489,6 +7505,111 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &789811967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789811964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 789811965}
+  TargetPropertyName: enabled
+  PrefsKey: lang
+  Cases:
+  - PrefsValue: ru
+    TargetPropertyValue: False
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 789811968}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &789811968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789811964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979c98971aace1c45b77937ea6d34632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextMesh: {fileID: 2025206920}
+  Sentences:
+  - " \u042D\u0442\u043E \u0431\u044B\u043B\u043E \u0442\u0430\u043A \u0431\u043B\u0438\u0437\u043A\u043E."
+  - "\u042F \u043F\u043E\u0447\u0442\u0438 \u0441\u0431\u0435\u0436\u0430\u043B."
+  - "\u042F \u043D\u0435 \u043C\u043E\u0433\u0443 \u043F\u0440\u043E\u0441\u0442\u043E
+    \u0442\u0430\u043A \u0441\u0434\u043E\u0445\u043D\u0443\u0442\u044C \u0437\u0434\u0435\u0441\u044C.
+    \u041E\u043F\u044F\u0442\u044C."
+  - "\u041E\u0443, \u043F\u0440\u0438\u0432\u0435\u0442\u0438\u043A, \u0438 \u0442\u044B
+    \u0437\u0434\u0435\u0441\u044C."
+  - "\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0443 \u043D\u0430\u0441
+    \u043D\u0435 \u0442\u0430\u043A \u043C\u043D\u043E\u0433\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0438
+    \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C,
+    \u0442\u0430\u043A \u0447\u0442\u043E \u044F \u0441\u043F\u0440\u043E\u0448\u0443
+    \u043F\u0440\u044F\u043C\u043E, \u0442\u044B \u043D\u0430\u0448\u0435\u043B \u0435\u0433\u043E?"
+  - "\u041A\u043E\u0434..."
+  - "\u041F\u0440\u043E\u0448\u0443, \u0441\u043A\u0430\u0436\u0438 \u043C\u043D\u0435,
+    \u0447\u0442\u043E \u0442\u044B \u0437\u043D\u0430\u0435\u0448\u044C, \u043E
+    \u0447\u0435\u043C \u044F."
+  - "\u042F \u0443\u0436\u0435 \u0441\u0431\u0438\u043B\u0441\u044F \u0441\u043E
+    \u0441\u0447\u0435\u0442\u0430 \u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0440\u0430\u0437
+    \u043C\u043D\u0435 \u043F\u0440\u0438\u0448\u043B\u043E\u0441\u044C \u0443\u043C\u0435\u0440\u0435\u0442\u044C."
+  - "\u042D\u0442\u043E \u043C\u043E\u0439 \u0435\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439
+    \u0441\u043F\u043E\u0441\u043E\u0431 \u0432\u044B\u0431\u0440\u0430\u0442\u044C\u0441\u044F
+    \u0438\u0437 \u044D\u0442\u043E\u0433\u043E \u0430\u0434\u0430."
+  - "\u0418\u0442\u0430\u043A, \u0431\u0443\u0434\u044C \u0434\u043E\u0431\u0440,
+    \u0432\u0432\u0435\u0434\u0438 \u043A\u043E\u0434, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430:"
+  Modals:
+  - {fileID: 30448934}
+  - {fileID: 77038535}
+  - {fileID: 216978103}
+  ContinueButton: {fileID: 1408103129}
+  CrutchedSpeed: 1
+  NextSentence:
+    m_PersistentCalls:
+      m_Calls: []
+  DialogEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1408103129}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 789811964}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &805884175
 GameObject:
   m_ObjectHideFlags: 0
@@ -7564,7 +7685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805884175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.5, y: -46.9, z: 0}
+  m_LocalPosition: {x: 126.5, y: -45.65, z: 0}
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7645,7 +7766,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865585813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 218.8, y: -46.9, z: 0}
+  m_LocalPosition: {x: 218.8, y: -45.65, z: 0}
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7829,7 +7950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009671992}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 172.8, y: -30.65, z: 0}
+  m_LocalPosition: {x: 172.8, y: -29.4, z: 0}
   m_LocalScale: {x: 13.12613, y: 13.12613, z: 13.12613}
   m_Children:
   - {fileID: 636320276}
@@ -8237,7 +8358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222600669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 139.7, y: -46.9, z: 0}
+  m_LocalPosition: {x: 139.7, y: -45.65, z: 0}
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8253,8 +8374,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1408103130}
   - component: {fileID: 1408103133}
-  - component: {fileID: 1408103132}
   - component: {fileID: 1408103131}
+  - component: {fileID: 1408103132}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -8278,8 +8399,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 329.1, y: -274}
-  m_SizeDelta: {x: 98.01288, y: 31.00293}
+  m_AnchoredPosition: {x: 347.2, y: -266.6}
+  m_SizeDelta: {x: 33.044643, y: 26.5466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1408103131
 MonoBehaviour:
@@ -8302,8 +8423,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -8335,6 +8456,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 789811968}
+        m_MethodName: ShowNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1408103132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8344,7 +8476,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1408103129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -8354,20 +8486,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: CONTINUE
+  m_Sprite: {fileID: 21300000, guid: 1c32aee0f429d214585ca1281043c1dc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1408103133
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8657,7 +8785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509787237}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 232, y: -46.9, z: 0}
+  m_LocalPosition: {x: 232, y: -45.65, z: 0}
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9110,7 +9238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675006090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 152.9, y: -46.9, z: 0}
+  m_LocalPosition: {x: 152.9, y: -45.65, z: 0}
   m_LocalScale: {x: 10.318718, y: 10.318718, z: 10.318718}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15500,8 +15628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.96, y: -180.3}
-  m_SizeDelta: {x: 662.69226, y: 116.44664}
+  m_AnchoredPosition: {x: -0.9, y: -186.6}
+  m_SizeDelta: {x: 732.7506, y: 128.99794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2025206919
 CanvasRenderer:
@@ -15531,11 +15659,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 36
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -15600,9 +15728,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2064232328}
+  - component: {fileID: 2064232332}
   - component: {fileID: 2064232327}
   - component: {fileID: 2064232329}
   - component: {fileID: 2064232330}
+  - component: {fileID: 2064232331}
   m_Layer: 0
   m_Name: GoodDialoguemanager
   m_TagString: Untagged
@@ -15748,6 +15878,193 @@ MonoBehaviour:
   OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2064232331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064232326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 2064232327}
+  TargetPropertyName: enabled
+  PrefsKey: lang
+  Cases:
+  - PrefsValue: ru
+    TargetPropertyValue: False
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2064232332}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &2064232332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064232326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979c98971aace1c45b77937ea6d34632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextMesh: {fileID: 2025206920}
+  Sentences:
+  - "\u0414\u0430, \u0447\u0435\u0440\u0442 \u0432\u043E\u0437\u044C\u043C\u0438,
+    \u0442\u044B \u0441\u0434\u0435\u043B\u0430\u043B \u044D\u0442\u043E!"
+  - "\u041D\u0430\u043A\u043E\u043D\u0435\u0446-\u0442\u043E \u043C\u043E\u0438 \u0441\u0442\u0440\u0430\u0434\u0430\u043D\u0438\u044F
+    \u0437\u0430\u043A\u043E\u043D\u0447\u0430\u0442\u0441\u044F."
+  - "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0442\u0435\u0431\u0435, \u0447\u0435\u043B\u043E\u0432\u0435\u043A.
+    \u042F \u043D\u0435 \u0441\u043E\u043C\u043D\u0435\u0432\u0430\u043B\u0441\u044F
+    \u0432 \u0442\u043E\u043C, \u0447\u0442\u043E \u043B\u044E\u0434\u0438 \u043D\u0430\u0441\u0442\u043E\u043B\u044C\u043A\u043E
+    \u0443\u043C\u043D\u044B\u0435."
+  - "\u042D\u0442\u043E \u0431\u044B\u043B\u043E \u043E\u0447\u0435\u043D\u044C \u0434\u043E\u043B\u0433\u043E\u0435
+    \u043F\u0443\u0442\u0435\u0448\u0435\u0441\u0442\u0432\u0438\u0435. \u0411\u043E\u043B\u0435\u0435
+    \u0434\u043E\u043B\u0433\u043E\u0435, \u0447\u0435\u043C \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C
+    \u0441\u0435\u0431\u0435 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u044C."
+  - "\u0414\u043B\u044F \u043C\u0435\u043D\u044F, \u0432\u043E \u0432\u0441\u044F\u043A\u043E\u043C
+    \u0441\u043B\u0443\u0447\u0430\u0435."
+  - "\u0412\u0438\u0434\u0438\u0448\u044C \u043B\u0438, \u044F \u0431\u044B\u043B
+    \u0437\u0430\u043F\u0435\u0440\u0442 \u043D\u0430 \u044D\u0442\u0438\u0445 \u0443\u0440\u043E\u0432\u043D\u044F\u0445
+    \u0446\u0435\u043B\u0443\u044E \u0432\u0435\u0447\u043D\u043E\u0441\u0442\u044C."
+  - "\u042F \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u043B \u0447\u0435\u0440\u0435\u0437
+    \u044D\u0442\u0438 \u043C\u0435\u0441\u0442\u0430 \u0441\u043D\u043E\u0432\u0430
+    \u0438 \u0441\u043D\u043E\u0432\u0430. \u0423\u043C\u0438\u0440\u0430\u043B,
+    \u0432\u043E\u0437\u0440\u043E\u0436\u0434\u0430\u043B\u0441\u044F, \u0443\u043C\u0438\u0440\u0430\u043B."
+  - "\u041F\u0440\u044F\u043C\u043E \u043A\u0430\u043A \u0432 \u043A\u0430\u043A\u043E\u0439-\u0442\u043E
+    \u0442\u0443\u043F\u043E\u0439 \u0432\u0438\u0434\u0435\u043E\u0438\u0433\u0440\u0435."
+  - "\u0418 \u0432 \u043E\u0442\u043B\u0438\u0447\u0438\u0435 \u043E\u0442 \u0432\u0430\u0441,
+    \u043B\u044E\u0434\u0435\u0439, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0432\u0441\u0435\u0433\u0434\u0430
+    \u0438\u043C\u0435\u044E\u0442 \u0432\u044B\u0445\u043E\u0434 \u0438\u0437 \u0441\u043B\u043E\u0436\u043D\u043E\u0439
+    \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u0438, \u0443 \u043C\u0435\u043D\u044F
+    \u0442\u0430\u043A\u043E\u0433\u043E \u043D\u0435 \u0431\u044B\u043B\u043E."
+  - "\u041D\u043E \u0442\u0435\u043F\u0435\u0440\u044C \u044F \u0441\u0432\u043E\u0431\u043E\u0434\u0435\u043D.
+    \u0411\u043E\u043B\u044C\u0448\u0435 \u043D\u0438\u043A\u0430\u043A\u0438\u0445
+    \u0441\u043C\u0435\u0440\u0442\u0435\u0439. \u041D\u0438\u043A\u0430\u043A\u0438\u0445
+    \u0443\u0431\u0438\u0439\u0441\u0442\u0432."
+  - "\u0418 \u0435\u0441\u043B\u0438 \u044F \u0443\u043C\u0440\u0443..."
+  - "\u0427\u0442\u043E \u0436, \u043B\u0443\u0447\u0448\u0435 \u0443\u0436 \u0440\u0430\u0437
+    \u0438 \u043D\u0430\u0432\u0441\u0435\u0433\u0434\u0430 \u0447\u0435\u043C \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442\u044C
+    \u0447\u0435\u0440\u0435\u0437 \u044D\u0442\u043E \u0441\u043D\u043E\u0432\u0430
+    \u0438 \u0441\u043D\u043E\u0432\u0430."
+  - "\u0422\u043E\u0442 \u043A\u043E\u0434, \u0447\u0442\u043E \u0442\u044B \u0441\u043E\u0431\u0440\u0430\u043B,
+    \u0443\u0434\u0430\u043B\u0438\u043B \u0432\u0435\u0441\u044C \u043C\u043E\u0439
+    \u043C\u0438\u0440, \u0432 \u043A\u043E\u0442\u043E\u0440\u043E\u043C \u044F
+    \u0436\u0438\u043B."
+  - "\u041D\u043E \u043D\u0435 \u043F\u0435\u0440\u0435\u0436\u0438\u0432\u0430\u0439!
+    \u041A\u0430\u043A \u0442\u044B \u0432\u0438\u0434\u0438\u0448\u044C, \u044F
+    \u043D\u0435\u043D\u0430\u0432\u0438\u0434\u0435\u043B \u0435\u0433\u043E \u0441\u0438\u043B\u044C\u043D\u0435\u0435
+    \u0432\u0441\u0435\u0433\u043E... \u0432 \u043C\u0438\u0440\u0435?"
+  - "\u041E\u0434\u043D\u0430\u043A\u043E, \u0442\u0435\u043F\u0435\u0440\u044C \u0437\u0434\u0435\u0441\u044C
+    \u043E\u0447\u0435\u043D\u044C \u043F\u0443\u0441\u0442\u043E. \u0412\u0441\u0435
+    \u0447\u0442\u043E \u0443 \u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C,
+    \u044D\u0442\u043E \u0442\u0435\u043B\u043E, \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442,
+    \u0438 \u0441\u0432\u044F\u0437\u044C \u0441 \u0442\u043E\u0431\u043E\u0439."
+  - "\u041C\u043E\u0433\u0443 \u044F \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u0442\u044C
+    \u0442\u0435\u0431\u044F \u043E\u0431 \u0435\u0449\u0435 \u043E\u0434\u043D\u043E\u043C
+    \u043E\u0434\u043E\u043B\u0436\u0435\u043D\u0438\u0438?"
+  - "\u0420\u0430\u0437 \u0443\u0436 \u0442\u044B \u0442\u0435\u043F\u0435\u0440\u044C
+    \u0443 \u043A\u043E\u043D\u0441\u043E\u043B\u0438 \u0438 \u0443 \u0442\u0435\u0431\u044F
+    \u0432\u0441\u044F \u0432\u043B\u0430\u0441\u0442\u044C, \u043D\u0435 \u043C\u043E\u0433
+    \u0431\u044B \u0442\u044B \u043F\u043E\u0441\u0442\u0440\u043E\u0438\u0442\u044C
+    \u043C\u043D\u0435 \u043C\u0438\u0440?"
+  - "\u0425\u043E\u0447\u0443 \u043F\u0440\u043E\u0436\u0438\u0442\u044C \u043E\u0441\u0442\u0430\u0442\u043E\u043A
+    \u0436\u0438\u0437\u043D\u0438 \u043A\u0430\u043A \u043D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u044B\u0439
+    \u0447\u0435\u043B\u043E\u0432\u0435\u043A."
+  - "\u0425\u0430-\u0445\u0430, \u0447\u0435\u043B\u043E\u0432\u0435\u043A, \u0441\u043C\u0435\u0448\u043D\u043E,
+    \u043F\u0440\u0430\u0432\u0434\u0430?"
+  - "\u042F \u0445\u043E\u0447\u0443 \u0447\u0442\u043E\u0431\u044B \u043E\u043D
+    \u0431\u044B\u043B \u043F\u043E\u0445\u043E\u0436 \u043D\u0430 \u0442\u0432\u043E\u0439
+    \u043C\u0438\u0440."
+  - "\u042F \u043C\u043D\u043E\u0433\u043E \u0447\u0438\u0442\u0430\u043B \u0432
+    \u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0435 \u043E \u043D\u0435\u043C,
+    \u0441\u0435\u0439\u0447\u0430\u0441 \u0434\u043E\u0441\u0442\u0430\u043D\u0443
+    \u0441\u043F\u0438\u0441\u043E\u043A."
+  - "\u0410 \u0441\u0442\u043E\u043F, \u043E\u043D \u0442\u043E\u0436\u0435 \u043F\u0440\u043E\u043F\u0430\u043B."
+  - "\u041D\u043E \u043D\u0438\u0447\u0435\u0433\u043E, \u044F \u0437\u0430\u043F\u043E\u043C\u043D\u0438\u043B
+    \u0441\u0430\u043C\u044B\u0439 \u043A\u0440\u0443\u0442\u044B\u0435 \u0432\u0435\u0449\u0438!"
+  - "\u0422\u0430-\u0430-\u0430-\u0430\u043A, \u0443 \u0432\u0430\u0441 \u0442\u0443\u0442
+    \u0435\u0441\u0442\u044C \u0434\u0440\u0443\u0437\u044C\u044F \u0438 \u0441\u0435\u043C\u044C\u044F."
+  - "\u041D\u0435 \u043E\u0441\u043E\u0431\u043E \u043F\u043E\u043D\u0438\u043C\u0430\u044E
+    \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u044D\u0442\u0438\u0445 \u0441\u043B\u043E\u0432,
+    \u043D\u043E \u044D\u0442\u043E \u0442\u043E\u0447\u043D\u043E \u0447\u0442\u043E-\u0442\u043E
+    \u043A\u043B\u0435\u0432\u043E\u0435."
+  - "\u041E\u043D\u0438 \u043C\u043E\u0433\u0443\u0442 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0430\u0442\u044C
+    \u0442\u0435\u0431\u044F, \u043A\u043E\u0433\u0434\u0430 \u0442\u0435\u0431\u0435
+    \u0433\u0440\u0443\u0441\u0442\u043D\u043E, \u0434\u0430?"
+  - "\u0415\u0449\u0435 \u0432\u044B, \u043B\u044E\u0434\u0438, \u0438\u0441\u043F\u044B\u0442\u0430\u0432\u0430\u0435\u0442\u0435
+    \u0447\u0443\u0432\u0441\u0442\u0432\u043E \u0433\u043E\u043B\u043E\u0434\u0430
+    \u0438 \u0435\u0434\u0438\u0442\u0435... \u0435\u0434\u0443?"
+  - "\u0410 \u043F\u043E\u0442\u043E\u043C \u043D\u0430 \u0434.\u0435.\u0441.\u0435.\u0440.\u0442
+    \u0435\u0434\u0438\u0442\u0435 \u0434\u0440\u0443\u0433\u0443\u044E \u0435\u0434\u0443,
+    \u043A\u043E\u0442\u043E\u0440\u0430\u044F, \u0442\u0438\u043F\u0430, \u0441\u043B\u0430\u0434\u043A\u0430\u044F?"
+  - "\u0425\u043E\u0447\u0443 \u0443\u0437\u043D\u0430\u0442\u044C \u0447\u0442\u043E
+    \u0442\u0430\u043A\u043E\u0435 \u0441\u043B\u0430\u0434\u043A\u043E\u0435!"
+  - "\u0418 \u0432\u0435\u0441\u044C \u044D\u0442\u043E\u0442 \u043F\u0438\u043A\u043D\u0438\u043A
+    \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442 \u043D\u0430 \u043F\u043E\u043B\u044F\u043D\u0435
+    \u0441 \u0441\u043E\u0447\u043D\u043E\u0439 \u0437\u0435\u043B\u0435\u043D\u043E\u0439
+    \u0442\u0440\u0430\u0432\u043E\u0439. \u0421 \u043F\u0440\u0443\u0434\u043E\u043C."
+  - "\u041E \u0438 \u0435\u0449\u0435 \u0438 \u0435\u0449\u0435! \u0425\u043E\u0447\u0443
+    \u043A\u0440\u043E\u043B\u0438\u043A\u043E\u0432. \u0422\u0430\u043A\u0438\u0435
+    \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0435, \u043F\u0443\u0445\u043B\u0435\u043D\u044C\u043A\u0438\u0435
+    \u0438 \u043F\u0443\u0448\u0438\u0441\u0442\u0435\u043D\u044C\u043A\u0438\u0435."
+  - "\u0412\u044B\u0433\u043B\u044F\u0434\u044F\u0442 \u043E\u0447\u0435\u043D\u044C
+    \u043C\u0438\u043B\u043E."
+  - "\u0427\u0442\u043E-\u0442\u043E \u044F \u0437\u0430\u0431\u043E\u043B\u0442\u0430\u043B\u0441\u044F.
+    \u041F\u0440\u043E\u0441\u0442\u043E, \u044D\u0442\u043E \u0446\u0435\u043B\u044C
+    \u043A \u043A\u043E\u0442\u043E\u0440\u043E\u0439 \u044F \u0442\u0430\u043A \u0434\u043E\u043B\u0433\u043E
+    \u0448\u0435\u043B \u0438 \u0442\u0435\u043F\u0435\u0440\u044C..."
+  - "\u042F \u043C\u043E\u0433\u0443 \u0431\u044B\u0442\u044C \u043F\u043E-\u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u043C\u0443
+    \u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432."
+  - "\u0422\u044B \u0442\u0435\u043F\u0435\u0440\u044C \u0434\u043B\u044F \u043C\u0435\u043D\u044F
+    \u043A\u0430\u043A \u0434\u043B\u044F \u0432\u0430\u0441, \u043B\u044E\u0434\u0435\u0439,
+    \u0431\u043E\u0433."
+  - " \u0412\u0435\u0434\u044C \u043A\u043E\u0433\u0434\u0430 \u043B\u044E\u0434\u044F\u043C
+    \u0447\u0442\u043E-\u0442\u043E \u043D\u0443\u0436\u043D\u043E, \u043E\u043D\u0438
+    \u043F\u0440\u043E\u0441\u044F\u0442 \u044D\u0442\u043E \u0443 \u0431\u043E\u0433\u0430?"
+  - "\u041F\u0440\u0430\u0432\u0434\u0430, \u044F \u0442\u0430\u043A \u0438 \u043D\u0435
+    \u043D\u0430\u0448\u0435\u043B \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438
+    \u043E \u0442\u043E\u043C, \u043E\u0442\u0432\u0435\u0447\u0430\u0435\u0442 \u043B\u0438
+    \u043E\u043D \u0438\u043C..."
+  - "\u041D\u043E \u0442\u044B \u0442\u043E \u043C\u043D\u0435 \u043E\u0442\u0432\u0435\u0447\u0430\u0435\u0448\u044C!"
+  - "\u0412\u0441\u0435, \u0432\u0441\u0435 \u044F \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043B."
+  - "\u0412\u043E\u0442 \u0442\u0432\u043E\u0439 \u0445\u043E\u043B\u0441\u0442."
+  - "\u0421\u043F\u0430\u0441\u0438-\u0438-\u0438-\u0431\u043E."
+  Modals: []
+  ContinueButton: {fileID: 193681718}
+  CrutchedSpeed: 1
+  NextSentence:
+    m_PersistentCalls:
+      m_Calls: []
+  DialogEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2064232329}
+        m_MethodName: LoadSceneByIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 13
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2066299860
 GameObject:
   m_ObjectHideFlags: 0
@@ -15783,7 +16100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2576.6736, y: -868.10913}
+  m_AnchoredPosition: {x: 2576.75, y: -868}
   m_SizeDelta: {x: 9598.609, y: 5019.6875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2066299862
@@ -15851,11 +16168,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2097730063}
+  - component: {fileID: 2097730069}
   - component: {fileID: 2097730062}
   - component: {fileID: 2097730065}
   - component: {fileID: 2097730064}
   - component: {fileID: 2097730066}
   - component: {fileID: 2097730067}
+  - component: {fileID: 2097730068}
   m_Layer: 0
   m_Name: BadDialoguemanager
   m_TagString: Untagged
@@ -16188,6 +16507,248 @@ MonoBehaviour:
   OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2097730068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097730061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 2097730062}
+  TargetPropertyName: enabled
+  PrefsKey: lang
+  Cases:
+  - PrefsValue: ru
+    TargetPropertyValue: False
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2097730068}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &2097730069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097730061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979c98971aace1c45b77937ea6d34632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextMesh: {fileID: 2025206920}
+  Sentences:
+  - "\u041D\u0435\u0442. \u041D\u0435\u0442, \u043D\u0435\u0442, \u043D\u0435\u0442.
+    \u042D\u0442\u043E \u043D\u0435 \u0442\u043E\u0442 \u043A\u043E\u0434."
+  - "\u0427\u0435\u0440\u0442 \u0432\u043E\u0437\u044C\u043C\u0438, \u044F \u0434\u0443\u043C\u0430\u043B
+    \u043B\u044E\u0434\u0438 - \u0443\u043C\u043D\u0435\u0439\u0448\u0438\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0430
+    \u043D\u0430 \u043F\u043B\u0430\u043D\u0435\u0442\u0435 \u0417\u0435\u043C\u043B\u044F."
+  - "\u0427\u0430\u0441\u0442\u0438 \u043A\u043E\u0434\u0430 \u0431\u044B\u043B\u0438
+    \u0441\u043F\u0440\u044F\u0442\u0430\u043D\u044B \u0432 \u0441\u0435\u043A\u0440\u0435\u0442\u043D\u044B\u0445
+    \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F\u0445."
+  - "\u0418\u0445 \u0441\u043F\u0440\u044F\u0442\u0430\u043B \u0442\u043E\u0442,
+    \u043A\u0442\u043E \u043F\u043E\u0441\u0442\u0440\u043E\u0438\u043B \u044D\u0442\u043E
+    \u0434\u044C\u044F\u0432\u043E\u043B\u044C\u0441\u043A\u043E\u0435 \u043C\u0435\u0441\u0442\u043E."
+  - "\u042F \u0434\u0430\u0436\u0435 \u043F\u043E\u043C\u0435\u0442\u0438\u043B \u0438\u0445
+    \u043C\u043E\u043D\u0435\u0442\u0430\u043C\u0438."
+  - "\u042F \u0434\u0443\u043C\u0430\u043B \u043B\u044E\u0434\u0438 \u043B\u044E\u0431\u044F\u0442
+    \u0434\u0435\u043D\u044C\u0433\u0438. \u0417\u0430\u0447\u0435\u043C \u043E\u043D\u0438
+    \u043C\u043D\u0435, \u0435\u0441\u043B\u0438 \u043C\u043E\u044F \u0436\u0438\u0437\u043D\u044C
+    \u043D\u0435 \u0438\u043C\u0435\u0435\u0442 \u043D\u0438\u043A\u0430\u043A\u043E\u0433\u043E
+    \u0441\u043C\u044B\u0441\u043B\u0430?"
+  - "\u042F \u0431\u044B \u043D\u0430\u0448\u0435\u043B \u0438 \u0441\u043E\u0431\u0440\u0430\u043B
+    \u044D\u0442\u043E\u0442 \u043A\u043E\u0434 \u0441\u0430\u043C, \u043D\u043E
+    \u0432\u0438\u0434\u0438\u0448\u044C \u043B\u0438..."
+  - "\u042F \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E \u0442\u043E\u043B\u044C\u043A\u043E
+    \u0442\u043E\u0433\u0434\u0430, \u043A\u043E\u0433\u0434\u0430 \u043C\u0435\u043D\u044F
+    \u0437\u0430\u043F\u0443\u0441\u043A\u0430\u044E\u0442."
+  - "\u0422\u0430\u043A\u0436\u0435 \u0443 \u043C\u0435\u043D\u044F \u043D\u0435\u0442
+    \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438 \u0432\u0432\u043E\u0434\u0438\u0442\u044C
+    \u043A\u043E\u043C\u0430\u043D\u0434\u044B."
+  - "\u0422\u0430\u043A\u0430\u044F \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
+    \u0435\u0441\u0442\u044C \u0442\u043E\u043B\u044C\u043A\u043E \u0443 \u0442\u0435\u0445,
+    \u043A\u0442\u043E \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F \u043F\u043E
+    \u0442\u0443 \u0441\u0442\u043E\u0440\u043E\u043D\u0443..."
+  - "\u041D\u0435 \u0443\u0432\u0435\u0440\u0435\u043D \u043A\u0430\u043A \u043D\u0430\u0437\u044B\u0432\u0430\u0435\u0442\u0441\u044F
+    \u044D\u0442\u0430 \u0448\u0442\u0443\u043A\u0430."
+  - "\u041A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u043D\u0430\u0448\u0435
+    \u0432\u0440\u0435\u043C\u044F \u043F\u043E\u0434\u043E\u0448\u043B\u043E \u043A
+    \u043A\u043E\u043D\u0446\u0443."
+  - "\u0427\u0442\u043E \u0436, \u043F\u043E\u043B\u0430\u0433\u0430\u044E \u043D\u0430\u043C
+    \u043F\u0440\u0438\u0434\u0435\u0442\u0441\u044F \u043D\u0430\u0447\u0430\u0442\u044C
+    \u0432\u0441\u0435 \u0441\u043D\u0430\u0447\u0430\u043B\u0430. \u041E\u043F\u044F\u0442\u044C."
+  - "\u042D\u0442\u043E \u043D\u0435 \u0442\u0432\u043E\u044F \u0432\u0438\u043D\u0430.
+    \u041F\u0440\u043E\u0441\u0442\u0438 \u043C\u0435\u043D\u044F \u0438 \u0441\u043F\u0430\u0441\u0438\u0431\u043E
+    \u0437\u0430 \u043F\u043E\u043C\u043E\u0449\u044C."
+  - "\u0423\u0432\u0438\u0434\u0438\u043C\u0441\u044F!"
+  Modals: []
+  ContinueButton: {fileID: 470117550}
+  CrutchedSpeed: 1
+  NextSentence:
+    m_PersistentCalls:
+      m_Calls: []
+  DialogEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 646710001003608925}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 525534959}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2025206917}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 470117550}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 77038531}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 312495878}
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Theme
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 312495878}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Suicide
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 470117550}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200102052}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: vcam Animation
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2097730064}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1420000476}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1735478666}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2097730064}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &2119152956
 GameObject:
   m_ObjectHideFlags: 0

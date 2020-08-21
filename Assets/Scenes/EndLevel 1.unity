@@ -545,6 +545,7 @@ GameObject:
   - component: {fileID: 145008888}
   - component: {fileID: 145008887}
   - component: {fileID: 145008889}
+  - component: {fileID: 145008890}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -591,11 +592,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -603,7 +604,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To add friends
+  m_Text: 'Add friends
 
 '
 --- !u!222 &145008888
@@ -690,6 +691,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &145008890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145008885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 145008887}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0434\u0440\u0443\u0437\u0435\u0439"
 --- !u!1 &156959520
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +795,7 @@ GameObject:
   - component: {fileID: 160918598}
   - component: {fileID: 160918597}
   - component: {fileID: 160918596}
+  - component: {fileID: 160918599}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -898,11 +918,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -910,7 +930,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To add family
+  m_Text: 'Add a family
 
 '
 --- !u!222 &160918598
@@ -921,6 +941,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160918594}
   m_CullTransparentMesh: 0
+--- !u!114 &160918599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160918594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 160918597}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0441\u0435\u043C\u044C\u044E"
 --- !u!1 &189119921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1521,7 @@ GameObject:
   - component: {fileID: 401227660}
   - component: {fileID: 401227659}
   - component: {fileID: 401227658}
+  - component: {fileID: 401227661}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1605,11 +1644,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1617,7 +1656,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To add world
+  m_Text: 'Add a world
 
 '
 --- !u!222 &401227660
@@ -1628,6 +1667,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401227656}
   m_CullTransparentMesh: 0
+--- !u!114 &401227661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401227656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 401227659}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043C\u0438\u0440"
 --- !u!1 &408743794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,6 +1697,7 @@ GameObject:
   - component: {fileID: 408743798}
   - component: {fileID: 408743797}
   - component: {fileID: 408743796}
+  - component: {fileID: 408743799}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1762,11 +1820,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1774,7 +1832,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To add rabbits
+  m_Text: Add rabbits
 --- !u!222 &408743798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1783,6 +1841,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408743794}
   m_CullTransparentMesh: 0
+--- !u!114 &408743799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408743794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 408743797}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043A\u0440\u043E\u043B\u0438\u043A\u043E\u0432"
 --- !u!1 &412511580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,6 +1945,7 @@ GameObject:
   - component: {fileID: 434819767}
   - component: {fileID: 434819766}
   - component: {fileID: 434819765}
+  - component: {fileID: 434819768}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1980,11 +2057,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1992,7 +2069,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: To add happiness
+  m_Text: Add happiness
 --- !u!222 &434819767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2001,6 +2078,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434819763}
   m_CullTransparentMesh: 0
+--- !u!114 &434819768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434819763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 434819766}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0441\u0447\u0430\u0441\u0442\u044C\u0435"
 --- !u!1 &440708522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,6 +2693,7 @@ GameObject:
   - component: {fileID: 661785336}
   - component: {fileID: 661785338}
   - component: {fileID: 661785337}
+  - component: {fileID: 661785339}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2644,8 +2740,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2674,6 +2770,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661785335}
   m_CullTransparentMesh: 0
+--- !u!114 &661785339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661785335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 661785337}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "Welcome to breakdown\n\ncreated by\nitdimk and Elnuir\n\n\u0421\u043F\u0430\u0441\u0438\u0431\u043E,
+      \u0447\u0442\u043E \u0438\u0433\u0440\u0430\u043B\u0438!"
 --- !u!1 &690063284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,6 +2801,7 @@ GameObject:
   - component: {fileID: 690063288}
   - component: {fileID: 690063287}
   - component: {fileID: 690063286}
+  - component: {fileID: 690063289}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2808,11 +2924,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2820,7 +2936,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To add food
+  m_Text: 'Add food
 
 '
 --- !u!222 &690063288
@@ -2831,6 +2947,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690063284}
   m_CullTransparentMesh: 0
+--- !u!114 &690063289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690063284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 690063287}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0435\u0434\u0443"
 --- !u!1 &751684500
 GameObject:
   m_ObjectHideFlags: 0
@@ -4001,6 +4135,7 @@ GameObject:
   - component: {fileID: 1109117130}
   - component: {fileID: 1109117129}
   - component: {fileID: 1109117128}
+  - component: {fileID: 1109117131}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4123,11 +4258,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4135,7 +4270,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To add meadow
+  m_Text: 'Add a meadow
 
 '
 --- !u!222 &1109117130
@@ -4146,6 +4281,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109117126}
   m_CullTransparentMesh: 0
+--- !u!114 &1109117131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109117126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1109117129}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043B\u0443\u0433"
 --- !u!1 &1126538646
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,6 +5620,7 @@ GameObject:
   - component: {fileID: 1604833486}
   - component: {fileID: 1604833488}
   - component: {fileID: 1604833487}
+  - component: {fileID: 1604833489}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -5513,11 +5667,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 2
     m_MaxSize: 50
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -5533,7 +5687,7 @@ MonoBehaviour:
     itdimk and elnuir
 
 
-    thank
+    Thank
     you for playing!'
 --- !u!222 &1604833488
 CanvasRenderer:
@@ -5543,6 +5697,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604833485}
   m_CullTransparentMesh: 0
+--- !u!114 &1604833489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604833485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1604833487}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "Welcome to breakdown\n\nCreated by\nitdimk and Elnuir\n\n\u0421\u043F\u0430\u0441\u0438\u0431\u043E,
+      \u0447\u0442\u043E \u0438\u0433\u0440\u0430\u043B\u0438!"
 --- !u!1 &1624390720
 GameObject:
   m_ObjectHideFlags: 0
@@ -6354,6 +6527,7 @@ GameObject:
   - component: {fileID: 1862424440}
   - component: {fileID: 1862424439}
   - component: {fileID: 1862424438}
+  - component: {fileID: 1862424441}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -6476,11 +6650,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6488,7 +6662,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To add candies
+  m_Text: 'Add candies
 
 '
 --- !u!222 &1862424440
@@ -6499,6 +6673,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862424436}
   m_CullTransparentMesh: 0
+--- !u!114 &1862424441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862424436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1862424439}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043A\u043E\u043D\u0444\u0435\u0442\u043A\u0438"
 --- !u!1 &1885677484
 GameObject:
   m_ObjectHideFlags: 0
@@ -7016,6 +7208,7 @@ GameObject:
   - component: {fileID: 1989117494}
   - component: {fileID: 1989117493}
   - component: {fileID: 1989117492}
+  - component: {fileID: 1989117495}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -7138,11 +7331,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -7150,7 +7343,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To add a house
+  m_Text: 'Add a house
 
 '
 --- !u!222 &1989117494
@@ -7161,6 +7354,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989117490}
   m_CullTransparentMesh: 0
+--- !u!114 &1989117495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989117490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1989117493}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0434\u043E\u043C"
 --- !u!1 &1999886958
 GameObject:
   m_ObjectHideFlags: 0
@@ -7247,6 +7458,7 @@ GameObject:
   - component: {fileID: 2004535690}
   - component: {fileID: 2004535689}
   - component: {fileID: 2004535688}
+  - component: {fileID: 2004535691}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -7380,11 +7592,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -7392,7 +7604,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'To add reality
+  m_Text: 'Add the reality
 
 '
 --- !u!222 &2004535690
@@ -7403,6 +7615,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004535686}
   m_CullTransparentMesh: 0
+--- !u!114 &2004535691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004535686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 2004535689}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
 --- !u!1 &2014483058
 GameObject:
   m_ObjectHideFlags: 0
