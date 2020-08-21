@@ -33167,6 +33167,7 @@ GameObject:
   - component: {fileID: 1866578230}
   - component: {fileID: 1866578229}
   - component: {fileID: 1866578238}
+  - component: {fileID: 1866578239}
   m_Layer: 8
   m_Name: PlaYeR (2)
   m_TagString: Player
@@ -33496,8 +33497,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   maxHp: 100
-  armor: 400
-  maxArmor: 500
+  armor: 399
+  maxArmor: 600
   armorAbsorption: 0.9
   WriteHpTo: {fileID: 695669832}
   WriteArmorTo: {fileID: 1903202844}
@@ -33562,6 +33563,44 @@ MonoBehaviour:
   BeforeDeath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1866578239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866578228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1866578238}
+  TargetPropertyName: armor
+  PrefsKey: difficulty
+  Cases:
+  - PrefsValue: 1
+    TargetPropertyValue: 600
+  - PrefsValue: 2
+    TargetPropertyValue: 400
+  - PrefsValue: 3
+    TargetPropertyValue: 300
+  IgnoreCase: 0
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1866578238}
+        m_MethodName: Armor
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1885677484
 GameObject:
   m_ObjectHideFlags: 0
@@ -35982,6 +36021,8 @@ GameObject:
   - component: {fileID: 1919769682}
   - component: {fileID: 1919769683}
   - component: {fileID: 5430505156761339550}
+  - component: {fileID: 5430505156761339553}
+  - component: {fileID: 5430505156761339552}
   - component: {fileID: 5430505156761339554}
   - component: {fileID: 5430505156761339555}
   - component: {fileID: 5430505156761339551}
@@ -36146,6 +36187,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HpBar: {fileID: 1032885511}
+--- !u!114 &5430505156761339552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5430505156761339548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 5430505156761339550}
+  TargetPropertyName: AttackInterval
+  PrefsKey: difficulty
+  Cases:
+  - PrefsValue: 1
+    TargetPropertyValue: 25
+  - PrefsValue: 2
+    TargetPropertyValue: 20
+  - PrefsValue: 3
+    TargetPropertyValue: 15
+  IgnoreCase: 1
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5430505156761339553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5430505156761339548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1919769683}
+  TargetPropertyName: AttackInterval
+  PrefsKey: difficulty
+  Cases:
+  - PrefsValue: 1
+    TargetPropertyValue: 25
+  - PrefsValue: 2
+    TargetPropertyValue: 20
+  - PrefsValue: 3
+    TargetPropertyValue: 15
+  IgnoreCase: 1
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5430505156761339554
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2520,6 +2520,7 @@ GameObject:
   - component: {fileID: 241120575}
   - component: {fileID: 241120574}
   - component: {fileID: 241120573}
+  - component: {fileID: 241120582}
   m_Layer: 8
   m_Name: PlaYeR (1)
   m_TagString: Player
@@ -2830,6 +2831,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &241120582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241120572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 241120573}
+  TargetPropertyName: health
+  PrefsKey: difficulty
+  Cases:
+  - PrefsValue: 1
+    TargetPropertyValue: 200
+  - PrefsValue: 2
+    TargetPropertyValue: 100
+  - PrefsValue: 3
+    TargetPropertyValue: 75
+  IgnoreCase: 1
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 241120573}
+        m_MethodName: Cure
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &256802994
 PrefabInstance:
   m_ObjectHideFlags: 0
