@@ -115319,6 +115319,7 @@ GameObject:
   - component: {fileID: 773533000}
   - component: {fileID: 773532999}
   - component: {fileID: 773532998}
+  - component: {fileID: 773533005}
   m_Layer: 8
   m_Name: PlaYeR (2)
   m_TagString: Player
@@ -115634,6 +115635,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &773533005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773532995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 773532998}
+  TargetPropertyName: Armor
+  PrefsKey: difficult
+  Cases:
+  - PrefsValue: 1
+    TargetPropertyValue: 200
+  - PrefsValue: 2
+    TargetPropertyValue: 100
+  - PrefsValue: 3
+    TargetPropertyValue: 0
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 773532998}
+        m_MethodName: ToArmor
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &775075939
 GameObject:
   m_ObjectHideFlags: 0

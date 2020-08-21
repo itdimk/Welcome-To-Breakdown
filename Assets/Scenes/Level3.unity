@@ -4660,6 +4660,7 @@ GameObject:
   - component: {fileID: 469424010}
   - component: {fileID: 469424009}
   - component: {fileID: 469424008}
+  - component: {fileID: 469424017}
   m_Layer: 8
   m_Name: PlaYeR (1)
   m_TagString: Player
@@ -4972,6 +4973,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &469424017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469424007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 469424008}
+  TargetPropertyName: armor
+  PrefsKey: difficulty
+  Cases:
+  - PrefsValue: 1
+    TargetPropertyValue: 150
+  - PrefsValue: 2
+    TargetPropertyValue: 100
+  - PrefsValue: 3
+    TargetPropertyValue: 0
+  IgnoreCase: 1
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 469424008}
+        m_MethodName: ToArmor
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &475739249
 GameObject:
   m_ObjectHideFlags: 0

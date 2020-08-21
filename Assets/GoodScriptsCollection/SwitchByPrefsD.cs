@@ -22,9 +22,12 @@ public class SwitchByPrefsD : MonoBehaviour
     [Space] public List<Case> Cases;
 
     [Space]
+    public bool IgnoreCase = true;
     public float UpdateInterval = 1E10F;
-    
+
+    [Space]
     public UnityEvent OnValueSet;
+
 
     private float _startTick = float.MinValue;
     
@@ -74,12 +77,22 @@ public class SwitchByPrefsD : MonoBehaviour
 
     FieldInfo GetTargetField()
     {
-        return Target.GetType().GetField(TargetPropertyName);
+        var flags = BindingFlags.Public | BindingFlags.Instance;
+
+        if (IgnoreCase)
+            flags |= BindingFlags.IgnoreCase;
+        
+        return Target.GetType().GetField(TargetPropertyName, flags);
     }
     
     PropertyInfo GetTargetProperty()
     {
-        return Target.GetType().GetProperty(TargetPropertyName);
+        var flags = BindingFlags.Public | BindingFlags.Instance;
+        
+        if (IgnoreCase)
+            flags |= BindingFlags.IgnoreCase;
+        
+        return Target.GetType().GetProperty(TargetPropertyName, flags);
     }
 
     void SetTargetField(FieldInfo targetField, object value)
