@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnResume;
     public UnityEvent OnQuit;
     public string PauseButton = "Cancel";
-
+    public const string DifficultyPrefKey = "difficulty";
+    public const string LanguagePrefKey = "language";
 
     [HideInInspector] public bool IsPaused;
 
@@ -66,5 +67,25 @@ public class GameManager : MonoBehaviour
         Resume();
         Application.Quit();
         Debug.Log("Application quit is called");
+    }
+    
+    public void SetLanguage(string value)
+    {
+        PlayerPrefs.SetString(LanguagePrefKey, value);
+    }
+    
+    public void SetDifficulty(int value)
+    {
+        PlayerPrefs.SetInt(DifficultyPrefKey, value);
+    }
+    
+    public string GetLanguage()
+    {
+        return PlayerPrefs.GetString(LanguagePrefKey);; 
+    }
+    
+    public int GetDifficulty()
+    {
+        return PlayerPrefs.GetInt(DifficultyPrefKey);; 
     }
 }
