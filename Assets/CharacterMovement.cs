@@ -32,6 +32,8 @@ public class CharacterMovement : MonoBehaviour
     private float _inputX;
     private Animator _animator;
     
+    public UnityEvent OnJump;
+
     public UnityEvent StartWalking;
     public UnityEvent StopWalking;
     
@@ -107,6 +109,7 @@ public class CharacterMovement : MonoBehaviour
         {
             var force = new Vector2(0, JumpForce);
             _physics.AddForce(force);
+            OnJump?.Invoke();
         }
     }
 
