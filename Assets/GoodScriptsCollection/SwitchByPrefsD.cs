@@ -65,13 +65,13 @@ public class SwitchByPrefsD : MonoBehaviour
                 else if(targetProperty != null)
                     SetTargetProperty(targetProperty, match.TargetPropertyValue);
                 else
-                    Debug.LogWarning($"Can't find field {TargetPropertyName} in {Target}");
+                    Debug.LogWarning($"Can't find field / property \"{TargetPropertyName}\" in {Target}");
             }
             else
-                Debug.LogWarning($"Case isn't defined for {nameof(Case.PrefsValue)} == {prefsValue}");
+                Debug.LogWarning($"Case isn't defined for {nameof(Case.PrefsValue)} == \"{prefsValue}\"");
         }
         else
-            Debug.LogWarning($"Key {PrefsKey} doesn't exist");
+            Debug.LogWarning($"Key \"{PrefsKey}\" doesn't exist in {nameof(PlayerPrefs)}");
     }
 
 
@@ -123,6 +123,7 @@ public class SwitchByPrefsD : MonoBehaviour
 
         float value2 = PlayerPrefs.GetFloat(PrefsKey, float.MinValue);
 
+        // ReSharper disable once CompareOfFloatsByEqualityOperator
         if (value2 != float.MinValue)
             return value2;
 
