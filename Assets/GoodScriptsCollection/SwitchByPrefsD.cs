@@ -17,12 +17,12 @@ public class SwitchByPrefsD : MonoBehaviour
 
     public Component Target;
     public string TargetPropertyName;
+    public bool IgnoreCase = true;
 
     [Space] public string PrefsKey;
     [Space] public List<Case> Cases;
 
     [Space]
-    public bool IgnoreCase = true;
     public float UpdateInterval = 1E10F;
 
     [Space]
