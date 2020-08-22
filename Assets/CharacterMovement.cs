@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class CharacterMovement : MonoBehaviour
@@ -24,10 +25,15 @@ public class CharacterMovement : MonoBehaviour
     private float groundDetectionR = 0.1f;
     private bool _isFacingRight = true;
 
+    private bool movementStarted;
+    
     private bool _jumpHasBeenPressed = false;
 
     private float _inputX;
     private Animator _animator;
+    
+    public UnityEvent StartWalking;
+    public UnityEvent StopWalking;
     
     void Start()
     {
@@ -59,6 +65,27 @@ public class CharacterMovement : MonoBehaviour
 
     private void Move()
     {
+        if (_isGrounded)
+        {
+            if (Mathf.Abs(_inputX) > 0.1 && !movementStarted)
+            {
+                StartWalking?.Invoke();
+                movementStarted = true;
+            }
+
+            if (Mathf.Abs(_inputX) <= 0.1 && movementStarted)
+            {
+                StopWalking?.Invoke();
+                movementStarted = false;
+            } 
+        }
+
+        if (!_isGrounded && movementStarted)
+        {
+            StopWalking?.Invoke();
+            movementStarted = false;
+        }
+        
         if (_isGrounded || AirControl)
         {
           
