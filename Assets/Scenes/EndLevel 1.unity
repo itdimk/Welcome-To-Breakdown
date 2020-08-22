@@ -1405,7 +1405,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: NukeBoom
     clip: {fileID: 8300000, guid: 6346af768df77f547929c19b1d1c1563, type: 3}
-    volume: 0.436
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -2717,7 +2717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00020742, y: -0.000021935}
+  m_AnchoredPosition: {x: -0.00020742, y: -17}
   m_SizeDelta: {x: 1071.4546, y: 605.04333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661785337
@@ -2741,7 +2741,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
-    m_FontSize: 25
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2760,8 +2760,8 @@ MonoBehaviour:
     itdimk and elnuir
 
 
-    thank
-    you for playing!'
+    Thank
+    You for playing!'
 --- !u!222 &661785338
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5644,8 +5644,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035, y: -0.000026703}
-  m_SizeDelta: {x: 638.5448, y: 340.26514}
+  m_AnchoredPosition: {x: -0.000061035, y: -37}
+  m_SizeDelta: {x: 892.13135, y: 593.85065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1604833487
 MonoBehaviour:
@@ -5668,12 +5668,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
-    m_FontSize: 25
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -5682,13 +5682,13 @@ MonoBehaviour:
   m_Text: 'Welcome to breakdown
 
 
-    Created by
+    created by
 
     itdimk and elnuir
 
 
     Thank
-    you for playing!'
+    You for playing!'
 --- !u!222 &1604833488
 CanvasRenderer:
   m_ObjectHideFlags: 0
