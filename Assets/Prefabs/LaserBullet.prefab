@@ -192,7 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Who:
   - Wall
-  - Spikes
   DestroyOnDelay: 2
   DestroyOnCollision: 0
   DestroyOnTrigger: 1
