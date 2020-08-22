@@ -115649,7 +115649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 773532998}
   TargetPropertyName: Armor
-  PrefsKey: difficult
+  PrefsKey: difficulty
   Cases:
   - PrefsValue: 1
     TargetPropertyValue: 200
