@@ -37278,7 +37278,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Death
     clip: {fileID: 8300000, guid: ca026b67c8b708a4c88405b969bbc9b0, type: 3}
-    volume: 1
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -37308,6 +37308,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: LevelComplete
     clip: {fileID: 8300000, guid: 454b45e8595266342865e4b21b817716, type: 3}
+    volume: 0.719
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 1cd64bbf58b8d2740953bc244f614937, type: 3}
     volume: 0.719
     pitch: 1
     loop: 0
