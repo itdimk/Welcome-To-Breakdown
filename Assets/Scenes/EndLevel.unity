@@ -1101,6 +1101,7 @@ GameObject:
   - component: {fileID: 299320137}
   - component: {fileID: 299320139}
   - component: {fileID: 299320138}
+  - component: {fileID: 299320140}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1147,8 +1148,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: 8da5dac60e3c85a42bd8fcf657f0e8db, type: 3}
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1167,8 +1168,8 @@ MonoBehaviour:
     itdimk and elnuir
 
 
-    thank
-    you for playing!'
+    Thank
+    You for playing!'
 --- !u!222 &299320139
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1177,6 +1178,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299320136}
   m_CullTransparentMesh: 0
+--- !u!114 &299320140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299320136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f3624f7359e74abcbf5b4998b66cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 299320138}
+  TargetPropertyName: text
+  LanguagePrefsKey: lang
+  Translations:
+  - Language: ru
+    Value: "Welcome to breakdown\n\ncreated by\nitdimk and elnuir\n\n\u0421\u043F\u0430\u0441\u0438\u0431\u043E,
+      \u0447\u0442\u043E \u0438\u0433\u0440\u0430\u043B\u0438!"
 --- !u!1 &312495877
 GameObject:
   m_ObjectHideFlags: 0
@@ -7523,6 +7543,7 @@ MonoBehaviour:
   Cases:
   - PrefsValue: ru
     TargetPropertyValue: False
+  IgnoreCase: 1
   UpdateInterval: 1e+10
   OnValueSet:
     m_PersistentCalls:
@@ -15896,6 +15917,7 @@ MonoBehaviour:
   Cases:
   - PrefsValue: ru
     TargetPropertyValue: False
+  IgnoreCase: 1
   UpdateInterval: 1e+10
   OnValueSet:
     m_PersistentCalls:
@@ -16525,6 +16547,7 @@ MonoBehaviour:
   Cases:
   - PrefsValue: ru
     TargetPropertyValue: False
+  IgnoreCase: 1
   UpdateInterval: 1e+10
   OnValueSet:
     m_PersistentCalls:
