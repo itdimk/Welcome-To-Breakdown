@@ -1245,7 +1245,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Theme2
+  - name: Theme
     clip: {fileID: 8300000, guid: 8844b90eb98fb9642bd755e3d3075c49, type: 3}
     volume: 0.487
     pitch: 0.834
@@ -7442,9 +7442,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 789811966}
-  - component: {fileID: 789811968}
   - component: {fileID: 789811965}
+  - component: {fileID: 789811968}
   - component: {fileID: 789811967}
+  - component: {fileID: 789811969}
   m_Layer: 0
   m_Name: BaseDialoguemanager
   m_TagString: Untagged
@@ -7459,7 +7460,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789811964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 979c98971aace1c45b77937ea6d34632, type: 3}
   m_Name: 
@@ -7537,28 +7538,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 789811965}
+  Target: {fileID: 789811968}
   TargetPropertyName: enabled
+  IgnoreCase: 1
   PrefsKey: lang
   Cases:
   - PrefsValue: ru
-    TargetPropertyValue: False
-  IgnoreCase: 1
+    TargetPropertyValue: True
   UpdateInterval: 1e+10
   OnValueSet:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 789811968}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &789811968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7566,7 +7556,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789811964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 979c98971aace1c45b77937ea6d34632, type: 3}
   m_Name: 
@@ -7631,6 +7621,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &789811969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789811964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 789811965}
+  TargetPropertyName: enabled
+  IgnoreCase: 1
+  PrefsKey: lang
+  Cases:
+  - PrefsValue: en
+    TargetPropertyValue: True
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &805884175
 GameObject:
   m_ObjectHideFlags: 0
@@ -15749,10 +15762,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2064232328}
-  - component: {fileID: 2064232332}
   - component: {fileID: 2064232327}
+  - component: {fileID: 2064232332}
   - component: {fileID: 2064232329}
   - component: {fileID: 2064232330}
+  - component: {fileID: 2064232333}
   - component: {fileID: 2064232331}
   m_Layer: 0
   m_Name: GoodDialoguemanager
@@ -15768,7 +15782,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064232326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 979c98971aace1c45b77937ea6d34632, type: 3}
   m_Name: 
@@ -15911,28 +15925,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 2064232327}
+  Target: {fileID: 2064232332}
   TargetPropertyName: enabled
+  IgnoreCase: 1
   PrefsKey: lang
   Cases:
   - PrefsValue: ru
-    TargetPropertyValue: False
-  IgnoreCase: 1
+    TargetPropertyValue: True
   UpdateInterval: 1e+10
   OnValueSet:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2064232332}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2064232332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15940,7 +15943,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064232326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 979c98971aace1c45b77937ea6d34632, type: 3}
   m_Name: 
@@ -16087,6 +16090,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2064232333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064232326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 2064232327}
+  TargetPropertyName: enabled
+  IgnoreCase: 1
+  PrefsKey: lang
+  Cases:
+  - PrefsValue: en
+    TargetPropertyValue: True
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2066299860
 GameObject:
   m_ObjectHideFlags: 0
@@ -16190,12 +16216,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2097730063}
-  - component: {fileID: 2097730069}
   - component: {fileID: 2097730062}
+  - component: {fileID: 2097730069}
   - component: {fileID: 2097730065}
   - component: {fileID: 2097730064}
   - component: {fileID: 2097730066}
   - component: {fileID: 2097730067}
+  - component: {fileID: 2097730070}
   - component: {fileID: 2097730068}
   m_Layer: 0
   m_Name: BadDialoguemanager
@@ -16211,7 +16238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097730061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 979c98971aace1c45b77937ea6d34632, type: 3}
   m_Name: 
@@ -16543,26 +16570,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 2097730062}
   TargetPropertyName: enabled
+  IgnoreCase: 1
   PrefsKey: lang
   Cases:
-  - PrefsValue: ru
-    TargetPropertyValue: False
-  IgnoreCase: 1
+  - PrefsValue: en
+    TargetPropertyValue: True
   UpdateInterval: 1e+10
   OnValueSet:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2097730068}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2097730069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16570,7 +16586,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097730061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 979c98971aace1c45b77937ea6d34632, type: 3}
   m_Name: 
@@ -16772,6 +16788,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &2097730070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097730061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 2097730062}
+  TargetPropertyName: enabled
+  IgnoreCase: 1
+  PrefsKey: lang
+  Cases:
+  - PrefsValue: ru
+    TargetPropertyValue: False
+  UpdateInterval: 1e+10
+  OnValueSet:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2119152956
 GameObject:
   m_ObjectHideFlags: 0

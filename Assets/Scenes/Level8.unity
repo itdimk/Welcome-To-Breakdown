@@ -3411,7 +3411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &632180012
 Transform:
   m_ObjectHideFlags: 0
@@ -23048,7 +23048,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.036393, y: -1.1668091}
+  m_Offset: {x: -4.4008145, y: -1.1668091}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -23059,7 +23059,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.072786, y: 19.08379}
+  m_Size: {x: 9.801629, y: 19.08379}
   m_EdgeRadius: 0
 --- !u!114 &1264591452
 MonoBehaviour:
@@ -33645,12 +33645,48 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1025
   IsGroundCheck: {fileID: 422026207}
+  OnJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5242208628865034234}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: JumpMetal
+          m_BoolArgument: 0
+        m_CallState: 2
   StartWalking:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5242208628865034234}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FootSteps
+          m_BoolArgument: 0
+        m_CallState: 2
   StopWalking:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5242208628865034234}
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FootSteps
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &1866578232
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34988,7 +35024,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.7088242, y: 1.5668125}
+  m_Offset: {x: -3.734604, y: 1.5668125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -34999,7 +35035,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 27.96495, y: 4.133625}
+  m_Size: {x: 27.913391, y: 4.133625}
   m_EdgeRadius: 0
 --- !u!114 &2012858952
 MonoBehaviour:
@@ -36033,6 +36069,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: FootSteps
+    clip: {fileID: 8300000, guid: a002d6b7c04036f4d8b89e99137565b4, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: JumpMetal
+    clip: {fileID: 8300000, guid: 3a4fbc3e15e927046b11571886155ace, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &5242208628865034235
 Transform:
   m_ObjectHideFlags: 0
@@ -36299,7 +36347,8 @@ MonoBehaviour:
   armorAbsorption: 0.95
   WriteHpTo: {fileID: 0}
   WriteArmorTo: {fileID: 0}
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 945210216811715066, guid: aab6350dcd5c6fd45bfd876747daef64,
+    type: 3}
   DeathDelay: 0
   OnDeath:
     m_PersistentCalls:

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnQuit;
     public string PauseButton = "Cancel";
     public const string DifficultyPrefKey = "difficulty";
-    public const string LanguagePrefKey = "language";
+    public const string LanguagePrefKey = "lang";
 
     [HideInInspector] public bool IsPaused;
 

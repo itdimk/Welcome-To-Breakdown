@@ -115832,12 +115832,48 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1025
   IsGroundCheck: {fileID: 286153950}
+  OnJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5242208628865034234}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: JumpMetal
+          m_BoolArgument: 0
+        m_CallState: 2
   StartWalking:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5242208628865034234}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FootSteps
+          m_BoolArgument: 0
+        m_CallState: 2
   StopWalking:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5242208628865034234}
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FootSteps
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &773533001
 AudioSource:
   m_ObjectHideFlags: 0
@@ -136378,6 +136414,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ManScream
     clip: {fileID: 8300000, guid: 3d864928bff001f4a91472512b7d7cab, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FootSteps
+    clip: {fileID: 8300000, guid: a002d6b7c04036f4d8b89e99137565b4, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: JumpMetal
+    clip: {fileID: 8300000, guid: 3a4fbc3e15e927046b11571886155ace, type: 3}
     volume: 1
     pitch: 1
     loop: 0
