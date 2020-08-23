@@ -16216,8 +16216,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2097730063}
-  - component: {fileID: 2097730062}
   - component: {fileID: 2097730069}
+  - component: {fileID: 2097730062}
   - component: {fileID: 2097730065}
   - component: {fileID: 2097730064}
   - component: {fileID: 2097730066}
@@ -16800,13 +16800,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cc17caa73f2464ba7dba00e620f4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 2097730062}
+  Target: {fileID: 2097730069}
   TargetPropertyName: enabled
   IgnoreCase: 1
   PrefsKey: lang
   Cases:
   - PrefsValue: ru
-    TargetPropertyValue: False
+    TargetPropertyValue: True
   UpdateInterval: 1e+10
   OnValueSet:
     m_PersistentCalls:
