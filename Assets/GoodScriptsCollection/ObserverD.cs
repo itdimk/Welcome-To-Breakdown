@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObserverD : MonoBehaviour
 {
-    public TargetSetterD Target;
+    public TargetProviderBaseD Target;
 
     [Space] public Transform Origin;
     public Vector2 DirectionMarker = Vector2.right;

@@ -4,9 +4,8 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
-using Button = UnityEngine.UI.Button;
 
-public class SwitchByPrefsD : MonoBehaviour
+public class SwitchByPrefs : MonoBehaviour
 {
     [Serializable]
     public class Case

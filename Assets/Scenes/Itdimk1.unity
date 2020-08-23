@@ -45998,7 +45998,7 @@ MonoBehaviour:
   - Enemy
   MaxDistance: 20
   MinDistance: 0
-  MaxAngle: 90
+  MaxAngle: 80
   CalcDistanceFrom: {fileID: 497170165}
   Priority: 1
 --- !u!114 &1187609785

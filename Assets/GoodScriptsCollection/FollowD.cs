@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowD : MonoBehaviour
 {
-    public TargetSetterD Target;
+    public TargetProviderBaseD Target;
     public float Smoothness = 0.1f;
     private Vector3 _velocity;
 

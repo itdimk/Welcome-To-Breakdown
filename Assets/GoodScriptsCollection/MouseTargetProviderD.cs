@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseTargetSetterD : TargetSetterD
+public class MouseTargetProviderD : TargetProviderBaseD
 {
     private Camera _mainCamera;
     private GameObject _marker;

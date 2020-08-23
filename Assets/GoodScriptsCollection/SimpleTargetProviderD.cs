@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleTargetSetterD : TargetSetterD
+public class SimpleTargetProviderD : TargetProviderBaseD
 {
     public Transform Target;
     

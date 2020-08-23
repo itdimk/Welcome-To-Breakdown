@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PreemptionTargetSetterD : TargetSetterD
+public class PreemptionTargetProviderD : TargetProviderBaseD
 {
     public Rigidbody2D Target;
     public float Scale = 0.04f;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class TargetSearchSetterD : TargetSetterD
+public class TargetSearchSetterD : TargetProviderBaseD
 {
     public enum PriorityD
     {
