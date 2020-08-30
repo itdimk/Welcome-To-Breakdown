@@ -26,5 +26,5 @@ public class FollowMouse : MonoBehaviour
     {
         Vector2 position = _mainCamera.ScreenToWorldPoint(_mousePosition);
         transform.position = position;
-    }
+   }
 }

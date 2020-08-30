@@ -10655,7 +10655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Who: []
-  DestroyOnDelay: 2
+  DestroyOnDelay: 1
   DestroyOnCollision: 0
   DestroyOnTrigger: 0
   OnDestroy:
