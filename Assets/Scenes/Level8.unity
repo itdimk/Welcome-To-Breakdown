@@ -2387,6 +2387,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 523328799110242177, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_Text
+      value: Level 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 523328799110242179, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: Translations.Array.data[0].Value
+      value: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 8"
+      objectReference: {fileID: 0}
+    - target: {fileID: 523328800096734326, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1369688121451843989, guid: ffc86a4f291bd8040a838dd59f3ec408,
         type: 3}
       propertyPath: m_RootOrder
@@ -2650,6 +2665,16 @@ PrefabInstance:
     - target: {fileID: 1887952045502444448, guid: ffc86a4f291bd8040a838dd59f3ec408,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504784712697611732, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639915587070597608, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3183400050387859736, guid: ffc86a4f291bd8040a838dd59f3ec408,
@@ -22754,6 +22779,12 @@ Transform:
   m_Father: {fileID: 1408840796}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1135020066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2639915587070597608, guid: ffc86a4f291bd8040a838dd59f3ec408,
+    type: 3}
+  m_PrefabInstance: {fileID: 474980827}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1158822887
 GameObject:
   m_ObjectHideFlags: 0
@@ -23689,12 +23720,6 @@ Transform:
   m_Father: {fileID: 1716267538}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1306522571 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1887952044233649889, guid: ffc86a4f291bd8040a838dd59f3ec408,
-    type: 3}
-  m_PrefabInstance: {fileID: 474980827}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1329018077
 GameObject:
   m_ObjectHideFlags: 0
@@ -33686,7 +33711,7 @@ MonoBehaviour:
   Armor: 9999999
   ArmorAbsorption: 1
   HitAnimationName: hit
-  EndLevelScreen: {fileID: 1306522571}
+  EndLevelScreen: {fileID: 1135020066}
   EndLevelScreenTime: 3000
   HelthText: {fileID: 0}
   ArmorText: {fileID: 0}
