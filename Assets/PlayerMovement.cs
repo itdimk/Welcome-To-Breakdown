@@ -171,10 +171,13 @@ public class PlayerMovement : MonoBehaviour
         float multiplier = HitPushPower / forceVector.magnitude;
         forceVector.Scale(new Vector3(multiplier, multiplier));
 
-        var physics = GetComponent<Rigidbody2D>();
+        if (!double.IsNaN(forceVector.x) && double.IsNaN(forceVector.y))
+        {
+            var physics = GetComponent<Rigidbody2D>();
 
-        if (physics != null)
-            physics.AddForce(forceVector);
+            if (physics != null)
+                physics.AddForce(forceVector);
+        }
     }
 
     private void GetDamage(float damageAmount, GameObject source)
