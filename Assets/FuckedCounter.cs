@@ -22,7 +22,7 @@ public class FuckedCounter : MonoBehaviour
         if(number < decimal.MaxValue / 2)
             number *= (decimal)(Random.Range(1f, 2f));
         
-        Text.text = $"Score: {number}E+{Random.Range(1f, 10f)}";
+        Text.text = $"{number}E+{Random.Range(1f, 10f)}";
 
     }
 }
