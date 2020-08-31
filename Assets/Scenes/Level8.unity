@@ -2387,6 +2387,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 523328799110242177, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_Text
+      value: Level 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 523328799110242179, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: Translations.Array.data[0].Value
+      value: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 8"
+      objectReference: {fileID: 0}
+    - target: {fileID: 523328800096734326, guid: ffc86a4f291bd8040a838dd59f3ec408,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1369688121451843989, guid: ffc86a4f291bd8040a838dd59f3ec408,
         type: 3}
       propertyPath: m_RootOrder
