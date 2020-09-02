@@ -6,22 +6,36 @@ using UnityEngine.Events;
 public class CursorVisibleD : MonoBehaviour
 {
     public bool ShowCursor;
-    public int UpdateInterval = 10;
+    public bool UseFixedUpdate;
+    public float UpdateInterval = 0.2F;
+
+    private float _startTick;
 
     public UnityEvent OnCursorVisibleSet;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _startTick = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.frameCount % UpdateInterval == 0 && Cursor.visible != ShowCursor)
+        if (!UseFixedUpdate && Time.time - _startTick >= UpdateInterval)
         {
             Cursor.visible = ShowCursor;
+            _startTick = Time.time;
+            OnCursorVisibleSet?.Invoke();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (UseFixedUpdate && Time.time - _startTick >= UpdateInterval)
+        {
+            Cursor.visible = ShowCursor;
+            _startTick = Time.time;
             OnCursorVisibleSet?.Invoke();
         }
     }
