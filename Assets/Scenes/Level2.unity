@@ -14773,7 +14773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowCursor: 1
   UseFixedUpdate: 0
-  UpdateInterval: 10
+  UpdateInterval: 0.1
   OnCursorVisibleSet:
     m_PersistentCalls:
       m_Calls: []
