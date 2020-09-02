@@ -7258,8 +7258,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 111.7, y: -1179.5}
-  m_SizeDelta: {x: 1056.4885, y: 1809.7942}
+  m_AnchoredPosition: {x: 115.7, y: -1543.8}
+  m_SizeDelta: {x: 1064.5049, y: 2538.3064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2010863232
 Animator:
@@ -7318,7 +7318,9 @@ MonoBehaviour:
     Castle - Fuzeblack\nHacobb - Horsemen at Dawn\nJimmy Castle - Febuary\n\nAlso
     were used:\n\nHelicopter sprite by Paul Chin\npaulmakegames.blogspot.com\n\nResources
     from unity asset store\n\nSounds from zvukipro.com\n\nWinter night by jplenio
-    from pixabay.com"
+    from pixabay.com\n\n\rDisclaimer font\n\xA9 2004 Andrew Young, disasterfonts.co.uk;\n\xA9
+    2020 Denis Ignatov mutno.me/fonts\n\n\"Pixel Font - Thaleah\" by Tiny Worlds\nassetstore.unity.com/publishers/39602\n\nMain
+    Font - Copyright hy60koshk 2013\nfontstruct.com/fontstructions/show/878547\nfontshop.com"
 --- !u!222 &2010863234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7354,7 +7356,11 @@ MonoBehaviour:
       \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u044B:\n\nHelicopter
       sprite by Paul Chin\npaulmakegames.blogspot.com\n\n\u0420\u0435\u0441\u0443\u0440\u0441\u044B
       \u0438\u0437 unity asset store\n\n\u0417\u0432\u0443\u043A\u0438 \u0438\u0437
-      zvukipro.com\n\nWinter night by jplenio from pixabay.com"
+      zvukipro.com\n\nWinter night by jplenio from pixabay.com\n\n\r\u0428\u0440\u0438\u0444\u0442
+      \u0434\u0438\u0441\u043A\u043B\u0435\u0439\u043C\u0435\u0440\u0430\n\xA9 2004
+      Andrew Young, disasterfonts.co.uk;\n\xA9 2020 Denis Ignatov mutno.me/fonts\n\n\"Pixel
+      Font - Thaleah\" by Tiny Worlds\nassetstore.unity.com/publishers/39602\n\n\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439
+      \u0448\u0440\u0438\u0444\u0442\nCopyright hy60koshk 2013\nfontstruct.com/fontstructions/show/878547\nwww.fontshop.com\n"
 --- !u!1 &2014483058
 GameObject:
   m_ObjectHideFlags: 0
