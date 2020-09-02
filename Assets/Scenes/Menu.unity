@@ -4809,6 +4809,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PauseButton: Cancel
+  CustomCursor: {fileID: 0}
   IsPaused: 0
 --- !u!4 &1125276071
 Transform:

@@ -1726,6 +1726,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   PauseButton: Cancel
+  CustomCursor: {fileID: 2800000, guid: e3bcb170ecacdfe4dab51fdd9a9cc80a, type: 3}
   IsPaused: 0
 --- !u!1 &601610925
 GameObject:
@@ -3552,6 +3553,85 @@ MonoBehaviour:
   Scale: 1
   OffsetY: 0
   FreezeY: 1
+--- !u!1001 &1301278953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 313456910130813504, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: Cases.Array.data[0].OnMatch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 312495878}
+    - target: {fileID: 313456910130813504, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: Cases.Array.data[0].OnMatch.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 132.2995
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.1401124
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -70.38328
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813506, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 313456910130813511, guid: 27139ae1c712a4d479e82aef1b09da45,
+        type: 3}
+      propertyPath: m_Name
+      value: CheatManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27139ae1c712a4d479e82aef1b09da45, type: 3}
 --- !u!1 &1342220628
 GameObject:
   m_ObjectHideFlags: 0

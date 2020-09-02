@@ -12,12 +12,15 @@ public class GameManager : MonoBehaviour
     public string PauseButton = "Cancel";
     public const string DifficultyPrefKey = "difficulty";
     public const string LanguagePrefKey = "lang";
-
+    public Texture2D CustomCursor;
+    
     [HideInInspector] public bool IsPaused;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(CustomCursor != null)
+            Cursor.SetCursor(CustomCursor, Vector2.zero, CursorMode.Auto);
     }
 
     // Update is called once per frame

@@ -182,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetDamage(float damageAmount, GameObject source)
     {
+        damageAmount /= Time.deltaTime * 55;
        GetComponent<Animator>().Play(HitAnimationName);
         
         float absorbed = Math.Min(damageAmount * ArmorAbsorption, Armor * ArmorAbsorption);
@@ -239,14 +240,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("EnemyBox"))
         {
-            GetDamage(8f, other.gameObject);
+            GetDamage(1.5f, other.gameObject);
         }
 
       
 
         if (other.gameObject.CompareTag("EnemyEye"))
         {
-            GetDamage(4, other.gameObject);
+            GetDamage(1f, other.gameObject);
         }
     }
 
