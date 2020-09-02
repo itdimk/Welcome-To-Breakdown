@@ -31,11 +31,11 @@ public class SwitchD : MonoBehaviour
         _propertyType = valueProvider.GetValueType();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (Time.time - _startTick >= UpdateInterval)
+        if (Time.unscaledTime - _startTick >= UpdateInterval)
         {
-            _startTick = Time.time;
+            _startTick = Time.unscaledTime;
             Refresh();
         }
     }

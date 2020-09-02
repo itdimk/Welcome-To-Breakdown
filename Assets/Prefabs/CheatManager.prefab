@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3edd35a27393a6e49a869a349b365aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxInterval: 1.8
+  MaxInterval: 2
 --- !u!114 &313456910130813504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueProvider: {fileID: 313456910130813505}
-  UpdateInterval: 1
+  UpdateInterval: 0.8
   Cases:
   - Value: shutup
     OnMatch:
