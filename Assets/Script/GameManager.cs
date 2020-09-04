@@ -13,14 +13,13 @@ public class GameManager : MonoBehaviour
     public const string DifficultyPrefKey = "difficulty";
     public const string LanguagePrefKey = "lang";
     public Texture2D CustomCursor;
-    
     [HideInInspector] public bool IsPaused;
 
     // Start is called before the first frame update
     void Start()
     {
         if(CustomCursor != null)
-            Cursor.SetCursor(CustomCursor, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(CustomCursor, new Vector2(21, 21), CursorMode.ForceSoftware);
     }
 
     // Update is called once per frame
