@@ -19,7 +19,8 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
         
-        Play("Theme");
+        if(PlayerPrefs.GetInt("mute-theme", 0) == 0)
+            Play("Theme");
     }
 
     public void Play(string name)

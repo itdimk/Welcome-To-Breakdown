@@ -7,8 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        int levelsCompleted = PlayerPrefs.GetInt("levels-completed", 1) - 1;
-        SceneManager.LoadScene(levelsCompleted + 1);
+        int levelsCompleted = PlayerPrefs.GetInt("levels-completed", 0) + 1;
+        SceneManager.LoadScene(levelsCompleted);
     }
 
     public void QuitGame()

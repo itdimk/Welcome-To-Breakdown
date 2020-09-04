@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown(PauseButton))
+        if (!string.IsNullOrWhiteSpace(PauseButton) && Input.GetButtonDown(PauseButton))
         {
             if (IsPaused)
                 Resume();
@@ -79,6 +79,16 @@ public class GameManager : MonoBehaviour
     public void SetDifficulty(int value)
     {
         PlayerPrefs.SetInt(DifficultyPrefKey, value);
+    }
+    
+    public void SwitchMainThemeMusic()
+    {
+        int current = PlayerPrefs.GetInt("mute-theme");
+        
+        if(current == 0)
+            PlayerPrefs.SetInt("mute-theme", 1);
+        else
+            PlayerPrefs.SetInt("mute-theme", 0);
     }
     
     public string GetLanguage()
